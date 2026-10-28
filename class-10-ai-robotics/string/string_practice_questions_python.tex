@@ -1,0 +1,552 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{geometry}
+\geometry{margin=1in}
+\usepackage{enumitem}
+\usepackage{listings}
+\usepackage{xcolor}
+\usepackage{hyperref}
+\usepackage{titlesec}
+\usepackage{fancyhdr}
+
+% Code listing style
+\lstset{
+    basicstyle=\ttfamily\small,
+    breaklines=true,
+    frame=single,
+    backgroundcolor=\color{gray!10},
+    keywordstyle=\color{blue},
+    commentstyle=\color{green!50!black},
+    stringstyle=\color{red},
+    showstringspaces=false,
+    tabsize=4
+}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{100 Practice Questions of String in Python}
+\fancyhead[R]{CS-IP Learning Hub}
+\fancyfoot[C]{\thepage}
+\renewcommand{\headrulewidth}{0.4pt}
+
+\title{\textbf{100 Important Practice Questions of String in Python}}
+\author{Compiled from CS-IP-Learning-Hub\\
+\url{https://csiplearninghub.com/practice-questions-of-string-in-python/}}
+\date{}
+
+\begin{document}
+
+\maketitle
+\tableofcontents
+\newpage
+
+\section{Practice Questions of String in Python -- Test 1}
+
+\begin{enumerate}[label=\textbf{Q\arabic*.}]
+
+\item What is String in Python?
+
+\item Is there any difference in `a' or ``a'' in python?
+
+\item Is there any difference between 1 or `1' in python?
+
+\item Python treats single quotes same as double quotes. (T/F)
+
+\item A string with zero character is called \underline{\hspace{3cm}} string.
+
+\item Python does not support a character type. (T/F)
+
+\item Write a code to store following String in a variable named `str'. \\
+\textit{This is Amit's Blog}
+
+\item Write the output of the following code:
+\begin{lstlisting}[language=Python]
+str1 = "Welcome to my blog"
+str2 = "Welcome to my \n Blog"
+print(str1)
+print(str2)
+\end{lstlisting}
+
+\item Write the output of the following.
+\begin{lstlisting}[language=Python]
+str1 = "Welcome \tto my Blog"
+str2 = "Welcome to\n my \tBlog"
+print(str1)
+print(str2)
+\end{lstlisting}
+
+\item Write the output of the following.
+\begin{lstlisting}[language=Python]
+str1 = """ Welcome to my
+blog.
+This is for
+Class X"""
+print(str1)
+\end{lstlisting}
+
+\end{enumerate}
+
+\section{Practice Questions of String in Python -- Test 2}
+
+\begin{enumerate}[label=\textbf{Q\arabic*.}]
+
+\item Write the output of following code- 
+
+\textbf{a)}
+\begin{lstlisting}[language=Python]
+str="hello"
+print(str[:3])
+\end{lstlisting}
+
+\textbf{b)}
+\begin{lstlisting}[language=Python]
+str='My Blog'
+a=' '
+for i in range(len(str)):
+    a+=str[i]
+print(a)
+\end{lstlisting}
+
+\textbf{c)}
+\begin{lstlisting}[language=Python]
+str='MyBLog'
+a=' '
+for i in range(len(str)):
+    print(i * str[i])
+\end{lstlisting}
+
+\textbf{d)}
+\begin{lstlisting}[language=Python]
+s='My'
+s1='Blog'
+s2=s[:1]+s1[len(s1)-1:]
+print(s2)
+\end{lstlisting}
+
+\textbf{e)} \texttt{print("My"+'Blog' * 2)}
+
+\textbf{f)} \texttt{print("My" *3 + "Blog" +'7')}
+
+\textbf{g)}
+\begin{lstlisting}[language=Python]
+for i in range(2,7,2):
+    print(i * '2')
+\end{lstlisting}
+
+\textbf{h)}
+\begin{lstlisting}[language=Python]
+for i in range(3,12, 2):
+    print("a".upper())
+\end{lstlisting}
+
+\textbf{i)}
+\begin{lstlisting}[language=Python]
+for i in range(3,12,13):
+    print("a".upper)
+\end{lstlisting}
+
+\textbf{j)}
+\begin{lstlisting}[language=Python]
+s='Welcome to My Site https://csiplearninghub.com '
+print(s.find('come'))
+print(s.find('o'))
+print(s.find('o', 10, 20))
+print(s.find('o', 5, 10))
+\end{lstlisting}
+
+\end{enumerate}
+
+\section{Practice Questions of String in Python -- Test 3}
+
+\begin{enumerate}[label=\textbf{Q\arabic*.}]
+
+\item Write a code to create empty string `str1'
+
+\item What do you mean by traversing a string?
+
+\item What is the index value of first element of a string?
+
+\item What is the index value of last element of a string?
+
+\item If the length of the string is 10 then what would be the positive index value of last element?
+
+\item If the length of string is 9, what would be the index value of middle element?
+
+\item Index value of a string can be in float. (T/F)
+
+\item What type of error is returned by following statement, if the length of string `str1' is 10.
+\begin{lstlisting}[language=Python]
+print(str1[13])
+\end{lstlisting}
+
+\item Write the output of the following:
+\begin{lstlisting}[language=Python]
+str1 = "Welcome to my Blog"
+a. print(str1[-1])
+b. print(str1[9])
+\end{lstlisting}
+
+\item Write a code to assign a string ``Hello World'' to a string variable named ``str1''.
+
+\end{enumerate}
+
+\section{Practice Questions of String in Python -- Test 4}
+
+\begin{enumerate}[label=\textbf{Q\arabic*.}]
+
+\item Write a program to display each character of the following string in separate line using `for' loop. \\
+\texttt{str1 = Welcome to My Blog}
+
+\item Write a program to display each character of the following string in separate line using `while' loop. \\
+\texttt{str1 = Welcome to My Blog}
+
+\item Index value of string ``str1'' varies from 0 to len(str1)-1. (T/F)
+
+\item Write the positive and negative index value of `B' in the following string. \\
+\texttt{"Welcome to my Blog"}
+
+\item What do you mean by concatenation of string?
+
+\item Which of the following is an example of concatenation?       
+\begin{enumerate}[label=\alph*.]
+\item 6 + 3
+\item `6' + `3'
+\item `a' + `b' + `c'
+\end{enumerate}
+
+\item Write a program to count the length of string without using inbuilt function.
+
+\item Write the output of the following statement.
+\begin{lstlisting}[language=Python]
+str1 = "Welcome to my Blog"
+for i in str1:
+    print(i)
+    print(i, end =' ')
+    print(i, end = '#')
+\end{lstlisting}
+
+\item Write the output of the following statement.
+\begin{lstlisting}[language=Python]
+str1 = "Amit"
+for i in str1:
+    print(i)
+    print(i, end =' ')
+\end{lstlisting}
+
+\item Write the output of the following statement.
+\begin{lstlisting}[language=Python]
+str1 = "Welcome to my Blog"
+for i in str1:
+    print(i)
+    print(i, end =' ')
+print(i, end = '#')
+\end{lstlisting}
+
+\end{enumerate}
+
+\section{Practice Questions of String in Python -- Test 5}
+
+\begin{enumerate}[label=\textbf{Q\arabic*.}]
+
+\item Match the Following
+
+\begin{center}
+\begin{tabular}{|l|l|}
+\hline
+\textbf{Column-1} & \textbf{Column-2} \\
+\hline
+Slicing & string[range] + `x' \\
+Concatenation & string[: -- 1] \\
+Repetition & string[range] \\
+Membership & string1 + string2 \\
+Reverse & in, not in \\
+\hline
+\end{tabular}
+\end{center}
+
+\item Write the code to join string `str1' and `str2' and store the result in variable `str3'
+
+\item The \underline{\hspace{3cm}} operator join the string.
+
+\item What type of error is shown by following code? \\
+\texttt{>>> 2 + '3'}
+
+\item Which operator is used to replicate string?
+
+\item Write the output of the following. \\
+\texttt{>>> 'A' * 3}
+
+\item Write the output of the following:
+\begin{lstlisting}[language=Python]
+for i in range(2,5,2):
+    print(i * '@')
+\end{lstlisting}
+
+\item `in' or `not in' are the \underline{\hspace{3cm}} operator
+
+\item Write the output of the following
+\begin{lstlisting}[language=Python]
+>>> 'h' in 'Hindi'
+>>>'i' in 'Hindi'
+\end{lstlisting}
+
+\item Write the output of the following
+\begin{lstlisting}[language=Python]
+for i in "Amit":
+    print(i in "Amit")
+\end{lstlisting}
+
+\end{enumerate}
+
+\section{Practice Questions of String in Python -- Test 6}
+
+\begin{enumerate}[label=\textbf{Q\arabic*.}]
+
+\item Write the output of the following
+\begin{lstlisting}[language=Python]
+>>>"string" in "substring"
+>>>"string" not in "substring"
+\end{lstlisting}
+
+\item Write the output of the following:
+\begin{lstlisting}[language=Python]
+>>>'tie' == 'ties'
+>>>"Amit" != "Amitabh"
+>>>"amit" > "Amitabh"
+\end{lstlisting}
+
+\item Write the full form of ASCII
+
+\item Write the ASCII value of `A' and `a'.
+
+\item String Slicing is used to fetch substring from a string. (T/F)
+
+\item Write the output of the following.
+\begin{lstlisting}[language=Python]
+S = "Welcome to my Blog"
+print(S[2 : 3])
+print(S[2 : 10])
+print(S[-2 : ])
+print(S[-10 : -2 : 2])
+\end{lstlisting}
+
+\item Strings are mutable. (T/F)
+
+\item Write the output of the following
+\begin{lstlisting}[language=Python]
+>>>str1 = "Anita"
+>>>str1[1]  = 'm'
+>>>print(str1)
+\end{lstlisting}
+
+\item Name any two built in function associated with string.
+
+\item Which function of string return the numerical value?
+
+\end{enumerate}
+
+\section{Practice Questions of String in Python -- Test 7}
+
+\begin{enumerate}[label=\textbf{Q\arabic*.}]
+
+\item What is the value returned by find() function for an unsuccessful search?
+
+\item isalpha() returns True if the string contains only alphabet. (T/F)
+
+\item Write the output of the following
+\begin{lstlisting}[language=Python]
+str1 = "Amit"
+str2 = "My Blog"
+str3 = "#blog"
+str4 = "My 1st Blog"
+print(str1.isalpha())
+print(str2.isalpha())
+print(str3.isalpha())
+print(str4.isalpha())
+\end{lstlisting}
+Specify the reason if any of the above print statement return False.
+
+\item Write a program to accept string and display total number of alphabets.
+
+\item Write a program to accept a string and display the sum of the digits, if any present in string. \\
+for example: \\
+input string : My position is 1st and my friend come on 4th \\
+output : 5
+
+\item Write the output of the following:
+\begin{lstlisting}[language=Python]
+>>>a = 123
+>>>b = "123"
+>>>b.isdigit()
+>>>a.isdigit()
+\end{lstlisting}
+
+\item What is the difference between lower() and islower()?
+
+\item Write a program to accept a string and convert it into lowercase.
+
+\item Write a program to count the number of lowercase and uppercase character in a string accepted from the user.
+
+\item Write the output of the following:
+\begin{lstlisting}[language=Python]
+>>>s = "My blog"
+>>>s.upper()
+>>>s.lower()
+>>>s.islower()
+>>>s.isupper()
+>>>s.isalpha()
+>>>s.isdigit()
+\end{lstlisting}
+
+\end{enumerate}
+
+\section{Practice Questions of String in Python -- Test 8}
+
+\begin{enumerate}[label=\textbf{Q\arabic*.}]
+
+\item What is lstrip() function in String?
+
+\item Write the output of the following. (\# represents the spaces)
+\begin{lstlisting}[language=Python]
+>>>str1 = "Welcome to my Blog"
+>>>print(len(str1))
+>>>str2 = "###Welcome to my Blog"
+>>>print(len(str2))
+>>>print(len(str2.lstrip()))
+\end{lstlisting}
+
+\item Write the output of the following. (\# represents the spaces)
+\begin{lstlisting}[language=Python]
+>>>str2 = "###Welcome to my Blog####"
+>>>print(len(str2))
+>>>print(len(str2.strip()))
+>>>print(len(str2.rstrip()))
+\end{lstlisting}
+
+\item Write the output of the following.
+\begin{lstlisting}[language=Python]
+>>>str1 = "Welcome to my Blog"
+>>>print(str1.rstrip('og'))
+>>>print(str1.lstrip('We'))
+>>>print(str1.strip('Welog'))
+\end{lstlisting}
+
+\item Write the output of the following.
+\begin{lstlisting}[language=Python]
+>>>print(len(str1.rstrip('og')))
+>>>print(len(str1.lstrip('We')))
+>>>print(len(str1.strip('Welog')))
+\end{lstlisting}
+
+\item isspace() returns True if the string contain only spaces (T/F)
+
+\item Write the output of the following
+\begin{lstlisting}[language=Python]
+>>>s1 = "   "
+>>>s2 = "   Amit"
+>>>print(s1.isspace())
+>>>print(s2.isspace())
+\end{lstlisting}
+
+\item Define the following function with example
+\begin{enumerate}[label=\alph*.]
+\item istitle()
+\item swapcase()
+\end{enumerate}
+
+\end{enumerate}
+
+\section{Practice Questions of String in Python -- Test 9}
+
+\begin{enumerate}[label=\textbf{Q\arabic*.}]
+
+\item Write the output of the following:
+\begin{lstlisting}[language=Python]
+str1 = "Welcome to my Blog"
+a. print(len(str1))
+b. print(capitalize(str1))
+\end{lstlisting}
+
+\item Write the output of the following.
+\begin{lstlisting}[language=Python]
+>>>str1 = "Welcome to my Blog"
+>>>x = str1.split()
+>>>print(x)
+\end{lstlisting}
+
+\item Write a program to accept a string and display each word and it's length.
+
+\item Write a program to accept a string and display string with capital letter of each word. \\
+for example, if input string is : welcome to my blog \\
+output string : Welcome To My Blog
+
+\item What is split() function in String?
+
+\item Write the output of the following:
+\begin{lstlisting}[language=Python]
+a = "Mummy?Papa?Brother?Sister?Uncle"
+print(a.split())
+print(a.split('?'))
+print(a.split('?',1))
+print(a.split('?',3))
+print(a.split('?',10))
+print(a.split('?',-1))
+\end{lstlisting}
+
+\item Write a program to replace all the word `do' with `done' in the following string. \\
+\texttt{str1 = "I do you do and we all will do"}
+
+\item Write the output of the following.
+\begin{lstlisting}[language=Python]
+str1 = "I went to Auli"
+print(str1.replace("Auli", "Leh"))
+print(str1)
+\end{lstlisting}
+
+\item What is the purpose of find() function in string?
+
+\item Write the output of the following:
+\begin{lstlisting}[language=Python]
+str1 = "Welcome to my Blog"
+print(str1.find('o'))
+print(str1.find('o',3))
+print(str1.find('o',7))
+print(str1.find('o',7,10))
+\end{lstlisting}
+
+\end{enumerate}
+
+\section{Practice Questions of String in Python -- Test 10}
+
+\begin{enumerate}[label=\textbf{Q\arabic*.}]
+
+\item Accept a string and display in reverse order.
+
+\item Write a program to accept a string and display 20 times.
+
+\item Write a program to accept a string in python and display the entire string in upper case.
+
+\item Write a program to accept a string and display last three characters of the string.
+
+\item Write a program to accept a string in python and display the entire string in lower case.
+
+\item Accept a string and display the entire string with first and last character in upper case.
+
+\item Write a program to accept a string and display first three characters of the string.
+
+\item Write a function in python which accept a string as argument and display total number of vowels.
+
+\item Write a function in python which accept a string as argument and display total number of lower case characters.
+
+\item Write a function in python which accept a string as argument and display total number of digits.
+
+\end{enumerate}
+
+\vspace{1cm}
+\begin{center}
+\textit{Source: CS-IP-Learning-Hub}\\
+\url{https://csiplearninghub.com/practice-questions-of-string-in-python/}
+\end{center}
+
+\end{document}

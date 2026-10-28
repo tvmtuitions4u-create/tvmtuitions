@@ -1,0 +1,97 @@
+{% extends "base.html" %}
+{% block title %}Library — PDF Organizer{% endblock %}
+
+{% block content %}
+<div class="d-flex justify-content-between align-items-center mb-4">
+    <h2 class="mb-0"><i class="bi bi-collection"></i> Document Library</h2>
+    <a href="{{ url_for('upload') }}" class="btn btn-primary"><i class="bi bi-plus-lg"></i> Upload New</a>
+</div>
+
+<!-- Search & Filters -->
+<div class="card mb-4">
+    <div class="card-body">
+        <form method="get" class="row g-3">
+            <div class="col-md-4">
+                <input type="text" name="q" class="form-control" placeholder="Search title, tags, notes..." value="{{ q }}">
+            </div>
+            <div class="col-md-2">
+                <input type="text" name="subject" class="form-control" list="subjects" placeholder="Subject" value="{{ subject }}">
+                <datalist id="subjects">
+                    {% for s in subjects %}<option value="{{ s }}">{% endfor %}
+                </datalist>
+            </div>
+            <div class="col-md-2">
+                <input type="text" name="batch" class="form-control" list="batches" placeholder="Batch" value="{{ batch }}">
+                <datalist id="batches">
+                    {% for b in batches %}<option value="{{ b }}">{% endfor %}
+                </datalist>
+            </div>
+            <div class="col-md-2">
+                <select name="category" class="form-select">
+                    <option value="">All Types</option>
+                    {% for c in categories %}
+                        <option value="{{ c }}" {% if category == c %}selected{% endif %}>{{ c }}</option>
+                    {% endfor %}
+                </select>
+            </div>
+            <div class="col-md-2 d-flex gap-2">
+                <button class="btn btn-outline-primary w-100" type="submit"><i class="bi bi-search"></i> Filter</button>
+                <a href="{{ url_for('index') }}" class="btn btn-outline-secondary">Clear</a>
+            </div>
+            <div class="col-md-3">
+                <input type="date" name="date_from" class="form-control" value="{{ date_from }}" placeholder="From">
+            </div>
+            <div class="col-md-3">
+                <input type="date" name="date_to" class="form-control" value="{{ date_to }}" placeholder="To">
+            </div>
+        </form>
+    </div>
+</div>
+
+<!-- Results -->
+<div class="row">
+    {% for doc in documents %}
+    <div class="col-md-6 col-lg-4 mb-4">
+        <div class="card h-100">
+            <div class="card-body">
+                <div class="d-flex justify-content-between">
+                    <h5 class="card-title">
+                        {% if doc.category == 'PDF' %}
+                            <i class="bi bi-file-earmark-pdf text-danger file-icon"></i>
+                        {% else %}
+                            <i class="bi bi-file-earmark text-primary file-icon"></i>
+                        {% endif %}
+                        {{ doc.title }}
+                    </h5>
+                    <span class="badge bg-secondary">{{ doc.category }}</span>
+                </div>
+                {% if doc.subject %}<span class="badge badge-subject me-1">{{ doc.subject }}</span>{% endif %}
+                {% if doc.batch %}<span class="badge badge-batch">{{ doc.batch }}</span>{% endif %}
+                <p class="card-text mt-2 small text-muted">{{ (doc.description or '')[:120] }}{% if doc.description and doc.description|length > 120 %}...{% endif %}</p>
+                {% if doc.class_name %}<p class="mb-1 small"><strong>Class:</strong> {{ doc.class_name }}</p>{% endif %}
+                {% if doc.class_date %}<p class="mb-1 small"><strong>Date:</strong> {{ doc.class_date }}</p>{% endif %}
+                {% if doc.tags %}
+                    <div class="mt-2">
+                        {% for tag in doc.tags_list() %}
+                            <span class="badge bg-light text-dark border">{{ tag }}</span>
+                        {% endfor %}
+                    </div>
+                {% endif %}
+            </div>
+            <div class="card-footer bg-white d-flex justify-content-between">
+                <small class="text-muted">{{ doc.uploaded_at.strftime('%Y-%m-%d') }}</small>
+                <div>
+                    <a href="{{ url_for('detail', doc_id=doc.id) }}" class="btn btn-sm btn-outline-primary">View</a>
+                    <a href="{{ url_for('download', doc_id=doc.id) }}" class="btn btn-sm btn-outline-success">Download</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    {% else %}
+    <div class="col-12 text-center py-5">
+        <i class="bi bi-inbox display-1 text-muted"></i>
+        <p class="lead">No documents found. <a href="{{ url_for('upload') }}">Upload the first one!</a></p>
+    </div>
+    {% endfor %}
+</div>
+{% endblock %}

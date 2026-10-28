@@ -1,1 +1,241 @@
-<h1>Testing </h1>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PDF Index</title>
+    <style>
+        body {
+            font-family: system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+            max-width: 900px;
+            margin: 40px auto;
+            padding: 0 20px;
+            background: #f8f9fa;
+            color: #212529;
+        }
+        h1 { margin-bottom: 0.2em; }
+        .count { color: #6c757d; margin-bottom: 1.2em; }
+        #search {
+            width: 100%;
+            padding: 12px 16px;
+            font-size: 16px;
+            border: 1px solid #ced4da;
+            border-radius: 6px;
+            margin-bottom: 20px;
+            box-sizing: border-box;
+        }
+        #search:focus {
+            outline: none;
+            border-color: #0d6efd;
+            box-shadow: 0 0 0 3px rgba(13, 110, 253, 0.15);
+        }
+        ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+        }
+        li {
+            border-bottom: 1px solid #e9ecef;
+        }
+        li:last-child { border-bottom: none; }
+        li a {
+            display: block;
+            padding: 12px 16px;
+            text-decoration: none;
+            color: #0d6efd;
+            word-break: break-all;
+        }
+        li a:hover {
+            background: #f1f3f5;
+        }
+        .hidden { display: none !important; }
+        .no-results {
+            padding: 20px;
+            text-align: center;
+            color: #6c757d;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <h1>PDF Files</h1>
+    <div class="count" id="count"></div>
+    <input type="text" id="search" placeholder="Search PDFs by name or path..." autofocus>
+    <ul id="pdfList">
+        <li><a href="10-icse/competency/ICSE_X_Maths_QA_Slides.pdf" target="_blank">10-icse/competency/ICSE_X_Maths_QA_Slides.pdf</a></li>
+        <li><a href="ICSE_X_Maths_QA_Slides.pdf" target="_blank">ICSE_X_Maths_QA_Slides.pdf</a></li>
+        <li><a href="class-10-ai-robotics/01-11rom_Robots_to_Cobots.pdf" target="_blank">class-10-ai-robotics/01-11rom_Robots_to_Cobots.pdf</a></li>
+        <li><a href="class-10-ai-robotics/11-From_Robots_to_Cobots.pdf" target="_blank">class-10-ai-robotics/11-From_Robots_to_Cobots.pdf</a></li>
+        <li><a href="class-10-ai-robotics/Benefits of Human Interaction.pdf" target="_blank">class-10-ai-robotics/Benefits of Human Interaction.pdf</a></li>
+        <li><a href="class-10-ai-robotics/DOC-20260630-WA0018..pdf" target="_blank">class-10-ai-robotics/DOC-20260630-WA0018..pdf</a></li>
+        <li><a href="class-10-ai-robotics/Importance of Collaborative Robots_annotated_annotated-1.pdf" target="_blank">class-10-ai-robotics/Importance of Collaborative Robots_annotated_annotated-1.pdf</a></li>
+        <li><a href="class-10-ai-robotics/Primer - Robotics and AI (66).pdf" target="_blank">class-10-ai-robotics/Primer - Robotics and AI (66).pdf</a></li>
+        <li><a href="class-10-ai-robotics/Python___dictionary.pdf" target="_blank">class-10-ai-robotics/Python___dictionary.pdf</a></li>
+        <li><a href="class-10-ai-robotics/Robots vs Cobots.pdf" target="_blank">class-10-ai-robotics/Robots vs Cobots.pdf</a></li>
+        <li><a href="class-10-ai-robotics/True or False Quiz.pdf" target="_blank">class-10-ai-robotics/True or False Quiz.pdf</a></li>
+        <li><a href="class-10-ai-robotics/Understanding Machines Robots and Cobots.pdf" target="_blank">class-10-ai-robotics/Understanding Machines Robots and Cobots.pdf</a></li>
+        <li><a href="class-10-ai-robotics/ai (2)/4ws_problem_canvas_pdf/4ws_problem_canvas.pdf" target="_blank">class-10-ai-robotics/ai (2)/4ws_problem_canvas_pdf/4ws_problem_canvas.pdf</a></li>
+        <li><a href="class-10-ai-robotics/ai (2)/ai_project_framework/ai_project_framework.pdf" target="_blank">class-10-ai-robotics/ai (2)/ai_project_framework/ai_project_framework.pdf</a></li>
+        <li><a href="class-10-ai-robotics/ai (2)/ai_project_framework_pdf/ai_project_framework.pdf" target="_blank">class-10-ai-robotics/ai (2)/ai_project_framework_pdf/ai_project_framework.pdf</a></li>
+        <li><a href="class-10-ai-robotics/ai (2)/chapter4_modules_numpy.pdf" target="_blank">class-10-ai-robotics/ai (2)/chapter4_modules_numpy.pdf</a></li>
+        <li><a href="class-10-ai-robotics/ai (2)/components_of_ai_framework_20261027.pdf" target="_blank">class-10-ai-robotics/ai (2)/components_of_ai_framework_20261027.pdf</a></li>
+        <li><a href="class-10-ai-robotics/ai (2)/icse2026_beamer.pdf" target="_blank">class-10-ai-robotics/ai (2)/icse2026_beamer.pdf</a></li>
+        <li><a href="class-10-ai-robotics/ai (2)/modules_20261027.pdf" target="_blank">class-10-ai-robotics/ai (2)/modules_20261027.pdf</a></li>
+        <li><a href="class-10-ai-robotics/ai (2)/numpy_presentation/numpy_presentation.pdf" target="_blank">class-10-ai-robotics/ai (2)/numpy_presentation/numpy_presentation.pdf</a></li>
+        <li><a href="class-10-ai-robotics/ai (2)/types_of_ai_models_pdf/types_of_ai_models.pdf" target="_blank">class-10-ai-robotics/ai (2)/types_of_ai_models_pdf/types_of_ai_models.pdf</a></li>
+        <li><a href="class-10-ai-robotics/ai/cobots_v1 (1).pdf" target="_blank">class-10-ai-robotics/ai/cobots_v1 (1).pdf</a></li>
+        <li><a href="class-10-ai-robotics/ai/cobots_v1.pdf" target="_blank">class-10-ai-robotics/ai/cobots_v1.pdf</a></li>
+        <li><a href="class-10-ai-robotics/ai/hac-school-notes-icse-ai/2. FROM ROBOTS TO COBOTS.pdf" target="_blank">class-10-ai-robotics/ai/hac-school-notes-icse-ai/2. FROM ROBOTS TO COBOTS.pdf</a></li>
+        <li><a href="class-10-ai-robotics/ai/hac-school-notes-icse-ai/AI Chapter1 class 10 copy.pdf" target="_blank">class-10-ai-robotics/ai/hac-school-notes-icse-ai/AI Chapter1 class 10 copy.pdf</a></li>
+        <li><a href="class-10-ai-robotics/ai/hac-school-notes-icse-ai/AI Chapter3 class 10 copy(Projct and AI Framework ).pdf" target="_blank">class-10-ai-robotics/ai/hac-school-notes-icse-ai/AI Chapter3 class 10 copy(Projct and AI Framework ).pdf</a></li>
+        <li><a href="class-10-ai-robotics/ai/hac-school-notes-icse-ai/AI Projct and AI Framework.pdf" target="_blank">class-10-ai-robotics/ai/hac-school-notes-icse-ai/AI Projct and AI Framework.pdf</a></li>
+        <li><a href="class-10-ai-robotics/ai/hac-school-notes-icse-ai/AI chapter2 class10 copy.pdf" target="_blank">class-10-ai-robotics/ai/hac-school-notes-icse-ai/AI chapter2 class10 copy.pdf</a></li>
+        <li><a href="class-10-ai-robotics/ai/hac-school-notes-icse-ai/Robotics3.pdf" target="_blank">class-10-ai-robotics/ai/hac-school-notes-icse-ai/Robotics3.pdf</a></li>
+        <li><a href="class-10-ai-robotics/ch-4-class-ppt/0_1.pdf" target="_blank">class-10-ai-robotics/ch-4-class-ppt/0_1.pdf</a></li>
+        <li><a href="class-10-ai-robotics/ch-4-class-ppt/0`.pdf" target="_blank">class-10-ai-robotics/ch-4-class-ppt/0`.pdf</a></li>
+        <li><a href="class-10-ai-robotics/ch-4-class-ppt/1.pdf" target="_blank">class-10-ai-robotics/ch-4-class-ppt/1.pdf</a></li>
+        <li><a href="class-10-ai-robotics/ch-4-class-ppt/2_Importance of Collaborative Robots.pdf" target="_blank">class-10-ai-robotics/ch-4-class-ppt/2_Importance of Collaborative Robots.pdf</a></li>
+        <li><a href="class-10-ai-robotics/ch-4-class-ppt/3_Robots vs Cobots.pdf" target="_blank">class-10-ai-robotics/ch-4-class-ppt/3_Robots vs Cobots.pdf</a></li>
+        <li><a href="class-10-ai-robotics/ch-4-class-ppt/True or False Quiz.pdf" target="_blank">class-10-ai-robotics/ch-4-class-ppt/True or False Quiz.pdf</a></li>
+        <li><a href="class-10-ai-robotics/ch-4-class-ppt/Understanding Machines Robots and Cobots.pdf" target="_blank">class-10-ai-robotics/ch-4-class-ppt/Understanding Machines Robots and Cobots.pdf</a></li>
+        <li><a href="class-10-ai-robotics/ch-4-class-ppt/q_1robot_quiz.pdf" target="_blank">class-10-ai-robotics/ch-4-class-ppt/q_1robot_quiz.pdf</a></li>
+        <li><a href="class-10-ai-robotics/ch-4-class-ppt/q_2qandansRobotics and Systems (Copy).pdf" target="_blank">class-10-ai-robotics/ch-4-class-ppt/q_2qandansRobotics and Systems (Copy).pdf</a></li>
+        <li><a href="class-10-ai-robotics/ch-4-class-ppt/qandansRobotics and Systems.pdf" target="_blank">class-10-ai-robotics/ch-4-class-ppt/qandansRobotics and Systems.pdf</a></li>
+        <li><a href="class-10-ai-robotics/chapter9_dictionaries_beamer.pdf" target="_blank">class-10-ai-robotics/chapter9_dictionaries_beamer.pdf</a></li>
+        <li><a href="class-10-ai-robotics/chp-4-components-of-robots-slides-20260630T103250Z-3-001/chp-4-components-of-robots-slides/1-to-be-presented-Characteristics of Gears in Robotics.pdf" target="_blank">class-10-ai-robotics/chp-4-components-of-robots-slides-20260630T103250Z-3-001/chp-4-components-of-robots-slides/1-to-be-presented-Characteristics of Gears in Robotics.pdf</a></li>
+        <li><a href="class-10-ai-robotics/chp-4-components-of-robots-slides-20260630T103250Z-3-001/chp-4-components-of-robots-slides/1-to-be-presented-Characteristics of Gears in Robotics_annotated.pdf" target="_blank">class-10-ai-robotics/chp-4-components-of-robots-slides-20260630T103250Z-3-001/chp-4-components-of-robots-slides/1-to-be-presented-Characteristics of Gears in Robotics_annotated.pdf</a></li>
+        <li><a href="class-10-ai-robotics/chp-4-components-of-robots-slides-20260630T103250Z-3-001/chp-4-components-of-robots-slides/2-Characteristics of Gears in Robotics.pdf" target="_blank">class-10-ai-robotics/chp-4-components-of-robots-slides-20260630T103250Z-3-001/chp-4-components-of-robots-slides/2-Characteristics of Gears in Robotics.pdf</a></li>
+        <li><a href="class-10-ai-robotics/chp-4-components-of-robots-slides-20260630T103250Z-3-001/chp-4-components-of-robots-slides/3-Sensors and Actuators in Robotics.pdf" target="_blank">class-10-ai-robotics/chp-4-components-of-robots-slides-20260630T103250Z-3-001/chp-4-components-of-robots-slides/3-Sensors and Actuators in Robotics.pdf</a></li>
+        <li><a href="class-10-ai-robotics/chp-4-components-of-robots-slides-20260630T103250Z-3-001/chp-4-components-of-robots-slides/3-Sensors and Actuators in Robotics_annotated.pdf" target="_blank">class-10-ai-robotics/chp-4-components-of-robots-slides-20260630T103250Z-3-001/chp-4-components-of-robots-slides/3-Sensors and Actuators in Robotics_annotated.pdf</a></li>
+        <li><a href="class-10-ai-robotics/chp-4-components-of-robots-slides-20260630T103250Z-3-001/chp-4-components-of-robots-slides/3-types-of-sensors.pdf" target="_blank">class-10-ai-robotics/chp-4-components-of-robots-slides-20260630T103250Z-3-001/chp-4-components-of-robots-slides/3-types-of-sensors.pdf</a></li>
+        <li><a href="class-10-ai-robotics/chp-4-components-of-robots-slides-20260630T103250Z-3-001/chp-4-components-of-robots-slides/4-Classification of Sensors in Robotics.pdf" target="_blank">class-10-ai-robotics/chp-4-components-of-robots-slides-20260630T103250Z-3-001/chp-4-components-of-robots-slides/4-Classification of Sensors in Robotics.pdf</a></li>
+        <li><a href="class-10-ai-robotics/chp-4-components-of-robots-slides-20260630T103250Z-3-001/chp-4-components-of-robots-slides/5-Functions of Sensors.pdf" target="_blank">class-10-ai-robotics/chp-4-components-of-robots-slides-20260630T103250Z-3-001/chp-4-components-of-robots-slides/5-Functions of Sensors.pdf</a></li>
+        <li><a href="class-10-ai-robotics/chp-4-components-of-robots-slides-20260630T103250Z-3-001/chp-4-components-of-robots-slides/detRobotics_Components_Sensors_Actuators_Gears_Presentation.pdf" target="_blank">class-10-ai-robotics/chp-4-components-of-robots-slides-20260630T103250Z-3-001/chp-4-components-of-robots-slides/detRobotics_Components_Sensors_Actuators_Gears_Presentation.pdf</a></li>
+        <li><a href="class-10-ai-robotics/chp-4-components-of-robots-slides-20260630T103250Z-3-001/chp-4-components-of-robots-slides/types-of-gears.pdf" target="_blank">class-10-ai-robotics/chp-4-components-of-robots-slides-20260630T103250Z-3-001/chp-4-components-of-robots-slides/types-of-gears.pdf</a></li>
+        <li><a href="class-10-ai-robotics/dictionary_qa_separated (1).pdf" target="_blank">class-10-ai-robotics/dictionary_qa_separated (1).pdf</a></li>
+        <li><a href="class-10-ai-robotics/dictionary_qa_separated.pdf" target="_blank">class-10-ai-robotics/dictionary_qa_separated.pdf</a></li>
+        <li><a href="class-10-ai-robotics/dictionary_solutions_beamer.pdf" target="_blank">class-10-ai-robotics/dictionary_solutions_beamer.pdf</a></li>
+        <li><a href="class-10-ai-robotics/ishaan/robotics-ppt.pdf" target="_blank">class-10-ai-robotics/ishaan/robotics-ppt.pdf</a></li>
+        <li><a href="class-10-ai-robotics/list-and-tuples/Touch_Pad_tuples_note.pdf" target="_blank">class-10-ai-robotics/list-and-tuples/Touch_Pad_tuples_note.pdf</a></li>
+        <li><a href="class-10-ai-robotics/list-and-tuples/class-11-tuple-ppt.pdf" target="_blank">class-10-ai-robotics/list-and-tuples/class-11-tuple-ppt.pdf</a></li>
+        <li><a href="class-10-ai-robotics/list-and-tuples/gemini-code-1785358701126.pdf" target="_blank">class-10-ai-robotics/list-and-tuples/gemini-code-1785358701126.pdf</a></li>
+        <li><a href="class-10-ai-robotics/list-and-tuples/list-tuple.pdf" target="_blank">class-10-ai-robotics/list-and-tuples/list-tuple.pdf</a></li>
+        <li><a href="class-10-ai-robotics/list-and-tuples/list_tuple_power_point_slide.pdf" target="_blank">class-10-ai-robotics/list-and-tuples/list_tuple_power_point_slide.pdf</a></li>
+        <li><a href="class-10-ai-robotics/list-and-tuples/python-for-cs-ip-tuple.pdf" target="_blank">class-10-ai-robotics/list-and-tuples/python-for-cs-ip-tuple.pdf</a></li>
+        <li><a href="class-10-ai-robotics/list-and-tuples/python_list_20260730.pdf" target="_blank">class-10-ai-robotics/list-and-tuples/python_list_20260730.pdf</a></li>
+        <li><a href="class-10-ai-robotics/list-and-tuples/python_tuple_worksheet_1.pdf" target="_blank">class-10-ai-robotics/list-and-tuples/python_tuple_worksheet_1.pdf</a></li>
+        <li><a href="class-10-ai-robotics/list-and-tuples/tuple_esay_exam_notes.pdf" target="_blank">class-10-ai-robotics/list-and-tuples/tuple_esay_exam_notes.pdf</a></li>
+        <li><a href="class-10-ai-robotics/list-and-tuples/tuple_worksheet_fitjee.pdf" target="_blank">class-10-ai-robotics/list-and-tuples/tuple_worksheet_fitjee.pdf</a></li>
+        <li><a href="class-10-ai-robotics/list-and-tuples/tuple_worksheet_fitjee_1..pdf" target="_blank">class-10-ai-robotics/list-and-tuples/tuple_worksheet_fitjee_1..pdf</a></li>
+        <li><a href="class-10-ai-robotics/list-and-tuples/tuple_worksheet_questions.pdf" target="_blank">class-10-ai-robotics/list-and-tuples/tuple_worksheet_questions.pdf</a></li>
+        <li><a href="class-10-ai-robotics/list_tuple_notes.pdf" target="_blank">class-10-ai-robotics/list_tuple_notes.pdf</a></li>
+        <li><a href="class-10-ai-robotics/numpy-ai-robotics-class-10-icse.pdf" target="_blank">class-10-ai-robotics/numpy-ai-robotics-class-10-icse.pdf</a></li>
+        <li><a href="class-10-ai-robotics/oct-27/012. PYTHON - string.pdf" target="_blank">class-10-ai-robotics/oct-27/012. PYTHON - string.pdf</a></li>
+        <li><a href="class-10-ai-robotics/oct-27/Python___dictionary.pdf" target="_blank">class-10-ai-robotics/oct-27/Python___dictionary.pdf</a></li>
+        <li><a href="class-10-ai-robotics/oct-27/ai_project_framework.pdf" target="_blank">class-10-ai-robotics/oct-27/ai_project_framework.pdf</a></li>
+        <li><a href="class-10-ai-robotics/oct-27/icse2026_beamer.pdf" target="_blank">class-10-ai-robotics/oct-27/icse2026_beamer.pdf</a></li>
+        <li><a href="class-10-ai-robotics/oct-27/numpy-ai-robotics-class-10-icse.pdf" target="_blank">class-10-ai-robotics/oct-27/numpy-ai-robotics-class-10-icse.pdf</a></li>
+        <li><a href="class-10-ai-robotics/oct-27/numpy_presentation.pdf" target="_blank">class-10-ai-robotics/oct-27/numpy_presentation.pdf</a></li>
+        <li><a href="class-10-ai-robotics/oct-27/python-string-class-ppt.pdf" target="_blank">class-10-ai-robotics/oct-27/python-string-class-ppt.pdf</a></li>
+        <li><a href="class-10-ai-robotics/qandansRobotics and Systems.pdf" target="_blank">class-10-ai-robotics/qandansRobotics and Systems.pdf</a></li>
+        <li><a href="class-10-ai-robotics/revision/daksh/revision-july-2026-cns.pdf" target="_blank">class-10-ai-robotics/revision/daksh/revision-july-2026-cns.pdf</a></li>
+        <li><a href="class-10-ai-robotics/revision/daksh/revisoin-july-2026-exa.pdf" target="_blank">class-10-ai-robotics/revision/daksh/revisoin-july-2026-exa.pdf</a></li>
+        <li><a href="class-10-ai-robotics/revision/revision-july-2026-cns.pdf" target="_blank">class-10-ai-robotics/revision/revision-july-2026-cns.pdf</a></li>
+        <li><a href="class-10-ai-robotics/robot_quiz.pdf" target="_blank">class-10-ai-robotics/robot_quiz.pdf</a></li>
+        <li><a href="class-10-ai-robotics/robotics-ppt.pdf" target="_blank">class-10-ai-robotics/robotics-ppt.pdf</a></li>
+        <li><a href="class-10-ai-robotics/set-python.pdf" target="_blank">class-10-ai-robotics/set-python.pdf</a></li>
+        <li><a href="class-10-ai-robotics/sets_1.pdf" target="_blank">class-10-ai-robotics/sets_1.pdf</a></li>
+        <li><a href="class-10-ai-robotics/string-1-ai.pdf" target="_blank">class-10-ai-robotics/string-1-ai.pdf</a></li>
+        <li><a href="class-10-ai-robotics/string/012. PYTHON - string.pdf" target="_blank">class-10-ai-robotics/string/012. PYTHON - string.pdf</a></li>
+        <li><a href="class-10-ai-robotics/string/013 LISTS.pdf" target="_blank">class-10-ai-robotics/string/013 LISTS.pdf</a></li>
+        <li><a href="class-10-ai-robotics/string/7352163-Class 11_CS_WS_7.pdf" target="_blank">class-10-ai-robotics/string/7352163-Class 11_CS_WS_7.pdf</a></li>
+        <li><a href="class-10-ai-robotics/string/CompSc-Grade-11-Worksheets-main/1_Computer-Science-Python-Book-Class-XI.pdf" target="_blank">class-10-ai-robotics/string/CompSc-Grade-11-Worksheets-main/1_Computer-Science-Python-Book-Class-XI.pdf</a></li>
+        <li><a href="class-10-ai-robotics/string/CompSc-Grade-11-Worksheets-main/Chapter-I Python fundamentals.pdf" target="_blank">class-10-ai-robotics/string/CompSc-Grade-11-Worksheets-main/Chapter-I Python fundamentals.pdf</a></li>
+        <li><a href="class-10-ai-robotics/string/CompSc-Grade-11-Worksheets-main/Cloud Computing.pdf" target="_blank">class-10-ai-robotics/string/CompSc-Grade-11-Worksheets-main/Cloud Computing.pdf</a></li>
+        <li><a href="class-10-ai-robotics/string/CompSc-Grade-11-Worksheets-main/Computer System &amp; Organization.pdf" target="_blank">class-10-ai-robotics/string/CompSc-Grade-11-Worksheets-main/Computer System &amp; Organization.pdf</a></li>
+        <li><a href="class-10-ai-robotics/string/CompSc-Grade-11-Worksheets-main/Conditional and Looping Constructs a.pdf" target="_blank">class-10-ai-robotics/string/CompSc-Grade-11-Worksheets-main/Conditional and Looping Constructs a.pdf</a></li>
+        <li><a href="class-10-ai-robotics/string/CompSc-Grade-11-Worksheets-main/Conditional and Looping Constructs p.pdf" target="_blank">class-10-ai-robotics/string/CompSc-Grade-11-Worksheets-main/Conditional and Looping Constructs p.pdf</a></li>
+        <li><a href="class-10-ai-robotics/string/CompSc-Grade-11-Worksheets-main/Data Handling ch3.pdf" target="_blank">class-10-ai-robotics/string/CompSc-Grade-11-Worksheets-main/Data Handling ch3.pdf</a></li>
+        <li><a href="class-10-ai-robotics/string/CompSc-Grade-11-Worksheets-main/Debugging.pdf" target="_blank">class-10-ai-robotics/string/CompSc-Grade-11-Worksheets-main/Debugging.pdf</a></li>
+        <li><a href="class-10-ai-robotics/string/CompSc-Grade-11-Worksheets-main/Dictionaries.pdf" target="_blank">class-10-ai-robotics/string/CompSc-Grade-11-Worksheets-main/Dictionaries.pdf</a></li>
+        <li><a href="class-10-ai-robotics/string/CompSc-Grade-11-Worksheets-main/FAQ-11CS.pdf" target="_blank">class-10-ai-robotics/string/CompSc-Grade-11-Worksheets-main/FAQ-11CS.pdf</a></li>
+        <li><a href="class-10-ai-robotics/string/CompSc-Grade-11-Worksheets-main/Flowchart and concept of running a program.pdf" target="_blank">class-10-ai-robotics/string/CompSc-Grade-11-Worksheets-main/Flowchart and concept of running a program.pdf</a></li>
+        <li><a href="class-10-ai-robotics/string/CompSc-Grade-11-Worksheets-main/Getting started with python (1).pdf" target="_blank">class-10-ai-robotics/string/CompSc-Grade-11-Worksheets-main/Getting started with python (1).pdf</a></li>
+        <li><a href="class-10-ai-robotics/string/CompSc-Grade-11-Worksheets-main/Getting started with python.pdf" target="_blank">class-10-ai-robotics/string/CompSc-Grade-11-Worksheets-main/Getting started with python.pdf</a></li>
+        <li><a href="class-10-ai-robotics/string/CompSc-Grade-11-Worksheets-main/Information Representation.pdf" target="_blank">class-10-ai-robotics/string/CompSc-Grade-11-Worksheets-main/Information Representation.pdf</a></li>
+        <li><a href="class-10-ai-robotics/string/CompSc-Grade-11-Worksheets-main/List Manipulation.pdf" target="_blank">class-10-ai-robotics/string/CompSc-Grade-11-Worksheets-main/List Manipulation.pdf</a></li>
+        <li><a href="class-10-ai-robotics/string/CompSc-Grade-11-Worksheets-main/Python Modules.pdf" target="_blank">class-10-ai-robotics/string/CompSc-Grade-11-Worksheets-main/Python Modules.pdf</a></li>
+        <li><a href="class-10-ai-robotics/string/CompSc-Grade-11-Worksheets-main/Python fundamentals.pdf" target="_blank">class-10-ai-robotics/string/CompSc-Grade-11-Worksheets-main/Python fundamentals.pdf</a></li>
+        <li><a href="class-10-ai-robotics/string/CompSc-Grade-11-Worksheets-main/String Manipulation.pdf" target="_blank">class-10-ai-robotics/string/CompSc-Grade-11-Worksheets-main/String Manipulation.pdf</a></li>
+        <li><a href="class-10-ai-robotics/string/CompSc-Grade-11-Worksheets-main/Tuples.pdf" target="_blank">class-10-ai-robotics/string/CompSc-Grade-11-Worksheets-main/Tuples.pdf</a></li>
+        <li><a href="class-10-ai-robotics/string/CompSc-Grade-11-Worksheets-main/conditional and looping constructs.pdf" target="_blank">class-10-ai-robotics/string/CompSc-Grade-11-Worksheets-main/conditional and looping constructs.pdf</a></li>
+        <li><a href="class-10-ai-robotics/string/CompSc-Grade-11-Worksheets-main/cs-chp-1.pdf" target="_blank">class-10-ai-robotics/string/CompSc-Grade-11-Worksheets-main/cs-chp-1.pdf</a></li>
+        <li><a href="class-10-ai-robotics/string/CompSc-Grade-11-Worksheets-main/cs-chp-16.pdf" target="_blank">class-10-ai-robotics/string/CompSc-Grade-11-Worksheets-main/cs-chp-16.pdf</a></li>
+        <li><a href="class-10-ai-robotics/string/CompSc-Grade-11-Worksheets-main/cs-chp-17.pdf" target="_blank">class-10-ai-robotics/string/CompSc-Grade-11-Worksheets-main/cs-chp-17.pdf</a></li>
+        <li><a href="class-10-ai-robotics/string/CompSc-Grade-11-Worksheets-main/cs-chp-18.pdf" target="_blank">class-10-ai-robotics/string/CompSc-Grade-11-Worksheets-main/cs-chp-18.pdf</a></li>
+        <li><a href="class-10-ai-robotics/string/CompSc-Grade-11-Worksheets-main/cs-chp-19 cbsepythonedu.com.pdf" target="_blank">class-10-ai-robotics/string/CompSc-Grade-11-Worksheets-main/cs-chp-19 cbsepythonedu.com.pdf</a></li>
+        <li><a href="class-10-ai-robotics/string/CompSc-Grade-11-Worksheets-main/cs-chp-3.pdf" target="_blank">class-10-ai-robotics/string/CompSc-Grade-11-Worksheets-main/cs-chp-3.pdf</a></li>
+        <li><a href="class-10-ai-robotics/string/CompSc-Grade-11-Worksheets-main/cs.-chp-2.pdf" target="_blank">class-10-ai-robotics/string/CompSc-Grade-11-Worksheets-main/cs.-chp-2.pdf</a></li>
+        <li><a href="class-10-ai-robotics/string/CompSc-Grade-11-Worksheets-main/cyber safety.pdf" target="_blank">class-10-ai-robotics/string/CompSc-Grade-11-Worksheets-main/cyber safety.pdf</a></li>
+        <li><a href="class-10-ai-robotics/string/CompSc-Grade-11-Worksheets-main/data handling a.pdf" target="_blank">class-10-ai-robotics/string/CompSc-Grade-11-Worksheets-main/data handling a.pdf</a></li>
+        <li><a href="class-10-ai-robotics/string/CompSc-Grade-11-Worksheets-main/data handling p.pdf" target="_blank">class-10-ai-robotics/string/CompSc-Grade-11-Worksheets-main/data handling p.pdf</a></li>
+        <li><a href="class-10-ai-robotics/string/CompSc-Grade-11-Worksheets-main/python fundamental a.pdf" target="_blank">class-10-ai-robotics/string/CompSc-Grade-11-Worksheets-main/python fundamental a.pdf</a></li>
+        <li><a href="class-10-ai-robotics/string/CompSc-Grade-11-Worksheets-main/rdbms a.pdf" target="_blank">class-10-ai-robotics/string/CompSc-Grade-11-Worksheets-main/rdbms a.pdf</a></li>
+        <li><a href="class-10-ai-robotics/string/CompSc-Grade-11-Worksheets-main/rdbms.pdf" target="_blank">class-10-ai-robotics/string/CompSc-Grade-11-Worksheets-main/rdbms.pdf</a></li>
+        <li><a href="class-10-ai-robotics/string/CompSc-Grade-11-Worksheets-main/sql a.pdf" target="_blank">class-10-ai-robotics/string/CompSc-Grade-11-Worksheets-main/sql a.pdf</a></li>
+        <li><a href="class-10-ai-robotics/string/CompSc-Grade-11-Worksheets-main/sql.pdf" target="_blank">class-10-ai-robotics/string/CompSc-Grade-11-Worksheets-main/sql.pdf</a></li>
+        <li><a href="class-10-ai-robotics/string/String_Handling_Worksheet.pdf" target="_blank">class-10-ai-robotics/string/String_Handling_Worksheet.pdf</a></li>
+        <li><a href="class-10-ai-robotics/string/Worksheet - String.pdf" target="_blank">class-10-ai-robotics/string/Worksheet - String.pdf</a></li>
+        <li><a href="class-10-ai-robotics/string/class11-python-strings-lists-questionbank_compress.pdf" target="_blank">class-10-ai-robotics/string/class11-python-strings-lists-questionbank_compress.pdf</a></li>
+        <li><a href="class-10-ai-robotics/string/document_compress.pdf" target="_blank">class-10-ai-robotics/string/document_compress.pdf</a></li>
+        <li><a href="class-10-ai-robotics/string/ilide.info-worksheet-class-11-string-pr_33a5e26a937145e4738e0acc018709a0.pdf" target="_blank">class-10-ai-robotics/string/ilide.info-worksheet-class-11-string-pr_33a5e26a937145e4738e0acc018709a0.pdf</a></li>
+        <li><a href="class-10-ai-robotics/string/ilide.info-worksheet-strings-in-python-pr_84ba08808727ae92f0bfb80f916df224.pdf" target="_blank">class-10-ai-robotics/string/ilide.info-worksheet-strings-in-python-pr_84ba08808727ae92f0bfb80f916df224.pdf</a></li>
+        <li><a href="class-10-ai-robotics/string/output-questions-class-11-string_compress.pdf" target="_blank">class-10-ai-robotics/string/output-questions-class-11-string_compress.pdf</a></li>
+        <li><a href="class-10-ai-robotics/string/python-string-class-ppt.pdf" target="_blank">class-10-ai-robotics/string/python-string-class-ppt.pdf</a></li>
+        <li><a href="class-10-ai-robotics/string/string.pdf" target="_blank">class-10-ai-robotics/string/string.pdf</a></li>
+        <li><a href="class-10-ai-robotics/string/string_practice_questions_python.pdf" target="_blank">class-10-ai-robotics/string/string_practice_questions_python.pdf</a></li>
+        <li><a href="class-10-ai-robotics/tinkercad/1_Applications of Mechanical Block in Robots-2.pdf" target="_blank">class-10-ai-robotics/tinkercad/1_Applications of Mechanical Block in Robots-2.pdf</a></li>
+        <li><a href="class-10-ai-robotics/tinkercad/Components of the Mechanical Block of a Robot.pdf" target="_blank">class-10-ai-robotics/tinkercad/Components of the Mechanical Block of a Robot.pdf</a></li>
+        <li><a href="class-10-ai-robotics/tinkercad/Types of Robotic Joints.pdf" target="_blank">class-10-ai-robotics/tinkercad/Types of Robotic Joints.pdf</a></li>
+        <li><a href="class-10-ai-robotics/tinkercad_20260915.pdf" target="_blank">class-10-ai-robotics/tinkercad_20260915.pdf</a></li>
+        <li><a href="materials/10-icse/competency/ICSE_X_Maths_QA_Slides.pdf" target="_blank">materials/10-icse/competency/ICSE_X_Maths_QA_Slides.pdf</a></li>
+        <li><a href="pdf_organizer/uploads/20261028_102023_ICSE-Mathematics-X.pdf" target="_blank">pdf_organizer/uploads/20261028_102023_ICSE-Mathematics-X.pdf</a></li>
+        <li><a href="pdf_organizer/uploads/20261028_102359_ICSE_X_Maths_QA_Slides.pdf" target="_blank">pdf_organizer/uploads/20261028_102359_ICSE_X_Maths_QA_Slides.pdf</a></li>
+    </ul>
+    <div class="no-results" id="noResults">No matching PDFs found.</div>
+
+    <script>
+        const search = document.getElementById('search');
+        const list = document.getElementById('pdfList');
+        const items = list.querySelectorAll('li');
+        const countEl = document.getElementById('count');
+        const noResults = document.getElementById('noResults');
+        const total = items.length;
+
+        function updateCount(visible) {
+            countEl.textContent = visible === total
+                ? total + ' PDF' + (total !== 1 ? 's' : '')
+                : visible + ' of ' + total + ' PDFs';
+            noResults.style.display = visible === 0 ? 'block' : 'none';
+        }
+
+        function filter() {
+            const q = search.value.trim().toLowerCase();
+            let visible = 0;
+            items.forEach(item => {
+                const text = item.textContent.toLowerCase();
+                const match = !q || text.includes(q);
+                item.classList.toggle('hidden', !match);
+                if (match) visible++;
+            });
+            updateCount(visible);
+        }
+
+        search.addEventListener('input', filter);
+        updateCount(total);
+    </script>
+</body>
+</html>

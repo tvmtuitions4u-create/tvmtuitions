@@ -1,0 +1,656 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[margin=0.8in]{geometry}
+\usepackage{enumitem}
+\usepackage{listings}
+\usepackage{xcolor}
+\usepackage{booktabs}
+\usepackage{longtable}
+\usepackage{array}
+\usepackage{fancyhdr}
+\usepackage{titlesec}
+
+\setlength{\headheight}{14pt}
+\addtolength{\topmargin}{-2pt}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{Class XI - Computer Science (083)}
+\fancyhead[R]{Topic: Tuple in Python}
+\fancyfoot[C]{\thepage}
+\renewcommand{\headrulewidth}{0.4pt}
+
+\titleformat{\section}{\large\bfseries}{Q\thesection.}{0.5em}{}
+
+\lstset{
+    language=Python,
+    basicstyle=\ttfamily\footnotesize,
+    breaklines=true,
+    frame=single,
+    backgroundcolor=\color{gray!5},
+    keywordstyle=\color{blue}\bfseries,
+    stringstyle=\color{red},
+    commentstyle=\color{green!60!black},
+    showstringspaces=false,
+    tabsize=4,
+    numbers=left,
+    numberstyle=\tiny\color{gray},
+    numbersep=3pt,
+    framexleftmargin=1.5em
+}
+
+\setlist[enumerate]{leftmargin=*,itemsep=0.3em,topsep=0.2em}
+\setlist[enumerate,2]{label=\alph*.,leftmargin=1.5em}
+
+\title{\textbf{Tuple Worksheet Questions}\\[0.3em]
+\large Class XI Computer Science (083) | Topic: Tuples in Python}
+\author{}
+\date{}
+
+\begin{document}
+\maketitle
+\thispagestyle{fancy}
+
+\begin{center}
+\textbf{Instructions:} Write the answers in the space provided or on a separate sheet as directed by your teacher.
+\end{center}
+
+\vspace{0.5em}
+
+\begin{enumerate}[label=\textbf{Q\arabic*.}]
+
+% Q1
+\item What do you mean by Tuple in Python?
+
+% Q2
+\item Write a statement to create an empty tuple named \texttt{T1}.
+
+% Q3
+\item Write a statement to create a tuple \texttt{T1} containing first five even numbers.
+
+% Q4
+\item Write the code to convert the given list \texttt{L1} to tuple.\\
+\texttt{L1 = [1, 2, 3, 4, 5]}
+
+% Q5
+\item Write a statement to create tuple \texttt{T1} with single element.
+
+% Q6
+\item Write the output of the following code:
+\begin{lstlisting}
+T1 = (4)
+print(type(T1))
+\end{lstlisting}
+
+% Q7
+\item Write the output of the following code:
+\begin{lstlisting}
+T1 = 4, 5, 6
+print(type(T1))
+\end{lstlisting}
+
+% Q8
+\item Write the output of the following code:
+\begin{lstlisting}
+T1 = (1, 2, 3, 4, 5, 6, 7, 8)
+print(T1)
+print(T1 * 2)
+print(T1 + T1)
+print(len(T1) * 2)
+\end{lstlisting}
+
+% Q9
+\item Write a statement to create tuple \texttt{T1} with the following data:\\
+\texttt{1, 4, 'CS', 'IP', 5}
+
+% Q10
+\item Write the output of the following code:
+\begin{lstlisting}
+T1 = (1, 2, 3, 4, 5, 6, 7, 8)
+print(T1[0])
+print(T1[-1])
+print(T1[2 + 3])
+print(T1[4 - 1])
+print(T1[7 % 2])
+\end{lstlisting}
+
+% Q11
+\item Write the output of the following:
+\begin{lstlisting}
+T1 = (1, 2, 3, 4, 5, 6, 7, 8)
+print(T1[:])
+print(T1[3:])
+print(T1[:4])
+print(T1[-2:-5])
+\end{lstlisting}
+
+% Q12
+\item Write the output of the following:
+\begin{lstlisting}
+T1 = (1, 2, 3, 4, 5, 6, 7, 8)
+print(T1[1::2])
+print(T1[-1:-5:-2])
+print(T1[::-1])
+print(T1[:7:2])
+\end{lstlisting}
+
+% Q13
+\item Which error is returned by the following code:
+\begin{lstlisting}
+T1 = (1, 2, 3, 4, 5, 6, 7, 8)
+print(T1[15])
+\end{lstlisting}
+
+% Q14
+\item Write two differences between Tuple and List.
+
+% Q15
+\item Write a statement in Python to concatenate the given tuples.\\
+\texttt{T1 = (1, 2, 3)}\\
+\texttt{T2 = (5, 6, 7)}
+
+% Q16
+\item Write the output of the following code:
+\begin{lstlisting}
+T1 = (45, 67, 98)
+T1 = T1 + (1, 2, 3)
+print(T1)
+\end{lstlisting}
+
+% Q17
+\item Write the output of the following code:
+\begin{lstlisting}
+T1 = (45, 67, 98)
+T1 = T1 * 3
+print(T1)
+\end{lstlisting}
+
+% Q18
+\item Write the output of the following code:
+\begin{lstlisting}
+T1 = (45, 67, 98)
+T2 = (45, 67, 98)
+print(T1 in T2)
+print(45 in T2)
+print(45 in T1)
+print(T1 + T2)
+\end{lstlisting}
+
+% Q19
+\item Explain the following functions in reference to Tuple in Python:
+\begin{enumerate}
+    \item \texttt{len()}
+    \item \texttt{count()}
+\end{enumerate}
+
+% Q20
+\item Write a program to accept five numbers from the user and store it in a tuple \texttt{'T1'}.
+
+% Q21
+\item Write a program to accept five fruit names from the user and store it in a tuple \texttt{'F1'}.
+
+% Q22
+\item Write a program to store \texttt{'n'} number of sports in a tuple \texttt{'S1'}. (Accept \texttt{'n'} from the user)
+
+% Q23
+\item Consider the following tuple and write the code for the following statements:\\
+\texttt{T1 = (12, 3, 45, 'Hockey', 'Anil', ('a', 'b'))}
+\begin{enumerate}
+    \item Display the first element of \texttt{'T1'}
+    \item Display the last element of \texttt{'T1'}
+    \item Display \texttt{'T1'} in reverse order.
+    \item Display \texttt{'Anil'} from tuple \texttt{'T1'}
+    \item Display \texttt{'b'} from tuple \texttt{'T1'}
+\end{enumerate}
+
+% Q24
+\item Write the output of the following:
+\begin{lstlisting}
+for i in tuple("SHIMLA"):
+    print(i + i)
+\end{lstlisting}
+
+% Q25
+\item Write the output of the following:
+\begin{lstlisting}
+>>> 7 in tuple('123456789')
+\end{lstlisting}
+
+% Q26
+\item Write the output of the following:
+\begin{lstlisting}
+T1 = (23, 32, 4, 5, 2, 12, 23, 7, 9, 10, 23)
+print(len(T1), *T1[-1])
+print(T1[T1.count(23) + len(T1) - 5])
+print(T1.count(T1[6]))
+print(T1.count(T1[-1]))
+\end{lstlisting}
+
+% Q27
+\item Write the output of the following:
+\begin{lstlisting}
+T1 = (23, 32, 4, 5, 2, 12, 23, 7, 9, 10, 23)
+print(max(T1))
+print(min(T1))
+\end{lstlisting}
+
+% Q28
+\item Write the output of the following:
+\begin{lstlisting}
+T1 = ('Hockey', 'Cricket', 'Football')
+print(max(T1))
+print(min(T1))
+\end{lstlisting}
+
+% Q29
+\item Write the output of the following:
+\begin{lstlisting}
+t1 = ('Raman', 'Ram', 'Ramaiya')
+print(max(t1))
+print(min(t1))
+\end{lstlisting}
+
+% Q30
+\item Write the output of the following:
+\begin{lstlisting}
+T1 = (23, 32, 4, 5, 2, 12, 23, 7, 9, 10, 23)
+print(sorted(T1))
+print(sorted(T1[2:7]))
+print(T1.index(23))
+print(T1.index(23, 3, 9))
+\end{lstlisting}
+
+% Q31
+\item Write the output of the following:
+\begin{lstlisting}
+T1 = (23, 32, 4, 5, 2, 12, 23, 7, 9, 10, 23)
+print(sum(T1) + min(T1))
+\end{lstlisting}
+\textit{(Note: Original may have had a typo in map(); corrected for sense)}
+
+% Q32
+\item Write a program to accept three numbers from the user and insert it at the end of given Tuple \texttt{T1}.\\
+\texttt{T1 = (23, 32, 4, 5, 2, 12, 23, 7, 9, 10, 23)}
+
+% Q33
+\item What type of error is returned by following statement:
+\begin{lstlisting}
+>>> (a, b, c, d) = (5, 6, 8)
+\end{lstlisting}
+
+% Q34
+\item Write the output of the following code:
+\begin{lstlisting}
+>>> (name, rollNo, subject) = ('Anil', 9, 'CS')
+>>> name
+\end{lstlisting}
+
+% Q35
+\item Predict the output:
+\begin{lstlisting}
+T = (1, 2, 3)
+del T
+print(T)
+\end{lstlisting}
+
+% Q36
+\item What do you mean by Nested Tuple? Give one example.
+
+% Q37
+\item Write a statement to print 30 from the given tuple.\\
+\texttt{a = ("Seventy", [1, 2, 3], (20, 30, 40), "Eighty")}
+
+% Q38
+\item Write a statement to unpack the following tuple into 3 variables.\\
+\texttt{(60, 70, 80)}
+
+% Q39
+\item Write a program to swap the values of given tuples.\\
+\texttt{T1 = ('A', 'B')}\\
+\texttt{T2 = (34, 65)}
+
+% Q40
+\item Write the output of the following code:
+\begin{lstlisting}
+T1 = ('A', ['B', 'D'], 'C')
+T1[1][1] = 'C'
+print(T1)
+\end{lstlisting}
+
+% Q41
+\item Write a program to print the frequency of a number accepted from the user in given tuple:\\
+\texttt{T1 = (12, 17, 18, 25, 19, 12, 18, 5)}
+
+% Q42
+\item Write a program in Python to concatenate all the characters of given tuple.\\
+\texttt{T1 = ('B', 'O', 'O', 'K')}\\
+\textit{Expected OUTPUT : BOOK}
+
+% Q43
+\item Write a program to remove a number (accepted from the user) from the given tuple\\
+\texttt{T1 = (12, 15, 18, 21, 24, 27, 30)}\\
+\textit{SAMPLE EXECUTION}\\
+\textit{Enter element to remove : 21}\\
+\textit{Tuple after removing element is : (12, 15, 18, 24, 27, 30)}
+
+% Q44
+\item What do you mean by Unpacking Tuple? Give example.
+
+% Q45
+\item What do you mean by Packing Tuple? Give Example.
+
+% Q46
+\item Write one similarity between Tuples and String.
+
+% Q47
+\item Write the output of the following:
+\begin{lstlisting}
+T1 = (2, 'Apple', 6)
+print(max(T1))
+\end{lstlisting}
+
+% Q48
+\item Consider the given tuple and write the output of given statements:\\
+\texttt{T1 = (1, 23, 4, 5, 'A', ['C', 'D'], (23, 45), 45)}
+\begin{enumerate}
+    \item \texttt{print(len(T1))}
+    \item \texttt{print(T1.index(45))}
+    \item \texttt{print(T1.count(45))}
+    \item \texttt{print(T1[5][0] - 2)}   % Note: list index, but as per question
+    \item \texttt{print(T1[:5])}
+    \item \texttt{print(T1[5:])}
+    \item \texttt{print(T1.index("A"))}
+    \item \texttt{print(T1[-1:-7:-2])}
+    \item \texttt{print(T1[4] + T1[5])}
+    \item \texttt{print(max(T1))}
+\end{enumerate}
+
+% Q49
+\item Write the length of following tuple:\\
+\texttt{T1 = (1, (2,3), ((34,56),45,67), 39)}
+
+% Q50
+\item Write a program to store the detail (Roll number, Name, Section) of three students in a tuple. Accept all data from the user.\\
+\textit{SAMPLE OUTPUT :}\\
+\texttt{((1, 'Amita', 'B'), (2, 'Sunita', 'C'), (3, 'Daya', 'A'))}
+
+% Q51
+\item Write a program to accept roll number from user and display it's detail from given tuple\\
+\texttt{Det = ((1, 'Amita', 'B'), (2, 'Sunita', 'C'), (3, 'Daya', 'A'))}
+
+% Q52
+\item Write a program to accept five numbers from the user and store these numbers in a tuple. Display the following from tuple:
+\begin{enumerate}
+    \item Largest number
+    \item Smallest number
+    \item Sum of all numbers
+    \item Average of all numbers
+\end{enumerate}
+
+% Q53
+\item Write a program in Python to print the second largest element in tuple given below:\\
+\texttt{T1 = (23, 45, 87, 45, 67, 43, 23, 12)}
+
+% Q54
+\item Write a program in Python to display the sum of all even numbers and odd numbers separately from the tuple given below:\\
+\texttt{T1 = (24, 45, 87, 46, 67, 44, 23, 12)}
+
+% Q55
+\item Write the output of the following:
+\begin{lstlisting}
+T1 = ("Amit", "Sumit")
+T2 = "Sumit", "Amit"
+T3 = "Amit", "Sumit"
+print(T1 == T2)
+print(T1 == T3)
+\end{lstlisting}
+
+% Q56
+\item Write a program to accept a number from the user and store first 10 multiples of number in a tuple.\\
+\textit{For example:}\\
+\textit{Enter any number : 4}\\
+\textit{Tuple = (4, 8, 12, 16, 20, 24, 28, 32, 36, 40)}
+
+% Q57
+\item Write a program to accept a string from the user and convert it into tuple.\\
+\textit{For example:}\\
+\textit{Enter any String : tuple}\\
+\textit{Tuple = ('t', 'u', 'p', 'l', 'e')}
+
+% Q58
+\item Write a program to display the sum of all the numbers in a given tuple:\\
+\texttt{T1 = (1, 2, 3, 'A', 'B', 4, 'Sun')}
+
+% Q59
+\item Write a program to find the sum of marks of all students stored in the given tuple.\\
+\texttt{T1 = (("Suman", 75), ("Glory", 35), ("Ravi", 50))}\\
+\textit{Expected Output is : 160}
+
+% Q60
+\item Write the output of the following:
+\begin{lstlisting}
+T1 = (1, (2, 'a'), (3, 'b', 'c'), (7, 'd', 'e', 'f'))
+print(len(T1))
+print(T1[1][0])
+print(7 in T1[3])
+print(T1.index(1))
+print(len(T1[3]))
+print(T1[T1[2][0]])
+\end{lstlisting}
+
+% Q61
+\item Write the output of the following:
+\begin{lstlisting}
+T1 = (1, (2, 'a', (3, 'b', 'c', (7, 'd', 'e', 'f'))))
+print(len(T1))
+print(T1[1][0])
+print(7 in T1[1])
+print(T1.index(1))
+print(len(T1[1]))
+print(T1[T1[0]])
+\end{lstlisting}
+
+% Q62
+\item Write the output of the following:
+\begin{lstlisting}
+T1 = (1, (2, 'a') * 2)
+print(T1)
+print(len(T1))
+print(T1[1][1])
+print(len(T1[1]))
+\end{lstlisting}
+
+% Q63
+\item Write the output of the following:
+\begin{lstlisting}
+T1 = (1, (2, 'a')) * 2
+print(T1)
+print(len(T1))
+print(T1[1][1])
+print(len(T1[1]))
+print(T1.count(1))
+print(T1.index(1))
+\end{lstlisting}
+
+% Q64
+\item Write the output of the following:
+\begin{lstlisting}
+T1 = ('a') * 3
+T2 = ('a',) * 3
+print(T1)
+print(type(T1))
+print(len(T1))
+print(T2)
+print(type(T2))
+print(len(T2))
+\end{lstlisting}
+
+% Q65
+\item Write the output of the following:
+\begin{lstlisting}
+T1 = "Spider Man:No Way Home"
+T2 = tuple(T1.split())
+print(T1)
+print(type(T1))
+print(len(T1))
+print(T2)
+print(T2[0][0] + T2[1][0])
+print(len(T2))
+\end{lstlisting}
+
+% Q66
+\item What type of error is returned by following code:
+\begin{lstlisting}
+T1 = (1, 2, 3, 4)
+T2 = (4, 5, 6)
+print(T1 - T2)
+\end{lstlisting}
+
+% Q67
+\item Write the output of the following:
+\begin{lstlisting}
+T1 = (1, 2, 3, 4)
+print(T1 * 3)
+print(T1 * (3))
+print((T1) * 3)
+print(T1 + (3,))
+\end{lstlisting}
+
+% Q68
+\item Write the output of the following:
+\begin{lstlisting}
+T1 = (30, 20, 30)
+print(T1, T1, T1)
+print(T1 * 3)
+\end{lstlisting}
+
+% Q69
+\item Write the output of the following:
+\begin{lstlisting}
+a = 30
+b = (30)
+c = (30,)
+print(b)
+print(type(b))
+print(c)
+print(type(c))
+\end{lstlisting}
+
+% Q70
+\item Write a program to accept a number from the user and create a tuple containing all factors of the number.\\
+\textit{Sample Output:}\\
+\textit{Enter any Number : 9}\\
+\textit{Tuple is : (1, 3, 9)}
+
+% Q71
+\item Write a program to arrange all the sub-tuples of a tuple in increasing order and store them in another tuple.\\
+\textit{For example:}\\
+\texttt{T1 = ((1, 2, 3), (45, 23), (98, 34, 67))} \textit{\# Original Tuple}\\
+\texttt{T2 = ((1, 2, 3), (23, 45), (34, 67, 98))} \textit{\# New Tuple}
+
+% Q72
+\item Write a program to store the length of all sub-tuples of a tuple into a new tuple.\\
+\textit{For example:}\\
+\texttt{T1 = ((1, 2, 3), (45, 23), (98, 34, 67), (34, 56, 78, 9))} \textit{\# Original}\\
+\texttt{T2 = (3, 2, 3, 4)} \textit{\# New Tuple}
+
+% Q73
+\item Write a program to print square of all odd numbers of a tuple.\\
+\texttt{T1 = (12, 13, 22, 7, 9, 66, 4)}\\
+\textit{Expected Output : 169, 49, 81}
+
+% Q74
+\item Write a program to print the common elements of given tuples:\\
+\texttt{T1 = (1, 2, 3, 4, 5, 6)}\\
+\texttt{T2 = (3, 5, 7, 9, 11)}\\
+\textit{Expected Output : 3, 5}
+
+% Q75
+\item Write a program to find the union (common elements included once) of given tuples:\\
+\texttt{t1 = (1, 2, 3, 4, 5, 6)}\\
+\texttt{t2 = (3, 5, 7, 9, 11)}\\
+\textit{Expected Output : 1, 2, 3, 4, 5, 6, 7, 9, 11}
+
+% Q76
+\item Write a program to store the sum of all sub-tuples of given tuple into a new tuple.\\
+\textit{For example:}\\
+\texttt{T1 = ((1, 2, 3), (45, 23), (98, 34, 67), (34, 56, 78, 9))} \textit{\#Original}\\
+\texttt{T2 = (6, 68, 199, 177)} \textit{\# New Tuple}
+
+% Q77
+\item Write a program to store the maximum value of all sub-tuples of given tuple into a new tuple.\\
+\textit{For example:}\\
+\texttt{T1 = ((1, 2, 3), (45, 23), (98, 34, 67), (34, 56, 78, 9), ("A", "B", "c"))}\\
+\texttt{T2 = (3, 45, 98, 78, 'c')} \textit{\# New Tuple (note: string max)}
+
+% Q78
+\item Write a program to display the longest sub-tuple from the given tuple.\\
+\texttt{T1 = ((1, 2, 3), (45, 23), (98, 34, 67), (34, 56, 78, 9))}\\
+\texttt{T2 = (34, 56, 78, 9)} \textit{\# New Tuple}
+
+% Q79
+\item Write a program to display names starting from vowel from the given tuple.\\
+\texttt{T1 = ("Amit", "Ram", "Esha", "Harry")}
+
+% Q80
+\item Write a program to print the length of all names in a given tuple.\\
+\texttt{T1 = ("Amit", "Ram", "Esha", "Harry")}\\
+\textit{Expected Output : 4, 3, 4, 5}
+
+% Q81
+\item What is the purpose of following operators in reference to tuples.
+\begin{enumerate}
+    \item \texttt{+}
+    \item \texttt{*}
+    \item \texttt{in}
+\end{enumerate}
+
+% Q82
+\item Match the following:
+
+\begin{center}
+\begin{tabular}{|l|l|l|}
+\hline
+\textbf{Functions} & \textbf{Description} & \textbf{Match} \\
+\hline
+\texttt{max()} & Returns the length of the tuple. & (3) \\
+\texttt{min()} & Returns the index value of element in tuple. & (4) \\
+\texttt{count()} & Returns the largest element in tuple. & (1) \\
+\texttt{index()} & Returns the smallest element in tuple. & (2) \\
+\texttt{len()} & Returns the frequency of an element in tuple. & (5) \\
+\hline
+\end{tabular}
+\end{center}
+\textit{(Match the numbers correctly in your answer)}
+
+% Q83
+\item Write the output of the following:
+\begin{lstlisting}
+>>> S = 1, (2,3,4,5), 51, (61,71)
+>>> len(S)
+>>> S[2:3]
+>>> S[-1][0]
+>>> type(S)
+\end{lstlisting}
+
+% Q84
+\item Predict the output:
+\begin{lstlisting}
+T = (1, 2, 4, 3, 8, 9)
+[T[i] for i in range(0, len(T), 2)]
+\end{lstlisting}
+
+% Q85
+\item What will be the output of the following code snippet?
+\begin{lstlisting}
+init_tuple = ()
+print(init_tuple.__len__())
+\end{lstlisting}
+
+\end{enumerate}
+
+\vspace{1em}
+\begin{center}
+\textit{--- End of Questions ---}
+\end{center}
+
+\end{document}

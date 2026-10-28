@@ -1,0 +1,1187 @@
+\PassOptionsToPackage{table}{xcolor}
+\documentclass[aspectratio=169,11pt]{beamer}
+
+% ---------- Packages ----------
+\usepackage[T1]{fontenc}
+\usepackage{textcomp}
+\usepackage{listings}
+\usepackage{tikz}
+
+% ---------- Theme ----------
+\usetheme{Madrid}
+\usecolortheme{seahorse}
+
+% ---------- Custom accent colours ----------
+\definecolor{mblue}{HTML}{1F6FEB}
+\definecolor{morange}{HTML}{F28C28}
+\definecolor{mgreen}{HTML}{2E9E5B}
+\definecolor{mteal}{HTML}{14A3A3}
+\definecolor{codebg}{HTML}{F4F8FF}
+\definecolor{outbg}{HTML}{EAF8F4}
+
+\setbeamercolor{structure}{fg=mblue}
+\setbeamercolor{palette primary}{bg=mblue,fg=white}
+\setbeamercolor{palette secondary}{bg=mteal,fg=white}
+\setbeamercolor{palette tertiary}{bg=mgreen,fg=white}
+\setbeamercolor{frametitle}{bg=mblue,fg=white}
+\setbeamercolor{block title}{bg=mblue,fg=white}
+\setbeamercolor{block body}{bg=mblue!8,fg=black}
+\setbeamercolor{block title example}{bg=mgreen,fg=white}
+\setbeamercolor{block body example}{bg=mgreen!10,fg=black}
+\setbeamercolor{block title alerted}{bg=morange,fg=white}
+\setbeamercolor{block body alerted}{bg=morange!12,fg=black}
+\setbeamercolor{itemize item}{fg=morange}
+\setbeamercolor{itemize subitem}{fg=mteal}
+\setbeamertemplate{navigation symbols}{}
+\setbeamertemplate{blocks}[rounded][shadow=false]
+\setbeamertemplate{itemize items}[circle]
+
+% ---------- Code listing styles ----------
+\lstdefinestyle{pycode}{
+  language=Python,
+  basicstyle=\ttfamily\footnotesize,
+  keywordstyle=\color{mblue}\bfseries,
+  commentstyle=\color{mgreen}\itshape,
+  stringstyle=\color{morange},
+  backgroundcolor=\color{codebg},
+  frame=single, rulecolor=\color{mblue},
+  showstringspaces=false, upquote=true,
+  keepspaces=true, columns=fixed,
+  aboveskip=2pt, belowskip=2pt
+}
+\lstdefinestyle{pyout}{
+  basicstyle=\ttfamily\footnotesize\color{black},
+  backgroundcolor=\color{outbg},
+  frame=single, rulecolor=\color{mteal},
+  keepspaces=true, columns=fixed,
+  aboveskip=2pt, belowskip=2pt
+}
+\lstnewenvironment{pycode}{\lstset{style=pycode}}{}
+\lstnewenvironment{pyout}{\lstset{style=pyout}}{}
+
+% ---------- Helper macros ----------
+\newcommand{\purpose}[1]{\begin{block}{Purpose}#1\end{block}}
+\newcommand{\imgph}[3]{% width, height, label
+  \begin{tikzpicture}
+    \node[draw=mteal, dashed, thick, rounded corners, minimum width=#1,
+          minimum height=#2, text=mteal, align=center, fill=mteal!5]
+          {\textbf{[Image placeholder]}\\ #3};
+  \end{tikzpicture}}
+\newcommand{\predict}{\par\medskip\textbf{Your prediction:} \underline{\hspace{4cm}}}
+
+% ---------- Title info ----------
+\title[NumPy Basics]{NumPy: Numerical Python}
+\subtitle{Chapter 4: Introduction to Data and Programming with Python}
+\author{Class 9/10: Artificial Intelligence}
+\institute[AI Class]{Modules, Packages and Libraries}
+\date{October 27, 2026}
+
+\begin{document}
+
+% =====================================================
+\begin{frame}
+  \titlepage
+\end{frame}
+
+% =====================================================
+\begin{frame}{What We Will Learn}
+  \begin{columns}[T]
+    \column{0.58\textwidth}
+    \begin{itemize}
+      \item What NumPy is and why we need it
+      \item Installing and importing NumPy
+      \item Creating arrays: \texttt{array, arange, ones, zeros, full, random}
+      \item Array attributes: \texttt{ndim, shape, size, dtype}
+      \item Methods: \texttt{max, min, sum, sort}, and \texttt{axis}
+      \item Bonus: \texttt{reshape}
+    \end{itemize}
+    \column{0.38\textwidth}
+    \begin{alertblock}{Our learning pattern}
+      \textbf{1.} Learn the idea\\
+      \textbf{2.} Try the practice questions\\
+      \textbf{3.} Check the answers
+    \end{alertblock}
+  \end{columns}
+\end{frame}
+
+% =====================================================
+\begin{frame}{What is NumPy?}
+  \begin{columns}[c]
+    \column{0.6\textwidth}
+    \begin{itemize}
+      \item \textbf{Num}erical \textbf{Py}thon: a free, open-source package
+      \item Works with \textbf{large sets of numbers} quickly
+      \item Its main tool is the \textbf{n-dimensional array}
+      \item Pandas, Matplotlib and Scikit-learn are built on NumPy
+      \item First step to becoming a Python data scientist
+    \end{itemize}
+    \column{0.36\textwidth}
+    \centering
+    \imgph{4.2cm}{3cm}{NumPy logo}
+  \end{columns}
+\end{frame}
+
+% =====================================================
+\begin{frame}{Why Do We Need NumPy?}
+  \centering
+  \renewcommand{\arraystretch}{1.25}
+  \begin{tabular}{|l|l|l|}
+    \hline
+    \rowcolor{mblue}\color{white}\textbf{Aspect} & \color{white}\textbf{NumPy array} & \color{white}\textbf{Python list}\\
+    \hline
+    Data type & Same type (homogeneous) & Mixed types allowed\\
+    \hline
+    \rowcolor{mteal!10} Memory & Uses less memory & Uses more memory\\
+    \hline
+    Maths operators & Work directly on the array & Must be applied element by element\\
+    \hline
+    \rowcolor{mteal!10} Main use & Mathematical operations & Data management\\
+    \hline
+  \end{tabular}
+\end{frame}
+
+% =====================================================
+\begin{frame}[fragile]{Installing NumPy}
+  \begin{block}{Python from python.org does \emph{not} include NumPy}
+    Open the terminal or command prompt and type:
+  \end{block}
+  \begin{pycode}
+pip install numpy
+  \end{pycode}
+  \begin{itemize}
+    \item You only need to do this \textbf{once} per computer
+    \item Pandas is installed the same way: \texttt{pip install pandas}
+  \end{itemize}
+\end{frame}
+
+% =====================================================
+\begin{frame}[fragile]{Importing NumPy}
+  \begin{columns}[T]
+    \column{0.55\textwidth}
+    \begin{pycode}
+import numpy            # whole package
+import numpy as np      # short name: np
+from numpy import array # only array
+from numpy import array as ary
+    \end{pycode}
+    \column{0.42\textwidth}
+    \begin{exampleblock}{Best practice}
+      Use \texttt{import numpy as np}, the standard everywhere.
+    \end{exampleblock}
+  \end{columns}
+  \begin{alertblock}{Remember}
+    Every example in this presentation assumes \texttt{import numpy as np} has been run first.
+  \end{alertblock}
+\end{frame}
+
+% =====================================================
+\begin{frame}{What is an Array?}
+  \begin{columns}[c]
+    \column{0.5\textwidth}
+    \begin{itemize}
+      \item An ordered collection of values of the \textbf{same type}
+      \item Index numbers start from \textbf{0}
+      \item 1-D array = \textbf{vector}
+      \item 2-D array = \textbf{matrix}
+    \end{itemize}
+    \column{0.48\textwidth}
+    \centering
+    \begin{tikzpicture}[cell/.style={draw=mblue,fill=mblue!12,minimum size=7mm,font=\ttfamily}]
+      \foreach \v/\i in {10/0,20/1,30/2,40/3} {
+        \node[cell] at (\i*0.75,0) {\v};
+        \node[font=\tiny,text=morange] at (\i*0.75,-0.55) {\i};
+      }
+      \node[font=\small,text=mteal] at (1.1,0.8) {1-D (vector)};
+      \foreach \v/\x/\y in {1/0/-2,2/0.75/-2,3/1.5/-2,4/0/-2.75,5/0.75/-2.75,6/1.5/-2.75}
+        \node[cell,fill=mgreen!15,draw=mgreen] at (\x,\y) {\v};
+      \node[font=\small,text=mgreen] at (0.75,-1.3) {2-D (matrix)};
+    \end{tikzpicture}
+  \end{columns}
+\end{frame}
+
+% =====================================================
+\section{Creating Arrays}
+\begin{frame}{Section 1: Creating Arrays}
+  \centering
+  \Large Five ways to build an array\\[2mm]
+  \normalsize \texttt{array} \quad \texttt{arange} \quad \texttt{ones / zeros} \quad \texttt{full} \quad \texttt{random}\\[4mm]
+  \imgph{7cm}{3.2cm}{Diagram: list turning into a NumPy array}
+\end{frame}
+
+% ----------------- np.array -----------------
+\begin{frame}[fragile]{Creating Arrays: \texttt{np.array()}}
+  \purpose{Converts a Python \textbf{list} into a NumPy array. Use a list of lists for a 2-D array.}
+  \begin{columns}[T]
+    \column{0.48\textwidth}
+    \begin{block}{Example 1: 1-D array}
+      \begin{pycode}
+a = np.array([1, 2, 3])
+print(a)
+      \end{pycode}
+      \begin{pyout}
+[1 2 3]
+      \end{pyout}
+    \end{block}
+    \column{0.48\textwidth}
+    \begin{block}{Example 2: 2-D array}
+      \begin{pycode}
+b = np.array([[1, 2], [3, 4]])
+print(b)
+      \end{pycode}
+      \begin{pyout}
+[[1 2]
+ [3 4]]
+      \end{pyout}
+    \end{block}
+  \end{columns}
+\end{frame}
+
+\begin{frame}[fragile]{Practice Question: \texttt{np.array()}}
+  \begin{columns}[T]
+    \column{0.48\textwidth}
+    \begin{alertblock}{Question 1}
+      \begin{pycode}
+x = np.array([2, 4, 6])
+print(x * 3)
+      \end{pycode}
+      \predict
+    \end{alertblock}
+    \column{0.48\textwidth}
+    \begin{alertblock}{Question 2}
+      \begin{pycode}
+y = np.array([1, 2, 3])
+print(type(y))
+      \end{pycode}
+      \predict
+    \end{alertblock}
+  \end{columns}
+\end{frame}
+
+\begin{frame}[fragile]{Answer: \texttt{np.array()}}
+  \begin{columns}[T]
+    \column{0.48\textwidth}
+    \begin{exampleblock}{Answer 1}
+      \begin{pyout}
+[ 6 12 18]
+      \end{pyout}
+      \small Operators work \textbf{element-wise}: $2\times3,\ 4\times3,\ 6\times3$.
+    \end{exampleblock}
+    \column{0.48\textwidth}
+    \begin{exampleblock}{Answer 2}
+      \begin{pyout}
+<class 'numpy.ndarray'>
+      \end{pyout}
+      \small The array's type is \texttt{ndarray}, an n-dimensional array.
+    \end{exampleblock}
+  \end{columns}
+\end{frame}
+
+% ----------------- np.arange -----------------
+\begin{frame}[fragile]{Creating Arrays: \texttt{np.arange()}}
+  \purpose{Makes a sequence of numbers: \texttt{np.arange(start, stop, step)}. The \textbf{stop} value is \emph{not} included.}
+  \begin{columns}[T]
+    \column{0.48\textwidth}
+    \begin{block}{Example 1: with a step}
+      \begin{pycode}
+a = np.arange(10, 101, 10)
+print(a)
+      \end{pycode}
+      \begin{pyout}
+[ 10  20  30  40  50  60  70  80  90 100]
+      \end{pyout}
+    \end{block}
+    \column{0.48\textwidth}
+    \begin{block}{Example 2: only stop}
+      \begin{pycode}
+b = np.arange(5)
+print(b)
+      \end{pycode}
+      \begin{pyout}
+[0 1 2 3 4]
+      \end{pyout}
+    \end{block}
+  \end{columns}
+\end{frame}
+
+\begin{frame}[fragile]{Practice Question: \texttt{np.arange()}}
+  \begin{columns}[T]
+    \column{0.48\textwidth}
+    \begin{alertblock}{Question 1}
+      \begin{pycode}
+print(np.arange(3, 16, 3))
+      \end{pycode}
+      \predict
+    \end{alertblock}
+    \column{0.48\textwidth}
+    \begin{alertblock}{Question 2}
+      \begin{pycode}
+print(np.arange(2, 9))
+      \end{pycode}
+      \predict
+    \end{alertblock}
+  \end{columns}
+\end{frame}
+
+\begin{frame}[fragile]{Answer: \texttt{np.arange()}}
+  \begin{columns}[T]
+    \column{0.48\textwidth}
+    \begin{exampleblock}{Answer 1}
+      \begin{pyout}
+[ 3  6  9 12 15]
+      \end{pyout}
+      \small Start at 3, add 3 each time, stop before 16.
+    \end{exampleblock}
+    \column{0.48\textwidth}
+    \begin{exampleblock}{Answer 2}
+      \begin{pyout}
+[2 3 4 5 6 7 8]
+      \end{pyout}
+      \small The default step is 1, and 9 is \textbf{not} included.
+    \end{exampleblock}
+  \end{columns}
+\end{frame}
+
+% ----------------- ones / zeros -----------------
+\begin{frame}[fragile]{Creating Arrays: \texttt{np.ones()} and \texttt{np.zeros()}}
+  \purpose{Create an array filled with all \textbf{1s} or all \textbf{0s}. Give the shape as a tuple: \texttt{(rows, columns)}.}
+  \begin{columns}[T]
+    \column{0.48\textwidth}
+    \begin{block}{Example 1: ones}
+      \begin{pycode}
+print(np.ones((2, 3)))
+      \end{pycode}
+      \begin{pyout}
+[[1. 1. 1.]
+ [1. 1. 1.]]
+      \end{pyout}
+    \end{block}
+    \column{0.48\textwidth}
+    \begin{block}{Example 2: zeros}
+      \begin{pycode}
+print(np.zeros((2, 2)))
+      \end{pycode}
+      \begin{pyout}
+[[0. 0.]
+ [0. 0.]]
+      \end{pyout}
+    \end{block}
+  \end{columns}
+  \small The dots (\texttt{1.}) show the numbers are decimals (floats) by default.
+\end{frame}
+
+\begin{frame}[fragile]{Practice Question: \texttt{np.ones()} and \texttt{np.zeros()}}
+  \begin{columns}[T]
+    \column{0.48\textwidth}
+    \begin{alertblock}{Question 1}
+      \begin{pycode}
+print(np.zeros((2, 3)))
+      \end{pycode}
+      \predict
+    \end{alertblock}
+    \column{0.48\textwidth}
+    \begin{alertblock}{Question 2}
+      \begin{pycode}
+print(np.ones((1, 4)))
+      \end{pycode}
+      \predict
+    \end{alertblock}
+  \end{columns}
+\end{frame}
+
+\begin{frame}[fragile]{Answer: \texttt{np.ones()} and \texttt{np.zeros()}}
+  \begin{columns}[T]
+    \column{0.48\textwidth}
+    \begin{exampleblock}{Answer 1}
+      \begin{pyout}
+[[0. 0. 0.]
+ [0. 0. 0.]]
+      \end{pyout}
+      \small 2 rows and 3 columns of zeros.
+    \end{exampleblock}
+    \column{0.48\textwidth}
+    \begin{exampleblock}{Answer 2}
+      \begin{pyout}
+[[1. 1. 1. 1.]]
+      \end{pyout}
+      \small 1 row and 4 columns, still printed with double brackets because it is 2-D.
+    \end{exampleblock}
+  \end{columns}
+\end{frame}
+
+% ----------------- np.full -----------------
+\begin{frame}[fragile]{Creating Arrays: \texttt{np.full()}}
+  \purpose{Fills an array of a given shape with \textbf{one constant value}: \texttt{np.full(shape, value)}.}
+  \begin{columns}[T]
+    \column{0.48\textwidth}
+    \begin{block}{Example 1}
+      \begin{pycode}
+print(np.full((2, 3), 7))
+      \end{pycode}
+      \begin{pyout}
+[[7 7 7]
+ [7 7 7]]
+      \end{pyout}
+    \end{block}
+    \column{0.48\textwidth}
+    \begin{block}{Example 2}
+      \begin{pycode}
+print(np.full((3, 2), 9))
+      \end{pycode}
+      \begin{pyout}
+[[9 9]
+ [9 9]
+ [9 9]]
+      \end{pyout}
+    \end{block}
+  \end{columns}
+\end{frame}
+
+\begin{frame}[fragile]{Practice Question: \texttt{np.full()}}
+  \begin{columns}[T]
+    \column{0.48\textwidth}
+    \begin{alertblock}{Question 1}
+      \begin{pycode}
+print(np.full((2, 2), 8))
+      \end{pycode}
+      \predict
+    \end{alertblock}
+    \column{0.48\textwidth}
+    \begin{alertblock}{Question 2}
+      \begin{pycode}
+print(np.full((1, 3), 4) + 1)
+      \end{pycode}
+      \predict
+    \end{alertblock}
+  \end{columns}
+\end{frame}
+
+\begin{frame}[fragile]{Answer: \texttt{np.full()}}
+  \begin{columns}[T]
+    \column{0.48\textwidth}
+    \begin{exampleblock}{Answer 1}
+      \begin{pyout}
+[[8 8]
+ [8 8]]
+      \end{pyout}
+      \small A 2$\times$2 array where every cell is 8.
+    \end{exampleblock}
+    \column{0.48\textwidth}
+    \begin{exampleblock}{Answer 2}
+      \begin{pyout}
+[[5 5 5]]
+      \end{pyout}
+      \small First we get \texttt{[[4 4 4]]}. Then $+1$ is added to \textbf{every} element.
+    \end{exampleblock}
+  \end{columns}
+\end{frame}
+
+% ----------------- random -----------------
+\begin{frame}[fragile]{Creating Arrays: \texttt{np.random}}
+  \purpose{Creates arrays of \textbf{random} numbers. \texttt{random(n)} gives $n$ decimals between 0 and 1. \texttt{randint(high, size=...)} gives whole numbers below \texttt{high}.}
+  \begin{columns}[T]
+    \column{0.48\textwidth}
+    \begin{block}{Example 1: random decimals}
+      \begin{pycode}
+print(np.random.random(3))
+      \end{pycode}
+      \begin{pyout}
+[0.62341534 0.18732091 0.93408216]
+      \end{pyout}
+    \end{block}
+    \column{0.48\textwidth}
+    \begin{block}{Example 2: random integers}
+      \begin{pycode}
+print(np.random.randint(10, size=(2, 3)))
+      \end{pycode}
+      \begin{pyout}
+[[3 7 1]
+ [9 0 4]]
+      \end{pyout}
+    \end{block}
+  \end{columns}
+  \small\textbf{Sample outputs only!} Your numbers will be different each time you run the code.
+\end{frame}
+
+\begin{frame}[fragile]{Practice Question: \texttt{np.random}}
+  \begin{columns}[T]
+    \column{0.48\textwidth}
+    \begin{alertblock}{Question 1}
+      \begin{pycode}
+r = np.random.random(6)
+print(len(r))
+      \end{pycode}
+      \predict
+    \end{alertblock}
+    \column{0.48\textwidth}
+    \begin{alertblock}{Question 2}
+      \begin{pycode}
+r = np.random.randint(10, size=5)
+print(r.max() < 10)
+      \end{pycode}
+      \predict\\
+      \footnotesize Hint: the answer is True or False.
+    \end{alertblock}
+  \end{columns}
+\end{frame}
+
+\begin{frame}[fragile]{Answer: \texttt{np.random}}
+  \begin{columns}[T]
+    \column{0.48\textwidth}
+    \begin{exampleblock}{Answer 1}
+      \begin{pyout}
+6
+      \end{pyout}
+      \small \texttt{random(6)} always makes exactly 6 numbers, even though their values change.
+    \end{exampleblock}
+    \column{0.48\textwidth}
+    \begin{exampleblock}{Answer 2}
+      \begin{pyout}
+True
+      \end{pyout}
+      \small \texttt{randint(10, \dots)} only gives numbers from 0 to 9, so the maximum is always below 10.
+    \end{exampleblock}
+  \end{columns}
+\end{frame}
+
+% =====================================================
+\section{Attributes and Methods}
+\begin{frame}{Section 2: Array Attributes and Methods}
+  \centering
+  \Large Learning about our arrays\\[2mm]
+  \normalsize \texttt{ndim} \quad \texttt{shape} \quad \texttt{size} \quad \texttt{dtype} \quad \texttt{max/min} \quad \texttt{sum} \quad \texttt{sort} \quad \texttt{reshape}\\[4mm]
+  \imgph{7cm}{3.2cm}{Picture: a detective's magnifying glass over an array}
+\end{frame}
+
+% ----------------- ndim -----------------
+\begin{frame}[fragile]{Attribute: \texttt{ndim}}
+  \purpose{Tells us the \textbf{number of dimensions} (axes) of an array. 1-D = vector, 2-D = matrix.}
+  \begin{columns}[T]
+    \column{0.48\textwidth}
+    \begin{block}{Example 1: 1-D}
+      \begin{pycode}
+a = np.array([1, 2, 3])
+print(a.ndim)
+      \end{pycode}
+      \begin{pyout}
+1
+      \end{pyout}
+    \end{block}
+    \column{0.48\textwidth}
+    \begin{block}{Example 2: 2-D}
+      \begin{pycode}
+b = np.array([[1, 2, 3],
+              [4, 5, 6]])
+print(b.ndim)
+      \end{pycode}
+      \begin{pyout}
+2
+      \end{pyout}
+    \end{block}
+  \end{columns}
+\end{frame}
+
+\begin{frame}[fragile]{Practice Question: \texttt{ndim}}
+  \begin{columns}[T]
+    \column{0.48\textwidth}
+    \begin{alertblock}{Question 1}
+      \begin{pycode}
+x = np.array([10, 20, 30, 40])
+print(x.ndim)
+      \end{pycode}
+      \predict
+    \end{alertblock}
+    \column{0.48\textwidth}
+    \begin{alertblock}{Question 2}
+      \begin{pycode}
+y = np.array([[7, 8, 9]])
+print(y.ndim)
+      \end{pycode}
+      \predict
+    \end{alertblock}
+  \end{columns}
+\end{frame}
+
+\begin{frame}[fragile]{Answer: \texttt{ndim}}
+  \begin{columns}[T]
+    \column{0.48\textwidth}
+    \begin{exampleblock}{Answer 1}
+      \begin{pyout}
+1
+      \end{pyout}
+      \small One pair of square brackets means a 1-D array.
+    \end{exampleblock}
+    \column{0.48\textwidth}
+    \begin{exampleblock}{Answer 2}
+      \begin{pyout}
+2
+      \end{pyout}
+      \small \textbf{Double} brackets mean 2-D, even though there is only one row.
+    \end{exampleblock}
+  \end{columns}
+\end{frame}
+
+% ----------------- shape -----------------
+\begin{frame}[fragile]{Attribute: \texttt{shape}}
+  \purpose{Gives the \textbf{length of each dimension} as a tuple: \texttt{(rows, columns)} for 2-D.}
+  \begin{columns}[T]
+    \column{0.48\textwidth}
+    \begin{block}{Example 1: 1-D}
+      \begin{pycode}
+a = np.array([1, 2, 3, 4])
+print(a.shape)
+      \end{pycode}
+      \begin{pyout}
+(4,)
+      \end{pyout}
+    \end{block}
+    \column{0.48\textwidth}
+    \begin{block}{Example 2: 2-D}
+      \begin{pycode}
+b = np.array([[1, 2, 3],
+              [4, 5, 6]])
+print(b.shape)
+      \end{pycode}
+      \begin{pyout}
+(2, 3)
+      \end{pyout}
+    \end{block}
+  \end{columns}
+\end{frame}
+
+\begin{frame}[fragile]{Practice Question: \texttt{shape}}
+  \begin{columns}[T]
+    \column{0.48\textwidth}
+    \begin{alertblock}{Question 1}
+      \begin{pycode}
+x = np.array([[1, 2],
+              [3, 4],
+              [5, 6]])
+print(x.shape)
+      \end{pycode}
+      \predict
+    \end{alertblock}
+    \column{0.48\textwidth}
+    \begin{alertblock}{Question 2}
+      \begin{pycode}
+y = np.array([9, 8, 7])
+print(y.shape)
+      \end{pycode}
+      \predict
+    \end{alertblock}
+  \end{columns}
+\end{frame}
+
+\begin{frame}[fragile]{Answer: \texttt{shape}}
+  \begin{columns}[T]
+    \column{0.48\textwidth}
+    \begin{exampleblock}{Answer 1}
+      \begin{pyout}
+(3, 2)
+      \end{pyout}
+      \small 3 rows and 2 columns.
+    \end{exampleblock}
+    \column{0.48\textwidth}
+    \begin{exampleblock}{Answer 2}
+      \begin{pyout}
+(3,)
+      \end{pyout}
+      \small A 1-D array has just one number. The comma makes it a tuple.
+    \end{exampleblock}
+  \end{columns}
+\end{frame}
+
+% ----------------- size -----------------
+\begin{frame}[fragile]{Attribute: \texttt{size}}
+  \purpose{Gives the \textbf{total number of elements} in the array: rows $\times$ columns for 2-D.}
+  \begin{columns}[T]
+    \column{0.48\textwidth}
+    \begin{block}{Example 1}
+      \begin{pycode}
+a = np.array([[1, 2, 3],
+              [4, 5, 6]])
+print(a.size)
+      \end{pycode}
+      \begin{pyout}
+6
+      \end{pyout}
+    \end{block}
+    \column{0.48\textwidth}
+    \begin{block}{Example 2}
+      \begin{pycode}
+b = np.zeros((3, 4))
+print(b.size)
+      \end{pycode}
+      \begin{pyout}
+12
+      \end{pyout}
+    \end{block}
+  \end{columns}
+\end{frame}
+
+\begin{frame}[fragile]{Practice Question: \texttt{size}}
+  \begin{columns}[T]
+    \column{0.48\textwidth}
+    \begin{alertblock}{Question 1}
+      \begin{pycode}
+x = np.arange(1, 11)
+print(x.size)
+      \end{pycode}
+      \predict
+    \end{alertblock}
+    \column{0.48\textwidth}
+    \begin{alertblock}{Question 2}
+      \begin{pycode}
+y = np.ones((5, 3))
+print(y.size)
+      \end{pycode}
+      \predict
+    \end{alertblock}
+  \end{columns}
+\end{frame}
+
+\begin{frame}[fragile]{Answer: \texttt{size}}
+  \begin{columns}[T]
+    \column{0.48\textwidth}
+    \begin{exampleblock}{Answer 1}
+      \begin{pyout}
+10
+      \end{pyout}
+      \small \texttt{arange(1, 11)} makes 1, 2, \dots, 10, which is 10 numbers.
+    \end{exampleblock}
+    \column{0.48\textwidth}
+    \begin{exampleblock}{Answer 2}
+      \begin{pyout}
+15
+      \end{pyout}
+      \small $5 \times 3 = 15$ elements.
+    \end{exampleblock}
+  \end{columns}
+\end{frame}
+
+% ----------------- dtype -----------------
+\begin{frame}[fragile]{Attribute: \texttt{dtype}}
+  \purpose{Shows the \textbf{data type} of the elements. Every element in a NumPy array has the same type.}
+  \begin{columns}[T]
+    \column{0.48\textwidth}
+    \begin{block}{Example 1: whole numbers}
+      \begin{pycode}
+a = np.array([1, 2, 3])
+print(a.dtype)
+      \end{pycode}
+      \begin{pyout}
+int64
+      \end{pyout}
+    \end{block}
+    \column{0.48\textwidth}
+    \begin{block}{Example 2: decimals}
+      \begin{pycode}
+b = np.array([1.5, 2.5])
+print(b.dtype)
+      \end{pycode}
+      \begin{pyout}
+float64
+      \end{pyout}
+    \end{block}
+  \end{columns}
+  \small On some computers (older Windows) integers may show as \texttt{int32}.
+\end{frame}
+
+\begin{frame}[fragile]{Practice Question: \texttt{dtype}}
+  \begin{columns}[T]
+    \column{0.48\textwidth}
+    \begin{alertblock}{Question 1}
+      \begin{pycode}
+x = np.arange(5)
+print(x.dtype)
+      \end{pycode}
+      \predict
+    \end{alertblock}
+    \column{0.48\textwidth}
+    \begin{alertblock}{Question 2}
+      \begin{pycode}
+y = np.array([1, 2.5, 3])
+print(y.dtype)
+      \end{pycode}
+      \predict
+    \end{alertblock}
+  \end{columns}
+\end{frame}
+
+\begin{frame}[fragile]{Answer: \texttt{dtype}}
+  \begin{columns}[T]
+    \column{0.48\textwidth}
+    \begin{exampleblock}{Answer 1}
+      \begin{pyout}
+int64
+      \end{pyout}
+      \small \texttt{arange(5)} gives whole numbers, so the type is integer.
+    \end{exampleblock}
+    \column{0.48\textwidth}
+    \begin{exampleblock}{Answer 2}
+      \begin{pyout}
+float64
+      \end{pyout}
+      \small One decimal makes NumPy convert \textbf{all} elements to float, so the array stays homogeneous.
+    \end{exampleblock}
+  \end{columns}
+\end{frame}
+
+% ----------------- axis -----------------
+\begin{frame}{Understanding \texttt{axis}}
+  \begin{columns}[c]
+    \column{0.5\textwidth}
+    \centering
+    \begin{tikzpicture}[cell/.style={draw=mblue,fill=mblue!12,minimum size=8mm,font=\ttfamily}]
+      \foreach \v/\x/\y in {1/0/0,2/0.9/0,3/1.8/0,4/2.7/0,3/0/-0.9,4/0.9/-0.9,5/1.8/-0.9,6/2.7/-0.9}
+        \node[cell] at (\x,\y) {\v};
+      \draw[->,very thick,morange] (-0.8,0.4)--(-0.8,-1.3) node[midway,left,text=morange]{\small axis 0};
+      \draw[->,very thick,mgreen] (-0.4,-1.6)--(3.2,-1.6) node[midway,below,text=mgreen]{\small axis 1};
+    \end{tikzpicture}
+    \column{0.48\textwidth}
+    \begin{itemize}
+      \item \textcolor{morange}{\textbf{axis=0}}: go \textbf{down}, giving one answer per \textbf{column}
+      \item \textcolor{mgreen}{\textbf{axis=1}}: go \textbf{across}, giving one answer per \textbf{row}
+      \item No axis: use \textbf{all} elements
+    \end{itemize}
+  \end{columns}
+\end{frame}
+
+% ----------------- max / min -----------------
+\begin{frame}[fragile]{Methods: \texttt{max()} and \texttt{min()}}
+  \purpose{Find the \textbf{largest} or \textbf{smallest} value, overall or along an \texttt{axis}.}
+  \begin{pycode}
+ARR = np.array([[1, 2, 3, 4],
+                [3, 4, 5, 6]])
+  \end{pycode}
+  \begin{columns}[T]
+    \column{0.48\textwidth}
+    \begin{block}{Example 1: whole array}
+      \begin{pycode}
+print(ARR.max())
+print(ARR.min())
+      \end{pycode}
+      \begin{pyout}
+6
+1
+      \end{pyout}
+    \end{block}
+    \column{0.48\textwidth}
+    \begin{block}{Example 2: with axis}
+      \begin{pycode}
+print(ARR.max(axis=0))
+print(ARR.min(axis=1))
+      \end{pycode}
+      \begin{pyout}
+[3 4 5 6]
+[1 3]
+      \end{pyout}
+    \end{block}
+  \end{columns}
+\end{frame}
+
+\begin{frame}[fragile]{Practice Question: \texttt{max()} and \texttt{min()}}
+  \begin{pycode}
+M = np.array([[2, 8, 5],
+              [9, 1, 7]])
+  \end{pycode}
+  \begin{columns}[T]
+    \column{0.48\textwidth}
+    \begin{alertblock}{Question 1}
+      \begin{pycode}
+print(M.max(axis=0))
+      \end{pycode}
+      \predict
+    \end{alertblock}
+    \column{0.48\textwidth}
+    \begin{alertblock}{Question 2}
+      \begin{pycode}
+print(M.min(axis=1))
+      \end{pycode}
+      \predict
+    \end{alertblock}
+  \end{columns}
+\end{frame}
+
+\begin{frame}[fragile]{Answer: \texttt{max()} and \texttt{min()}}
+  \begin{columns}[T]
+    \column{0.48\textwidth}
+    \begin{exampleblock}{Answer 1}
+      \begin{pyout}
+[9 8 7]
+      \end{pyout}
+      \small \textbf{axis=0}, column-wise: max(2,9)=9, max(8,1)=8, max(5,7)=7.
+    \end{exampleblock}
+    \column{0.48\textwidth}
+    \begin{exampleblock}{Answer 2}
+      \begin{pyout}
+[2 1]
+      \end{pyout}
+      \small \textbf{axis=1}, row-wise: min(2,8,5)=2, min(9,1,7)=1.
+    \end{exampleblock}
+  \end{columns}
+\end{frame}
+
+% ----------------- sum -----------------
+\begin{frame}[fragile]{Method: \texttt{sum()}}
+  \purpose{Adds up the elements: all of them, or column-wise (\texttt{axis=0}) or row-wise (\texttt{axis=1}).}
+  \begin{pycode}
+a = np.array([[1, 2, 3],
+              [4, 5, 6]])
+  \end{pycode}
+  \begin{columns}[T]
+    \column{0.48\textwidth}
+    \begin{block}{Example 1: total}
+      \begin{pycode}
+print(a.sum())
+      \end{pycode}
+      \begin{pyout}
+21
+      \end{pyout}
+    \end{block}
+    \column{0.48\textwidth}
+    \begin{block}{Example 2: with axis}
+      \begin{pycode}
+print(a.sum(axis=0))
+print(a.sum(axis=1))
+      \end{pycode}
+      \begin{pyout}
+[5 7 9]
+[ 6 15]
+      \end{pyout}
+    \end{block}
+  \end{columns}
+\end{frame}
+
+\begin{frame}[fragile]{Practice Question: \texttt{sum()}}
+  \begin{pycode}
+N = np.array([[2, 4],
+              [6, 8],
+              [1, 3]])
+  \end{pycode}
+  \begin{columns}[T]
+    \column{0.48\textwidth}
+    \begin{alertblock}{Question 1}
+      \begin{pycode}
+print(N.sum(axis=0))
+      \end{pycode}
+      \predict
+    \end{alertblock}
+    \column{0.48\textwidth}
+    \begin{alertblock}{Question 2}
+      \begin{pycode}
+print(N.sum(axis=1))
+      \end{pycode}
+      \predict
+    \end{alertblock}
+  \end{columns}
+\end{frame}
+
+\begin{frame}[fragile]{Answer: \texttt{sum()}}
+  \begin{columns}[T]
+    \column{0.48\textwidth}
+    \begin{exampleblock}{Answer 1}
+      \begin{pyout}
+[ 9 15]
+      \end{pyout}
+      \small Column 0: $2+6+1=9$. Column 1: $4+8+3=15$.
+    \end{exampleblock}
+    \column{0.48\textwidth}
+    \begin{exampleblock}{Answer 2}
+      \begin{pyout}
+[ 6 14  4]
+      \end{pyout}
+      \small Row sums: $2+4=6$, $6+8=14$, $1+3=4$. One answer per row.
+    \end{exampleblock}
+  \end{columns}
+\end{frame}
+
+% ----------------- sort -----------------
+\begin{frame}[fragile]{Function: \texttt{np.sort()}}
+  \purpose{Returns a \textbf{sorted copy} (smallest to largest). For 2-D arrays each \textbf{row} is sorted. The original array is not changed.}
+  \begin{columns}[T]
+    \column{0.48\textwidth}
+    \begin{block}{Example 1: 1-D}
+      \begin{pycode}
+a = np.array([5, 2, 9, 1])
+print(np.sort(a))
+      \end{pycode}
+      \begin{pyout}
+[1 2 5 9]
+      \end{pyout}
+    \end{block}
+    \column{0.48\textwidth}
+    \begin{block}{Example 2: 2-D}
+      \begin{pycode}
+b = np.array([[9, 3, 6],
+              [8, 2, 7]])
+print(np.sort(b))
+      \end{pycode}
+      \begin{pyout}
+[[3 6 9]
+ [2 7 8]]
+      \end{pyout}
+    \end{block}
+  \end{columns}
+\end{frame}
+
+\begin{frame}[fragile]{Practice Question: \texttt{np.sort()}}
+  \begin{columns}[T]
+    \column{0.48\textwidth}
+    \begin{alertblock}{Question 1}
+      \begin{pycode}
+x = np.array([40, 10, 30, 20])
+print(np.sort(x))
+      \end{pycode}
+      \predict
+    \end{alertblock}
+    \column{0.48\textwidth}
+    \begin{alertblock}{Question 2}
+      \begin{pycode}
+y = np.array([[4, 1, 3],
+              [9, 7, 8]])
+print(np.sort(y))
+      \end{pycode}
+      \predict
+    \end{alertblock}
+  \end{columns}
+\end{frame}
+
+\begin{frame}[fragile]{Answer: \texttt{np.sort()}}
+  \begin{columns}[T]
+    \column{0.48\textwidth}
+    \begin{exampleblock}{Answer 1}
+      \begin{pyout}
+[10 20 30 40]
+      \end{pyout}
+      \small Ascending order, smallest first.
+    \end{exampleblock}
+    \column{0.48\textwidth}
+    \begin{exampleblock}{Answer 2}
+      \begin{pyout}
+[[1 3 4]
+ [7 8 9]]
+      \end{pyout}
+      \small Each row is sorted on its own.
+    \end{exampleblock}
+  \end{columns}
+\end{frame}
+
+% ----------------- reshape (extra) -----------------
+\begin{frame}[fragile]{Bonus Method: \texttt{reshape()}}
+  \purpose{Changes the \textbf{shape} of an array without changing its data. The total number of elements must stay the same.}
+  \begin{columns}[T]
+    \column{0.48\textwidth}
+    \begin{block}{Example 1}
+      \begin{pycode}
+a = np.arange(6)
+print(a.reshape(2, 3))
+      \end{pycode}
+      \begin{pyout}
+[[0 1 2]
+ [3 4 5]]
+      \end{pyout}
+    \end{block}
+    \column{0.48\textwidth}
+    \begin{block}{Example 2}
+      \begin{pycode}
+b = np.arange(1, 9)
+print(b.reshape(4, 2))
+      \end{pycode}
+      \begin{pyout}
+[[1 2]
+ [3 4]
+ [5 6]
+ [7 8]]
+      \end{pyout}
+    \end{block}
+  \end{columns}
+\end{frame}
+
+\begin{frame}[fragile]{Practice Question: \texttt{reshape()}}
+  \begin{columns}[T]
+    \column{0.48\textwidth}
+    \begin{alertblock}{Question 1}
+      \begin{pycode}
+x = np.arange(8)
+print(x.reshape(2, 4))
+      \end{pycode}
+      \predict
+    \end{alertblock}
+    \column{0.48\textwidth}
+    \begin{alertblock}{Question 2}
+      \begin{pycode}
+y = np.arange(10)
+print(y.reshape(3, 3))
+      \end{pycode}
+      \predict\\
+      \footnotesize Hint: does it work?
+    \end{alertblock}
+  \end{columns}
+\end{frame}
+
+\begin{frame}[fragile]{Answer: \texttt{reshape()}}
+  \begin{columns}[T]
+    \column{0.48\textwidth}
+    \begin{exampleblock}{Answer 1}
+      \begin{pyout}
+[[0 1 2 3]
+ [4 5 6 7]]
+      \end{pyout}
+      \small $2\times4=8$ elements, which matches.
+    \end{exampleblock}
+    \column{0.48\textwidth}
+    \begin{exampleblock}{Answer 2}
+      \begin{pyout}
+ValueError: cannot reshape array
+of size 10 into shape (3,3)
+      \end{pyout}
+      \small $3\times3=9$, but the array has 10 elements. The sizes must match.
+    \end{exampleblock}
+  \end{columns}
+\end{frame}
+
+% =====================================================
+\begin{frame}[fragile]{Cheat Sheet}
+  \centering
+  \renewcommand{\arraystretch}{1.2}
+  \small
+  \begin{tabular}{|l|l|l|}
+    \hline
+    \rowcolor{mblue}\color{white}\textbf{Code} & \color{white}\textbf{What it gives} & \color{white}\textbf{For ARR (2$\times$4)}\\
+    \hline
+    \texttt{ARR.ndim}        & number of dimensions & 2\\
+    \hline
+    \rowcolor{mteal!10}\texttt{ARR.shape}       & (rows, columns)      & (2, 4)\\
+    \hline
+    \texttt{ARR.size}        & total elements       & 8\\
+    \hline
+    \rowcolor{mteal!10}\texttt{ARR.dtype}       & data type            & int64\\
+    \hline
+    \texttt{ARR.max()}       & largest value        & 6\\
+    \hline
+    \rowcolor{mteal!10}\texttt{ARR.sum(axis=1)} & row sums             & [10 18]\\
+    \hline
+    \texttt{np.sort(ARR)}    & each row sorted      & same order here\\
+    \hline
+  \end{tabular}
+\end{frame}
+
+% =====================================================
+\begin{frame}{Thank You! Homework Time}
+  \begin{columns}[T]
+    \column{0.58\textwidth}
+    \begin{alertblock}{Try these assignments}
+      \begin{enumerate}
+        \item Create NumPy arrays using different methods
+        \item Get elements using index values
+        \item Find the shape and reshape an array
+        \item Search and sort a NumPy array
+      \end{enumerate}
+    \end{alertblock}
+    \column{0.38\textwidth}
+    \centering
+    \imgph{4cm}{3cm}{Celebration / well done image}
+  \end{columns}
+\end{frame}
+
+\end{document}

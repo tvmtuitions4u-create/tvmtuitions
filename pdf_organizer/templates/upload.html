@@ -1,0 +1,76 @@
+{% extends "base.html" %}
+{% block title %}Upload — PDF Organizer{% endblock %}
+
+{% block content %}
+<div class="row justify-content-center">
+    <div class="col-lg-8">
+        <div class="card">
+            <div class="card-header bg-primary text-white">
+                <h4 class="mb-0"><i class="bi bi-cloud-upload"></i> Upload Document</h4>
+            </div>
+            <div class="card-body">
+                <form method="post" enctype="multipart/form-data">
+                    <div class="mb-3">
+                        <label class="form-label">File (PDF, DOC, PPT, TXT, images, ZIP) <span class="text-danger">*</span></label>
+                        <input type="file" name="file" class="form-control" required>
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Title <span class="text-danger">*</span></label>
+                        <input type="text" name="title" class="form-control" required placeholder="Lecture 5 - Integration Techniques">
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6 mb-3">
+                            <label class="form-label">Subject</label>
+                            <input type="text" name="subject" class="form-control" placeholder="Mathematics, Physics, Chemistry...">
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <label class="form-label">Batch / Group</label>
+                            <input type="text" name="batch" class="form-control" placeholder="2024-A, Morning Batch, Grade 12...">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6 mb-3">
+                            <label class="form-label">Class / Lecture Name</label>
+                            <input type="text" name="class_name" class="form-control" placeholder="Daily Class - Calculus, Lab Session...">
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <label class="form-label">Class Date</label>
+                            <input type="date" name="class_date" class="form-control">
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Students / Audience (optional)</label>
+                        <textarea name="students" class="form-control" rows="2" placeholder="All students, Group A, John, Mary..."></textarea>
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Description</label>
+                        <textarea name="description" class="form-control" rows="3" placeholder="Brief description of the content..."></textarea>
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Tags (comma separated)</label>
+                        <input type="text" name="tags" class="form-control" placeholder="calculus, exam, notes, important">
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6 mb-3">
+                            <label class="form-label">Category</label>
+                            <select name="category" class="form-select">
+                                <option value="PDF">PDF</option>
+                                <option value="Notes">Notes</option>
+                                <option value="Slides">Slides</option>
+                                <option value="Assignment">Assignment</option>
+                                <option value="Other">Other</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Additional Notes (optional)</label>
+                        <textarea name="notes" class="form-control" rows="2"></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-lg"><i class="bi bi-upload"></i> Upload & Save</button>
+                    <a href="{{ url_for('index') }}" class="btn btn-secondary btn-lg">Cancel</a>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

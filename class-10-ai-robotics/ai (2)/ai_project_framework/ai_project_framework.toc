@@ -1,0 +1,6 @@
+\beamer@sectionintoc {1}{AI Project Cycle}{4}{0}{1}
+\beamer@sectionintoc {2}{Problem Scoping and Goals}{8}{0}{2}
+\beamer@sectionintoc {3}{Data Acquisition}{17}{0}{3}
+\beamer@sectionintoc {4}{Data Exploration}{23}{0}{4}
+\beamer@sectionintoc {5}{Modelling}{26}{0}{5}
+\beamer@sectionintoc {6}{Evaluation and Deployment}{31}{0}{6}

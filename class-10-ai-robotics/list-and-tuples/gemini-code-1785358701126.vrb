@@ -1,0 +1,14 @@
+\frametitle{3.6 Output Analysis of Program 1}
+\begin{infoCard}{Program 1 Output}
+    \begin{lstlisting}
+(3, 4, 6, 7)
+(3, 'Orange', 15.5)
+(162, [7, 'Orange', 15.5], (2, 'Orange Education', 70.5))
+    \end{lstlisting}
+  \end{infoCard}
+  \vspace{0.3cm}
+  \begin{itemize}
+    \item \texttt{tuple1}: Standard integer tuple[cite: 1].
+    \item \texttt{tuple2}: Mixed integer, string, and float[cite: 1].
+    \item \texttt{tuple3}: Contains integer, nested list, and nested tuple[cite: 1].
+  \end{itemize}

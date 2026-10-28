@@ -1,0 +1,719 @@
+% ============================================================
+% Components of AI Project Framework -- Colorful Beamer
+% Theme: Madrid + seahorse (vibrant) with custom accents
+% Images included locally (downloaded from Unsplash/Pixabay)
+% Compile with pdflatex
+% ============================================================
+\documentclass[aspectratio=169,11pt]{beamer}
+
+% ---------- Theme and design (more colorful) ----------
+\usetheme{Madrid}
+\usecolortheme{seahorse}
+\setbeamertemplate{navigation symbols}{}
+\setbeamertemplate{blocks}[rounded][shadow=false]
+\setbeamertemplate{itemize items}[circle]
+
+% Custom vibrant colors
+\definecolor{aiBlue}{RGB}{0,102,204}
+\definecolor{aiOrange}{RGB}{255,102,0}
+\definecolor{aiGreen}{RGB}{0,153,76}
+\definecolor{aiPurple}{RGB}{102,51,153}
+\definecolor{aiTeal}{RGB}{0,153,153}
+
+\setbeamercolor{structure}{fg=aiBlue}
+\setbeamercolor{block title}{bg=aiBlue!80,fg=white}
+\setbeamercolor{block body}{bg=aiBlue!10}
+\setbeamercolor{alertblock title}{bg=aiOrange!90,fg=white}
+\setbeamercolor{alertblock body}{bg=aiOrange!15}
+\setbeamercolor{exampleblock title}{bg=aiGreen!80,fg=white}
+\setbeamercolor{exampleblock body}{bg=aiGreen!10}
+
+% ---------- Packages ----------
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath}
+\usepackage{booktabs}
+\usepackage{array}
+\usepackage{graphicx}
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta, positioning, shapes.geometric, calc}
+
+% ---------- Title information ----------
+\title[AI Project Framework]{Components of AI Project Framework}
+\subtitle{The AI Project Cycle: from Problem Scoping to Deployment}
+\author{Your Name}
+\institute[Your School]{Your School / Institute}
+\date{\today}
+
+% ---------- Section divider slides ----------
+\AtBeginSection[]{
+  \begin{frame}[plain]
+    \centering
+    \vfill
+    {\usebeamercolor[fg]{structure}\Huge\bfseries\insertsection\par}
+    \vfill
+  \end{frame}
+}
+
+\begin{document}
+
+% ============================================================
+% 1. TITLE + CONTENTS + OUTCOMES
+% ============================================================
+\begin{frame}
+  \titlepage
+\end{frame}
+
+\begin{frame}{Contents}
+  \tableofcontents
+\end{frame}
+
+\begin{frame}{Learning Outcomes}
+  Students will be able to:
+  \begin{itemize}
+    \item know about the AI Project Cycle and appreciate its importance
+    \item understand the nature of problem scoping
+    \item set goals for an AI project
+    \item explore the process of data acquisition
+    \item comprehend data exploration using data visualisation techniques
+    \item gain awareness about modelling and its approaches
+    \item get familiar with evaluation and deployment
+  \end{itemize}
+  \vfill
+  \begin{center}
+    \includegraphics[width=0.55\textwidth]{images/ai.jpg}
+  \end{center}
+\end{frame}
+
+% ============================================================
+% SECTION 1: AI PROJECT CYCLE
+% ============================================================
+\section{AI Project Cycle}
+
+\begin{frame}{What Is the AI Project Cycle?}
+  \begin{columns}[T]
+    \begin{column}{0.52\textwidth}
+      \begin{itemize}
+        \item Like the water cycle, it shows the \alert{progression of a process}.
+        \item A \textbf{structured, step-by-step framework} for creating an AI system.
+        \item Helps us define the problem, set goals, collect data, find patterns, and test the model.
+        \item Each stage needs careful planning and execution.
+      \end{itemize}
+    \end{column}
+    \begin{column}{0.46\textwidth}
+      \begin{center}
+      \begin{tikzpicture}[scale=0.85,
+          st/.style={draw, rounded corners, fill=aiBlue!20, align=center,
+                     minimum width=2.2cm, minimum height=0.7cm, font=\scriptsize, text=aiBlue!80!black},
+          ar/.style={-{Stealth[length=2mm]}, thick, aiOrange}]
+        \node[st] (a) at (90:2.3)  {Problem\\Scoping};
+        \node[st] (b) at (18:2.3)  {Data\\Acquisition};
+        \node[st] (c) at (-54:2.3) {Data\\Exploration};
+        \node[st] (d) at (-126:2.3){Modelling};
+        \node[st] (e) at (162:2.3) {Evaluation};
+        \draw[ar] (a) -- (b);
+        \draw[ar] (b) -- (c);
+        \draw[ar] (c) -- (d);
+        \draw[ar] (d) -- (e);
+        \draw[ar] (e) -- (a);
+      \end{tikzpicture}
+      \end{center}
+    \end{column}
+  \end{columns}
+  \vspace{0.4em}
+  \begin{center}
+    \includegraphics[width=0.4\textwidth]{images/cycle.jpg}
+  \end{center}
+\end{frame}
+
+\begin{frame}{The Stages of the Cycle}
+  \begin{description}
+    \item[Problem scoping] Understand and define the problem; set clear goals and objectives.
+    \item[Data acquisition] Collect relevant data from reliable, authentic sources in sufficient quantity.
+    \item[Data exploration] Analyse the data to find patterns, trends, and relationships, using visual representations.
+    \item[Modelling] Select an AI model that can learn from the data and make predictions.
+    \item[Evaluation] Test the model and compare results with expected outcomes.
+  \end{description}
+  \vspace{0.3em}
+  \begin{alertblock}{Deployment}
+    Once evaluation gives accurate results, the model can be deployed in the real world.
+  \end{alertblock}
+\end{frame}
+
+\begin{frame}{Activity 11.1: Museum Security Scenario}
+  \begin{columns}[T]
+    \begin{column}{0.55\textwidth}
+      \begin{exampleblock}{Scenario}
+        You are the Chief Security Officer protecting high-value ancient artefacts that have been brought to a museum for exhibition. They are of great historical significance, and collectors worldwide want them.
+      \end{exampleblock}
+      \begin{itemize}
+        \item Information is circulating that a notorious art collector has recruited a master criminal to steal them.
+        \item \textbf{Task:} enhance the museum's security and prevent any theft.
+        \item \textbf{Follow-up:} explain the AI project cycle using a suitable example.
+      \end{itemize}
+    \end{column}
+    \begin{column}{0.42\textwidth}
+      \begin{center}
+        \includegraphics[width=\textwidth]{images/museum.jpg}\\[0.3em]
+        \includegraphics[width=0.6\textwidth]{images/security.jpg}
+      \end{center}
+    \end{column}
+  \end{columns}
+\end{frame}
+
+% ============================================================
+% SECTION 2: PROBLEM SCOPING AND SETTING GOALS
+% ============================================================
+\section{Problem Scoping and Goals}
+
+\begin{frame}{Problem Scoping}
+  \begin{columns}[T]
+    \begin{column}{0.55\textwidth}
+      \begin{itemize}
+        \item Choosing a problem to address using AI.
+        \item Identify the problem's \alert{scope, objectives, and constraints} to get a clear understanding of what needs to be solved.
+        \item Select a problem from a theme, an SDG-related issue, or one of your own.
+      \end{itemize}
+      \vspace{0.3em}
+      \footnotesize
+      \begin{tabular}{@{}p{3.3cm}p{4.5cm}@{}}
+        \toprule
+        \textbf{Theme} & \textbf{Topics / Challenges} \\
+        \midrule
+        Smart Cities & Energy efficiency, traffic and waste management \\
+        Social Media & Sentiment analysis, fake news detection \\
+        Environmental Sustainability & Biodiversity, climate action, pollution \\
+        Health & Medicinal aid, spread of diseases \\
+        Agriculture & Pest issues, yield rates \\
+        \bottomrule
+      \end{tabular}
+    \end{column}
+    \begin{column}{0.42\textwidth}
+      \begin{center}
+        \includegraphics[width=\textwidth]{images/goals.jpg}
+      \end{center}
+    \end{column}
+  \end{columns}
+\end{frame}
+
+\begin{frame}{More Themes (Activity 11.2)}
+  \small
+  \begin{tabular}{@{}p{4cm}p{7.5cm}@{}}
+    \toprule
+    \textbf{Theme} & \textbf{Topics / Challenges} \\
+    \midrule
+    Vaccination Drive & Vaccine awareness, limited supply, vaccination centres, training healthcare workers \\
+    Hostel & Limited space, surveillance, cleanliness, rent collection, complaints, maintenance \\
+    School Attendance & Connectivity, hardware and software faults, user adoption, cost, inaccurate records \\
+    \bottomrule
+  \end{tabular}
+  \vspace{0.6em}
+  \begin{block}{Activity 11.2}
+    (1) Pick a theme and say why. (2) List problems related to it. (3) Draw a mind map of the problems.
+  \end{block}
+\end{frame}
+
+\begin{frame}{Goal of a Project}
+  \begin{columns}[T]
+    \begin{column}{0.58\textwidth}
+      \begin{itemize}
+        \item Defining the goal is one of the most important steps in project planning.
+        \item A clear aim gives \alert{clarity and direction} to all later actions.
+        \item Defining a goal is iterative and needs cooperation, research, and careful evaluation.
+        \item A well-defined goal guides decision-making and ensures the AI solution addresses real-life challenges.
+      \end{itemize}
+    \end{column}
+    \begin{column}{0.40\textwidth}
+      \begin{center}
+        \includegraphics[width=\textwidth]{images/goals.jpg}
+      \end{center}
+    \end{column}
+  \end{columns}
+\end{frame}
+
+\begin{frame}{4Ws Problem Canvas: Who and What}
+  Problem scoping = identifying a problem, the factors affecting it, and the project goal. The canvas has four blocks: \textbf{Who? What? Where? Why?}
+  \vspace{0.4em}
+  \begin{columns}[T]
+    \begin{column}{0.48\textwidth}
+      \begin{block}{Who?}
+        \begin{itemize}
+          \item Who are the stakeholders (directly or indirectly affected)?
+          \item What do you know about them?
+        \end{itemize}
+        Stakeholders are involved in the problem and benefit from the solution.
+      \end{block}
+    \end{column}
+    \begin{column}{0.48\textwidth}
+      \begin{block}{What?}
+        \begin{itemize}
+          \item What is the problem?
+          \item How do you know it is a problem?
+        \end{itemize}
+        Gather evidence: observations, newspapers, social media posts, reports.
+      \end{block}
+    \end{column}
+  \end{columns}
+\end{frame}
+
+\begin{frame}{4Ws Problem Canvas: Where and Why}
+  \begin{columns}[T]
+    \begin{column}{0.48\textwidth}
+      \begin{block}{Where?}
+        \begin{itemize}
+          \item In what context or location do stakeholders experience the problem?
+          \item Physical places (cities, areas), online platforms, institutions, public spaces
+          \item Local or global impact
+        \end{itemize}
+      \end{block}
+    \end{column}
+    \begin{column}{0.48\textwidth}
+      \begin{block}{Why?}
+        \begin{itemize}
+          \item Why is the problem worth solving?
+          \item How will the solution benefit stakeholders and society?
+          \item Better quality of life, efficiency, cost savings, safety, sustainability
+        \end{itemize}
+      \end{block}
+    \end{column}
+  \end{columns}
+  \vspace{0.4em}
+  The canvas defines the problem, identifies stakeholders, specifies context, and highlights why solving it matters.
+\end{frame}
+
+\begin{frame}{Problem Statement Template}
+  \begin{itemize}
+    \item Summarises all key points of the 4Ws canvas \alert{in a single template}.
+    \item Lets us quickly recall the ideas later.
+    \item Makes the important aspects easy to understand and remember for analysis and decision-making.
+  \end{itemize}
+  \vfill
+  \begin{center}
+    \includegraphics[width=0.45\textwidth]{images/data.jpg}
+  \end{center}
+\end{frame}
+
+\begin{frame}{Example: Gopalapuram Air Pollution (Who \& What)}
+  \small
+  Gopalapuram is a small urban area known for a clean, green environment, but rapid industrialisation, construction, and rising vehicular traffic have changed that.
+  \begin{columns}[T]
+    \begin{column}{0.48\textwidth}
+      \begin{block}{Who?}
+        Residents, local government, environmentalists, healthcare authorities, animals and birds, industrialists.
+        \begin{itemize}
+          \item Residents: health and quality of life directly affected
+          \item Government: environmental and public-health policy
+          \item Environmentalists: protect biodiversity
+        \end{itemize}
+      \end{block}
+    \end{column}
+    \begin{column}{0.48\textwidth}
+      \begin{block}{What?}
+        \begin{itemize}
+          \item Rising air pollution (industrial and vehicular emissions)
+          \item More respiratory problems in citizens
+          \item Insect and bird populations affected
+        \end{itemize}
+        \textbf{Evidence:} increased pollution; more respiratory illness.
+      \end{block}
+      \begin{center}
+        \includegraphics[width=0.9\textwidth]{images/pollution.jpg}
+      \end{center}
+    \end{column}
+  \end{columns}
+\end{frame}
+
+\begin{frame}{Example: Gopalapuram Air Pollution (Where \& Why)}
+  \small
+  \begin{columns}[T]
+    \begin{column}{0.42\textwidth}
+      \begin{block}{Where?}
+        Felt in daily life across residential areas, public places, workplaces, green spaces, educational institutions, and natural habitats.
+      \end{block}
+      \begin{center}
+        \includegraphics[width=\textwidth]{images/pollution.jpg}
+      \end{center}
+    \end{column}
+    \begin{column}{0.55\textwidth}
+      \begin{block}{Why? (value to stakeholders)}
+        \begin{itemize}
+          \item Lower pollution and health risks for residents
+          \item Lower healthcare burden
+          \item Sustainable development for industry and authorities
+          \item Preserved biodiversity and green spaces
+        \end{itemize}
+      \end{block}
+      \begin{block}{How the situation improves}
+        \begin{itemize}
+          \item Cleaner, more enjoyable living environment
+          \item A sustainable, environmentally conscious city
+          \item Ecological balance for insects and birds
+        \end{itemize}
+      \end{block}
+    \end{column}
+  \end{columns}
+\end{frame}
+
+% ============================================================
+% SECTION 3: DATA ACQUISITION
+% ============================================================
+\section{Data Acquisition}
+
+\begin{frame}{What Is Data? Training vs.\ Testing Data}
+  \textbf{Data} is a collection of facts or statistics gathered for reference or analysis (text, video, images, audio, \dots). \alert{Data is the fuel for AI algorithms.}
+  \vspace{0.4em}
+  \begin{columns}[T]
+    \begin{column}{0.48\textwidth}
+      \begin{block}{Training data}
+        Initial dataset used to train the model. It must be aligned with the problem statement and be sufficient, relevant, accurate, and wide-ranging.
+      \end{block}
+    \end{column}
+    \begin{column}{0.48\textwidth}
+      \begin{block}{Testing data}
+        Data the algorithm has \emph{not seen before}, used to evaluate performance. It should represent what the model will meet in the real world.
+      \end{block}
+    \end{column}
+  \end{columns}
+  \vfill
+  \begin{center}
+    \includegraphics[width=0.5\textwidth]{images/data.jpg}
+  \end{center}
+\end{frame}
+
+\begin{frame}{Data Features and the Cricket Example}
+  \begin{itemize}
+    \item \textbf{Data features} describe the type of information to collect in response to the problem statement.
+    \item Visualise the factors that influence the problem and find parameters that affect it directly or indirectly.
+  \end{itemize}
+  \begin{exampleblock}{Predicting the result of a match between Team A and Team B from pitch conditions}
+    \begin{itemize}
+      \item \textbf{Training data:} pitch conditions and outcomes of previous matches
+      \item \textbf{Testing data:} pitch conditions of upcoming matches
+      \item \textbf{Data features:} historical pitch conditions, scores, match outcomes, and pitch conditions of upcoming matches
+    \end{itemize}
+  \end{exampleblock}
+\end{frame}
+
+\begin{frame}{Sources of Data}
+  \small
+  \begin{columns}[T]
+    \begin{column}{0.5\textwidth}
+      \begin{itemize}
+        \item \textbf{Surveys:} ask a group of people questions (paper, interviews, online forms); e.g., population census every ten years
+        \item \textbf{Web scraping:} collecting website data automatically with tools such as BeautifulSoup or Scrapy
+        \item \textbf{Sensors:} measure temperature, pressure, light, sound, motion; e.g., smart homes, autonomous cars
+      \end{itemize}
+    \end{column}
+    \begin{column}{0.5\textwidth}
+      \begin{itemize}
+        \item \textbf{Cameras:} images and video (CCTV, webcams); key to Computer Vision
+        \item \textbf{Observations:} manual data gathering; e.g., counting birds in a season
+        \item \textbf{APIs:} programs that fetch data from other services; e.g., social media posts for sentiment analysis
+        \item \textbf{Kaggle:} datasets on text, images, tabular data; also competitions and notebooks (Python, R)
+      \end{itemize}
+      \vspace{0.3em}
+      \begin{center}
+        \includegraphics[width=0.7\textwidth]{images/data.jpg}
+      \end{center}
+    \end{column}
+  \end{columns}
+\end{frame}
+
+\begin{frame}{Acquiring Relevant Data from Reliable Sources}
+  \begin{itemize}
+    \item Data must be \alert{authentic, reliable, and accurate}; random websites may not be.
+    \item Collection methods must be \alert{ethical}: fair, lawful, and respectful of others' rights.
+    \item Data should be open-sourced; accessing private data without permission is an offence.
+  \end{itemize}
+  \begin{block}{Reliable source: government open-data portals}
+    Examples: \texttt{data.gov.in} and \texttt{india.gov.in}.
+  \end{block}
+  \vfill
+  \begin{center}
+    \includegraphics[width=0.4\textwidth]{images/data.jpg}
+  \end{center}
+\end{frame}
+
+\begin{frame}{System Maps}
+  \begin{columns}[T]
+    \begin{column}{0.5\textwidth}
+      \small
+      Visual diagrams showing the elements of an AI project and how they are connected.
+      \begin{itemize}
+        \item \textbf{Elements:} main parts working toward a purpose
+        \item \textbf{Relationships:} how elements relate
+        \item \textbf{Feedback loops:} cause-effect chains where output influences the system's own behaviour or inputs (positive or negative)
+        \item Arrow \textbf{+}: directly related (X up $\Rightarrow$ Y up)
+        \item Arrow \textbf{$-$}: inversely related (X up $\Rightarrow$ Y down)
+      \end{itemize}
+    \end{column}
+    \begin{column}{0.48\textwidth}
+      \begin{tikzpicture}[scale=0.9,
+          el/.style={draw, ellipse, fill=aiTeal!20, font=\scriptsize, align=center},
+          ar/.style={-{Stealth[length=2mm]}, thick, aiOrange}]
+        \node[el] (h) at (0,2.2) {Human\\activities};
+        \node[el] (c) at (3.2,2.2) {CO$_2$\\emissions};
+        \node[el] (g) at (3.2,0) {Greenhouse\\gases};
+        \node[el] (w) at (0,0) {Global\\warming};
+        \node[el] (t) at (1.6,-1.7) {Trees};
+        \draw[ar] (h) -- node[above,font=\scriptsize]{+} (c);
+        \draw[ar] (c) -- node[right,font=\scriptsize]{+} (g);
+        \draw[ar] (g) -- node[below,font=\scriptsize]{+} (w);
+        \draw[ar] (t) -- node[right,font=\scriptsize]{$-$} (c);
+      \end{tikzpicture}
+      {\scriptsize Simplified sketch: trees absorb CO$_2$ (negative loop); human activities add it (positive loop).}
+    \end{column}
+  \end{columns}
+\end{frame}
+
+% ============================================================
+% SECTION 4: DATA EXPLORATION
+% ============================================================
+\section{Data Exploration}
+
+\begin{frame}{Need for Visualising Data and Tools}
+  \begin{columns}[T]
+    \begin{column}{0.44\textwidth}
+      \textbf{Visualisation helps to}
+      \begin{itemize}
+        \item simplify complex data
+        \item reveal trends, relationships, patterns
+        \item uncover hidden relationships or anomalies
+        \item select models for the next stage
+        \item communicate insights, even to non-technical people
+      \end{itemize}
+    \end{column}
+    \begin{column}{0.54\textwidth}
+      \small
+      \textbf{Tools}
+      \begin{itemize}
+        \item \textbf{Tableau:} user-friendly, interactive, large datasets
+        \item \textbf{Microsoft Power BI:} cloud BI, dashboards, reports
+        \item \textbf{Qlik View:} shows data relationships by colours; in-memory speed
+        \item \textbf{Looker Studio:} free web-based charts and dashboards
+        \item \textbf{Excel:} manual; simple charts, not for large data
+        \item \textbf{Plotly:} open-source Python; interactive 2D/3D graphs
+        \item \textbf{Matplotlib:} Python; static, animated, interactive plots
+        \item \textbf{Highcharts:} free JavaScript library; works on touch platforms
+      \end{itemize}
+    \end{column}
+  \end{columns}
+  \vfill
+  \begin{center}
+    \includegraphics[width=0.45\textwidth]{images/data.jpg}
+  \end{center}
+\end{frame}
+
+\begin{frame}{Ways to Visualise Data}
+  \small
+  \begin{tabular}{@{}p{2cm}p{4.6cm}p{5.4cm}@{}}
+    \toprule
+    \textbf{Chart} & \textbf{Description} & \textbf{Suitable for} \\
+    \midrule
+    Bar chart & Rectangular bars whose height/length is proportional to the values & Comparing categories; e.g., team scores, marks in subjects, rainy-day activity preferences \\[0.4em]
+    Line chart & Points connected by a line to track changes over time & Trends over time; e.g., bear population per year, temperature \\[0.4em]
+    Pie chart & Circle divided into sectors proportional to quantities & Contribution of each category to a whole; e.g., favourite fruit, energy sources, expense categories \\
+    \bottomrule
+  \end{tabular}
+  \vfill
+  \begin{center}
+    \includegraphics[width=0.5\textwidth]{images/data.jpg}
+  \end{center}
+\end{frame}
+
+% ============================================================
+% SECTION 5: MODELLING
+% ============================================================
+\section{Modelling}
+
+\begin{frame}{Deep Learning and Types of AI Models}
+  \begin{columns}[T]
+    \begin{column}{0.55\textwidth}
+      \begin{itemize}
+        \item \textbf{Deep learning:} learns from large amounts of data using multi-layer neural networks that mimic the human brain; e.g., a driverless car identifying a person crossing the road.
+        \item Humans understand graphs, but \alert{machines need data as numbers (0s and 1s)}.
+        \item AI models define relationships between parameters \emph{mathematically}.
+      \end{itemize}
+      \begin{block}{Two approaches}
+        \textbf{Rule-based} \quad and \quad \textbf{Learning-based}
+      \end{block}
+    \end{column}
+    \begin{column}{0.42\textwidth}
+      \begin{center}
+        \includegraphics[width=\textwidth]{images/neural.jpg}
+      \end{center}
+    \end{column}
+  \end{columns}
+\end{frame}
+
+\begin{frame}{Rule-based vs.\ Learning-based Approach}
+  \small
+  \begin{columns}[T]
+    \begin{column}{0.48\textwidth}
+      \begin{block}{Rule-based}
+        Developer feeds data plus rules (``If this happens, then do this'').
+        \begin{itemize}
+          \item Banana/orange example: 200 labelled images; labels act as rules
+          \item Unseen data (e.g., an apple) cannot be identified
+        \end{itemize}
+      \end{block}
+    \end{column}
+    \begin{column}{0.48\textwidth}
+      \begin{block}{Learning-based}
+        Machine learns on its own from labelled and unlabelled data and defines its own rules.
+        \begin{itemize}
+          \item Example: 1000 mixed tree images clustered by height, colour, fruit, leaf type
+        \end{itemize}
+      \end{block}
+    \end{column}
+  \end{columns}
+  \vspace{0.3em}
+  \footnotesize
+  \begin{tabular}{@{}p{5.6cm}p{5.6cm}@{}}
+    \toprule
+    \textbf{Rule-based} & \textbf{Learning-based} \\
+    \midrule
+    Follows rules defined by the developer & Learns on its own from the data \\
+    AI via rule-based technique & AI via learning technique \\
+    Typically uses labelled data & Handles labelled and unlabelled data \\
+    May require less training time & Requires more training time \\
+    \bottomrule
+  \end{tabular}
+\end{frame}
+
+\begin{frame}{Supervised Learning and Regression}
+  \begin{columns}[T]
+    \begin{column}{0.5\textwidth}
+      \begin{block}{Supervised learning}
+        \begin{itemize}
+          \item Trained on a \alert{labelled} dataset (inputs and known outputs)
+          \item Data split into training and test sets
+          \item Fast training because results are already known
+          \item Once trained, predicts the output for new input
+        \end{itemize}
+      \end{block}
+    \end{column}
+    \begin{column}{0.48\textwidth}
+      \begin{block}{Regression}
+        \begin{itemize}
+          \item Predicts \emph{continuous numerical values} (product price, salary)
+          \item Predicts one variable from another
+          \item Example: next day's temperature from humidity and cloud cover
+          \item The learned function (a line on a graph) predicts future values
+        \end{itemize}
+      \end{block}
+    \end{column}
+  \end{columns}
+  \vfill
+  \begin{center}
+    \includegraphics[width=0.4\textwidth]{images/neural.jpg}
+  \end{center}
+\end{frame}
+
+\begin{frame}{Unsupervised Learning}
+  \begin{itemize}
+    \item Training input is \alert{neither classified nor labelled}.
+    \item The system does not know the correct output; it explores the data and finds the hidden (latent) structure.
+    \item Once it learns the patterns, it can find them in new datasets.
+  \end{itemize}
+  \begin{exampleblock}{Example}
+    Fed images of a cycle, a car, and a helicopter, the model can separate them into groups, but it cannot say which cluster is the cycle because the data is unlabelled.
+  \end{exampleblock}
+  \vfill
+  \begin{center}
+    \includegraphics[width=0.45\textwidth]{images/neural.jpg}
+  \end{center}
+\end{frame}
+
+% ============================================================
+% SECTION 6: EVALUATION AND DEPLOYMENT
+% ============================================================
+\section{Evaluation and Deployment}
+
+\begin{frame}{AI Project Evaluation}
+  \begin{itemize}
+    \item Assess the \alert{reliability and efficiency} of a model by feeding it testing data and comparing output with the expected outcome.
+    \item Testing data is separated from the acquired dataset at the data acquisition stage.
+    \item Evaluation happens at various stages to find improvements and meet project goals.
+    \item \textbf{Prediction:} forecasts about unknown or future data using patterns learned from training data.
+    \item \textbf{Reality:} the actual situation when the prediction is made.
+  \end{itemize}
+  \vfill
+  \begin{center}
+    \includegraphics[width=0.4\textwidth]{images/ai.jpg}
+  \end{center}
+\end{frame}
+
+\begin{frame}{Prediction vs.\ Reality: Is It Raining?}
+  Rainfall model: is it raining at a given place?
+  \vspace{0.4em}
+  \begin{columns}[T]
+    \begin{column}{0.5\textwidth}
+      \centering
+      \renewcommand{\arraystretch}{1.6}
+      \begin{tabular}{c|c|c}
+        & \textbf{Reality: Yes} & \textbf{Reality: No} \\ \hline
+        \textbf{Pred.: Yes} & \textcolor{green!50!black}{\textbf{True Positive}} & \textcolor{red!70!black}{\textbf{False Positive}} \\ \hline
+        \textbf{Pred.: No}  & \textcolor{red!70!black}{\textbf{False Negative}} & \textcolor{green!50!black}{\textbf{True Negative}} \\
+      \end{tabular}
+    \end{column}
+    \begin{column}{0.48\textwidth}
+      \small
+      \begin{itemize}
+        \item \textbf{True Positive:} predicts rain; it is raining
+        \item \textbf{True Negative:} predicts no rain; there is none
+        \item \textbf{False Positive:} predicts rain; there is none
+        \item \textbf{False Negative:} predicts no rain; it is raining
+      \end{itemize}
+    \end{column}
+  \end{columns}
+\end{frame}
+
+\begin{frame}{AI Project Deployment}
+  \begin{columns}[T]
+    \begin{column}{0.55\textwidth}
+      \begin{itemize}
+        \item Implementing the AI model in a \alert{real-world setting}.
+        \item The model is integrated into the desired software or system and packaged for practical use.
+        \item Goal: make the AI model useful for solving real problems.
+      \end{itemize}
+    \end{column}
+    \begin{column}{0.42\textwidth}
+      \begin{center}
+        \includegraphics[width=\textwidth]{images/deployment.jpg}
+      \end{center}
+    \end{column}
+  \end{columns}
+\end{frame}
+
+% ============================================================
+% RECAP / THANK YOU
+% ============================================================
+\begin{frame}{Recap}
+  \small
+  \begin{itemize}
+    \item The AI project cycle has five stages: problem scoping, data acquisition, data exploration, modelling, and evaluation.
+    \item The \textbf{4Ws canvas} and \textbf{Problem Statement Template} structure problem scoping.
+    \item \textbf{Training data} trains the model; \textbf{testing data} checks its performance.
+    \item \textbf{Data features} describe what information to collect; \textbf{system maps} show how elements relate.
+    \item \textbf{Rule-based:} the machine follows developer-defined rules. \textbf{Learning-based:} the machine learns on its own.
+    \item \textbf{Unsupervised learning} uses data that is neither classified nor labelled.
+  \end{itemize}
+  \vfill
+  \begin{center}
+    \includegraphics[width=0.35\textwidth]{images/ai.jpg}
+  \end{center}
+\end{frame}
+
+\begin{frame}[plain]
+  \centering
+  \vfill
+  {\usebeamercolor[fg]{structure}\Huge\bfseries Thank You!\par}
+  \vspace{1em}
+  Questions?
+  \vfill
+  \includegraphics[width=0.3\textwidth]{images/cycle.jpg}
+  \vfill
+\end{frame}
+
+\end{document}

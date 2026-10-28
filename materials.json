@@ -1,0 +1,1385 @@
+{
+  "generated": "2026-10-28T10:00:23",
+  "total": 136,
+  "classes": [
+    "10-icse",
+    "class-10-ai-robotics"
+  ],
+  "subjects": [
+    "General",
+    "ai",
+    "ai (2)",
+    "ch-4-class-ppt",
+    "chp-4-components-of-robots-slides-20260630T103250Z-3-001",
+    "competency",
+    "ishaan",
+    "list-and-tuples",
+    "materials",
+    "oct-27",
+    "revision",
+    "string",
+    "tinkercad"
+  ],
+  "materials": [
+    {
+      "name": "ICSE_X_Maths_QA_Slides.pdf",
+      "path": "materials/10-icse/competency/ICSE_X_Maths_QA_Slides.pdf",
+      "folder": "materials/10-icse/competency",
+      "class": "10-icse",
+      "subject": "materials",
+      "size": 235670,
+      "modified": "2026-10-28T09:49:55",
+      "is_pdf": true
+    },
+    {
+      "name": "qandansRobotics and Systems.pdf",
+      "path": "class-10-ai-robotics/qandansRobotics and Systems.pdf",
+      "folder": "class-10-ai-robotics",
+      "class": "class-10-ai-robotics",
+      "subject": "General",
+      "size": 1606099,
+      "modified": "2026-10-28T09:56:08",
+      "is_pdf": true
+    },
+    {
+      "name": "01-11rom_Robots_to_Cobots.pdf",
+      "path": "class-10-ai-robotics/01-11rom_Robots_to_Cobots.pdf",
+      "folder": "class-10-ai-robotics",
+      "class": "class-10-ai-robotics",
+      "subject": "General",
+      "size": 778103,
+      "modified": "2026-10-28T09:56:08",
+      "is_pdf": true
+    },
+    {
+      "name": "Primer - Robotics and AI (66).pdf",
+      "path": "class-10-ai-robotics/Primer - Robotics and AI (66).pdf",
+      "folder": "class-10-ai-robotics",
+      "class": "class-10-ai-robotics",
+      "subject": "General",
+      "size": 4591682,
+      "modified": "2026-10-28T09:56:08",
+      "is_pdf": true
+    },
+    {
+      "name": "list_tuple_notes.pdf",
+      "path": "class-10-ai-robotics/list_tuple_notes.pdf",
+      "folder": "class-10-ai-robotics",
+      "class": "class-10-ai-robotics",
+      "subject": "General",
+      "size": 474754,
+      "modified": "2026-10-28T09:56:08",
+      "is_pdf": true
+    },
+    {
+      "name": "dictionary_solutions_beamer.pdf",
+      "path": "class-10-ai-robotics/dictionary_solutions_beamer.pdf",
+      "folder": "class-10-ai-robotics",
+      "class": "class-10-ai-robotics",
+      "subject": "General",
+      "size": 125413,
+      "modified": "2026-10-28T09:56:08",
+      "is_pdf": true
+    },
+    {
+      "name": "Importance of Collaborative Robots_annotated_annotated-1.pdf",
+      "path": "class-10-ai-robotics/Importance of Collaborative Robots_annotated_annotated-1.pdf",
+      "folder": "class-10-ai-robotics",
+      "class": "class-10-ai-robotics",
+      "subject": "General",
+      "size": 3673088,
+      "modified": "2026-10-28T09:56:08",
+      "is_pdf": true
+    },
+    {
+      "name": "robotics-ppt.pdf",
+      "path": "class-10-ai-robotics/robotics-ppt.pdf",
+      "folder": "class-10-ai-robotics",
+      "class": "class-10-ai-robotics",
+      "subject": "General",
+      "size": 10186300,
+      "modified": "2026-10-28T09:56:08",
+      "is_pdf": true
+    },
+    {
+      "name": "robot_quiz.pdf",
+      "path": "class-10-ai-robotics/robot_quiz.pdf",
+      "folder": "class-10-ai-robotics",
+      "class": "class-10-ai-robotics",
+      "subject": "General",
+      "size": 166819,
+      "modified": "2026-10-28T09:56:08",
+      "is_pdf": true
+    },
+    {
+      "name": "Understanding Machines Robots and Cobots.pdf",
+      "path": "class-10-ai-robotics/Understanding Machines Robots and Cobots.pdf",
+      "folder": "class-10-ai-robotics",
+      "class": "class-10-ai-robotics",
+      "subject": "General",
+      "size": 1861722,
+      "modified": "2026-10-28T09:56:08",
+      "is_pdf": true
+    },
+    {
+      "name": "dictionary_qa_separated (1).pdf",
+      "path": "class-10-ai-robotics/dictionary_qa_separated (1).pdf",
+      "folder": "class-10-ai-robotics",
+      "class": "class-10-ai-robotics",
+      "subject": "General",
+      "size": 165219,
+      "modified": "2026-10-28T09:56:08",
+      "is_pdf": true
+    },
+    {
+      "name": "numpy-ai-robotics-class-10-icse.pdf",
+      "path": "class-10-ai-robotics/numpy-ai-robotics-class-10-icse.pdf",
+      "folder": "class-10-ai-robotics",
+      "class": "class-10-ai-robotics",
+      "subject": "General",
+      "size": 2748825,
+      "modified": "2026-10-28T09:56:08",
+      "is_pdf": true
+    },
+    {
+      "name": "11-From_Robots_to_Cobots.pdf",
+      "path": "class-10-ai-robotics/11-From_Robots_to_Cobots.pdf",
+      "folder": "class-10-ai-robotics",
+      "class": "class-10-ai-robotics",
+      "subject": "General",
+      "size": 778103,
+      "modified": "2026-10-28T09:56:08",
+      "is_pdf": true
+    },
+    {
+      "name": "string-1-ai.pdf",
+      "path": "class-10-ai-robotics/string-1-ai.pdf",
+      "folder": "class-10-ai-robotics",
+      "class": "class-10-ai-robotics",
+      "subject": "General",
+      "size": 2750494,
+      "modified": "2026-10-28T09:56:08",
+      "is_pdf": true
+    },
+    {
+      "name": "Benefits of Human Interaction.pdf",
+      "path": "class-10-ai-robotics/Benefits of Human Interaction.pdf",
+      "folder": "class-10-ai-robotics",
+      "class": "class-10-ai-robotics",
+      "subject": "General",
+      "size": 1888676,
+      "modified": "2026-10-28T09:56:08",
+      "is_pdf": true
+    },
+    {
+      "name": "DOC-20260630-WA0018..pdf",
+      "path": "class-10-ai-robotics/DOC-20260630-WA0018..pdf",
+      "folder": "class-10-ai-robotics",
+      "class": "class-10-ai-robotics",
+      "subject": "General",
+      "size": 130840,
+      "modified": "2026-10-28T09:56:08",
+      "is_pdf": true
+    },
+    {
+      "name": "Robots vs Cobots.pdf",
+      "path": "class-10-ai-robotics/Robots vs Cobots.pdf",
+      "folder": "class-10-ai-robotics",
+      "class": "class-10-ai-robotics",
+      "subject": "General",
+      "size": 1351352,
+      "modified": "2026-10-28T09:56:08",
+      "is_pdf": true
+    },
+    {
+      "name": "dictionary_qa_separated.pdf",
+      "path": "class-10-ai-robotics/dictionary_qa_separated.pdf",
+      "folder": "class-10-ai-robotics",
+      "class": "class-10-ai-robotics",
+      "subject": "General",
+      "size": 165219,
+      "modified": "2026-10-28T09:56:08",
+      "is_pdf": true
+    },
+    {
+      "name": "sets_1.pdf",
+      "path": "class-10-ai-robotics/sets_1.pdf",
+      "folder": "class-10-ai-robotics",
+      "class": "class-10-ai-robotics",
+      "subject": "General",
+      "size": 474926,
+      "modified": "2026-10-28T09:56:08",
+      "is_pdf": true
+    },
+    {
+      "name": "Python___dictionary.pdf",
+      "path": "class-10-ai-robotics/Python___dictionary.pdf",
+      "folder": "class-10-ai-robotics",
+      "class": "class-10-ai-robotics",
+      "subject": "General",
+      "size": 7581843,
+      "modified": "2026-10-28T09:56:08",
+      "is_pdf": true
+    },
+    {
+      "name": "tinkercad_20260915.pdf",
+      "path": "class-10-ai-robotics/tinkercad_20260915.pdf",
+      "folder": "class-10-ai-robotics",
+      "class": "class-10-ai-robotics",
+      "subject": "General",
+      "size": 4615664,
+      "modified": "2026-10-28T09:56:08",
+      "is_pdf": true
+    },
+    {
+      "name": "chapter9_dictionaries_beamer.pdf",
+      "path": "class-10-ai-robotics/chapter9_dictionaries_beamer.pdf",
+      "folder": "class-10-ai-robotics",
+      "class": "class-10-ai-robotics",
+      "subject": "General",
+      "size": 274956,
+      "modified": "2026-10-28T09:56:08",
+      "is_pdf": true
+    },
+    {
+      "name": "set-python.pdf",
+      "path": "class-10-ai-robotics/set-python.pdf",
+      "folder": "class-10-ai-robotics",
+      "class": "class-10-ai-robotics",
+      "subject": "General",
+      "size": 3493634,
+      "modified": "2026-10-28T09:56:08",
+      "is_pdf": true
+    },
+    {
+      "name": "True or False Quiz.pdf",
+      "path": "class-10-ai-robotics/True or False Quiz.pdf",
+      "folder": "class-10-ai-robotics",
+      "class": "class-10-ai-robotics",
+      "subject": "General",
+      "size": 442092,
+      "modified": "2026-10-28T09:56:08",
+      "is_pdf": true
+    },
+    {
+      "name": "qandansRobotics and Systems.pdf",
+      "path": "class-10-ai-robotics/ch-4-class-ppt/qandansRobotics and Systems.pdf",
+      "folder": "class-10-ai-robotics/ch-4-class-ppt",
+      "class": "class-10-ai-robotics",
+      "subject": "ch-4-class-ppt",
+      "size": 1606099,
+      "modified": "2026-10-28T09:56:08",
+      "is_pdf": true
+    },
+    {
+      "name": "0_1.pdf",
+      "path": "class-10-ai-robotics/ch-4-class-ppt/0_1.pdf",
+      "folder": "class-10-ai-robotics/ch-4-class-ppt",
+      "class": "class-10-ai-robotics",
+      "subject": "ch-4-class-ppt",
+      "size": 132391,
+      "modified": "2026-10-28T09:56:08",
+      "is_pdf": true
+    },
+    {
+      "name": "Understanding Machines Robots and Cobots.pdf",
+      "path": "class-10-ai-robotics/ch-4-class-ppt/Understanding Machines Robots and Cobots.pdf",
+      "folder": "class-10-ai-robotics/ch-4-class-ppt",
+      "class": "class-10-ai-robotics",
+      "subject": "ch-4-class-ppt",
+      "size": 1861722,
+      "modified": "2026-10-28T09:56:08",
+      "is_pdf": true
+    },
+    {
+      "name": "q_1robot_quiz.pdf",
+      "path": "class-10-ai-robotics/ch-4-class-ppt/q_1robot_quiz.pdf",
+      "folder": "class-10-ai-robotics/ch-4-class-ppt",
+      "class": "class-10-ai-robotics",
+      "subject": "ch-4-class-ppt",
+      "size": 166819,
+      "modified": "2026-10-28T09:56:08",
+      "is_pdf": true
+    },
+    {
+      "name": "q_2qandansRobotics and Systems (Copy).pdf",
+      "path": "class-10-ai-robotics/ch-4-class-ppt/q_2qandansRobotics and Systems (Copy).pdf",
+      "folder": "class-10-ai-robotics/ch-4-class-ppt",
+      "class": "class-10-ai-robotics",
+      "subject": "ch-4-class-ppt",
+      "size": 1606099,
+      "modified": "2026-10-28T09:56:08",
+      "is_pdf": true
+    },
+    {
+      "name": "0`.pdf",
+      "path": "class-10-ai-robotics/ch-4-class-ppt/0`.pdf",
+      "folder": "class-10-ai-robotics/ch-4-class-ppt",
+      "class": "class-10-ai-robotics",
+      "subject": "ch-4-class-ppt",
+      "size": 778103,
+      "modified": "2026-10-28T09:56:08",
+      "is_pdf": true
+    },
+    {
+      "name": "2_Importance of Collaborative Robots.pdf",
+      "path": "class-10-ai-robotics/ch-4-class-ppt/2_Importance of Collaborative Robots.pdf",
+      "folder": "class-10-ai-robotics/ch-4-class-ppt",
+      "class": "class-10-ai-robotics",
+      "subject": "ch-4-class-ppt",
+      "size": 1033580,
+      "modified": "2026-10-28T09:56:08",
+      "is_pdf": true
+    },
+    {
+      "name": "3_Robots vs Cobots.pdf",
+      "path": "class-10-ai-robotics/ch-4-class-ppt/3_Robots vs Cobots.pdf",
+      "folder": "class-10-ai-robotics/ch-4-class-ppt",
+      "class": "class-10-ai-robotics",
+      "subject": "ch-4-class-ppt",
+      "size": 1351352,
+      "modified": "2026-10-28T09:56:08",
+      "is_pdf": true
+    },
+    {
+      "name": "True or False Quiz.pdf",
+      "path": "class-10-ai-robotics/ch-4-class-ppt/True or False Quiz.pdf",
+      "folder": "class-10-ai-robotics/ch-4-class-ppt",
+      "class": "class-10-ai-robotics",
+      "subject": "ch-4-class-ppt",
+      "size": 442092,
+      "modified": "2026-10-28T09:56:08",
+      "is_pdf": true
+    },
+    {
+      "name": "1.pdf",
+      "path": "class-10-ai-robotics/ch-4-class-ppt/1.pdf",
+      "folder": "class-10-ai-robotics/ch-4-class-ppt",
+      "class": "class-10-ai-robotics",
+      "subject": "ch-4-class-ppt",
+      "size": 1888676,
+      "modified": "2026-10-28T09:56:08",
+      "is_pdf": true
+    },
+    {
+      "name": "1-to-be-presented-Characteristics of Gears in Robotics_annotated.pdf",
+      "path": "class-10-ai-robotics/chp-4-components-of-robots-slides-20260630T103250Z-3-001/chp-4-components-of-robots-slides/1-to-be-presented-Characteristics of Gears in Robotics_annotated.pdf",
+      "folder": "class-10-ai-robotics/chp-4-components-of-robots-slides-20260630T103250Z-3-001/chp-4-components-of-robots-slides",
+      "class": "class-10-ai-robotics",
+      "subject": "chp-4-components-of-robots-slides-20260630T103250Z-3-001",
+      "size": 3223955,
+      "modified": "2026-10-28T09:56:08",
+      "is_pdf": true
+    },
+    {
+      "name": "5-Functions of Sensors.pdf",
+      "path": "class-10-ai-robotics/chp-4-components-of-robots-slides-20260630T103250Z-3-001/chp-4-components-of-robots-slides/5-Functions of Sensors.pdf",
+      "folder": "class-10-ai-robotics/chp-4-components-of-robots-slides-20260630T103250Z-3-001/chp-4-components-of-robots-slides",
+      "class": "class-10-ai-robotics",
+      "subject": "chp-4-components-of-robots-slides-20260630T103250Z-3-001",
+      "size": 1721792,
+      "modified": "2026-10-28T09:56:08",
+      "is_pdf": true
+    },
+    {
+      "name": "3-types-of-sensors.pdf",
+      "path": "class-10-ai-robotics/chp-4-components-of-robots-slides-20260630T103250Z-3-001/chp-4-components-of-robots-slides/3-types-of-sensors.pdf",
+      "folder": "class-10-ai-robotics/chp-4-components-of-robots-slides-20260630T103250Z-3-001/chp-4-components-of-robots-slides",
+      "class": "class-10-ai-robotics",
+      "subject": "chp-4-components-of-robots-slides-20260630T103250Z-3-001",
+      "size": 802148,
+      "modified": "2026-10-28T09:56:08",
+      "is_pdf": true
+    },
+    {
+      "name": "3-Sensors and Actuators in Robotics_annotated.pdf",
+      "path": "class-10-ai-robotics/chp-4-components-of-robots-slides-20260630T103250Z-3-001/chp-4-components-of-robots-slides/3-Sensors and Actuators in Robotics_annotated.pdf",
+      "folder": "class-10-ai-robotics/chp-4-components-of-robots-slides-20260630T103250Z-3-001/chp-4-components-of-robots-slides",
+      "class": "class-10-ai-robotics",
+      "subject": "chp-4-components-of-robots-slides-20260630T103250Z-3-001",
+      "size": 4727853,
+      "modified": "2026-10-28T09:56:08",
+      "is_pdf": true
+    },
+    {
+      "name": "1-to-be-presented-Characteristics of Gears in Robotics.pdf",
+      "path": "class-10-ai-robotics/chp-4-components-of-robots-slides-20260630T103250Z-3-001/chp-4-components-of-robots-slides/1-to-be-presented-Characteristics of Gears in Robotics.pdf",
+      "folder": "class-10-ai-robotics/chp-4-components-of-robots-slides-20260630T103250Z-3-001/chp-4-components-of-robots-slides",
+      "class": "class-10-ai-robotics",
+      "subject": "chp-4-components-of-robots-slides-20260630T103250Z-3-001",
+      "size": 2125345,
+      "modified": "2026-10-28T09:56:08",
+      "is_pdf": true
+    },
+    {
+      "name": "detRobotics_Components_Sensors_Actuators_Gears_Presentation.pdf",
+      "path": "class-10-ai-robotics/chp-4-components-of-robots-slides-20260630T103250Z-3-001/chp-4-components-of-robots-slides/detRobotics_Components_Sensors_Actuators_Gears_Presentation.pdf",
+      "folder": "class-10-ai-robotics/chp-4-components-of-robots-slides-20260630T103250Z-3-001/chp-4-components-of-robots-slides",
+      "class": "class-10-ai-robotics",
+      "subject": "chp-4-components-of-robots-slides-20260630T103250Z-3-001",
+      "size": 93866,
+      "modified": "2026-10-28T09:56:08",
+      "is_pdf": true
+    },
+    {
+      "name": "2-Characteristics of Gears in Robotics.pdf",
+      "path": "class-10-ai-robotics/chp-4-components-of-robots-slides-20260630T103250Z-3-001/chp-4-components-of-robots-slides/2-Characteristics of Gears in Robotics.pdf",
+      "folder": "class-10-ai-robotics/chp-4-components-of-robots-slides-20260630T103250Z-3-001/chp-4-components-of-robots-slides",
+      "class": "class-10-ai-robotics",
+      "subject": "chp-4-components-of-robots-slides-20260630T103250Z-3-001",
+      "size": 2212799,
+      "modified": "2026-10-28T09:56:08",
+      "is_pdf": true
+    },
+    {
+      "name": "4-Classification of Sensors in Robotics.pdf",
+      "path": "class-10-ai-robotics/chp-4-components-of-robots-slides-20260630T103250Z-3-001/chp-4-components-of-robots-slides/4-Classification of Sensors in Robotics.pdf",
+      "folder": "class-10-ai-robotics/chp-4-components-of-robots-slides-20260630T103250Z-3-001/chp-4-components-of-robots-slides",
+      "class": "class-10-ai-robotics",
+      "subject": "chp-4-components-of-robots-slides-20260630T103250Z-3-001",
+      "size": 1397766,
+      "modified": "2026-10-28T09:56:08",
+      "is_pdf": true
+    },
+    {
+      "name": "types-of-gears.pdf",
+      "path": "class-10-ai-robotics/chp-4-components-of-robots-slides-20260630T103250Z-3-001/chp-4-components-of-robots-slides/types-of-gears.pdf",
+      "folder": "class-10-ai-robotics/chp-4-components-of-robots-slides-20260630T103250Z-3-001/chp-4-components-of-robots-slides",
+      "class": "class-10-ai-robotics",
+      "subject": "chp-4-components-of-robots-slides-20260630T103250Z-3-001",
+      "size": 492148,
+      "modified": "2026-10-28T09:56:08",
+      "is_pdf": true
+    },
+    {
+      "name": "3-Sensors and Actuators in Robotics.pdf",
+      "path": "class-10-ai-robotics/chp-4-components-of-robots-slides-20260630T103250Z-3-001/chp-4-components-of-robots-slides/3-Sensors and Actuators in Robotics.pdf",
+      "folder": "class-10-ai-robotics/chp-4-components-of-robots-slides-20260630T103250Z-3-001/chp-4-components-of-robots-slides",
+      "class": "class-10-ai-robotics",
+      "subject": "chp-4-components-of-robots-slides-20260630T103250Z-3-001",
+      "size": 2363392,
+      "modified": "2026-10-28T09:56:08",
+      "is_pdf": true
+    },
+    {
+      "name": "gemini-code-1785358701126.pdf",
+      "path": "class-10-ai-robotics/list-and-tuples/gemini-code-1785358701126.pdf",
+      "folder": "class-10-ai-robotics/list-and-tuples",
+      "class": "class-10-ai-robotics",
+      "subject": "list-and-tuples",
+      "size": 52005,
+      "modified": "2026-10-28T09:56:08",
+      "is_pdf": true
+    },
+    {
+      "name": "python_list_20260730.pdf",
+      "path": "class-10-ai-robotics/list-and-tuples/python_list_20260730.pdf",
+      "folder": "class-10-ai-robotics/list-and-tuples",
+      "class": "class-10-ai-robotics",
+      "subject": "list-and-tuples",
+      "size": 2492692,
+      "modified": "2026-10-28T09:56:08",
+      "is_pdf": true
+    },
+    {
+      "name": "list-tuple.pdf",
+      "path": "class-10-ai-robotics/list-and-tuples/list-tuple.pdf",
+      "folder": "class-10-ai-robotics/list-and-tuples",
+      "class": "class-10-ai-robotics",
+      "subject": "list-and-tuples",
+      "size": 95833,
+      "modified": "2026-10-28T09:56:08",
+      "is_pdf": true
+    },
+    {
+      "name": "tuple_worksheet_questions.pdf",
+      "path": "class-10-ai-robotics/list-and-tuples/tuple_worksheet_questions.pdf",
+      "folder": "class-10-ai-robotics/list-and-tuples",
+      "class": "class-10-ai-robotics",
+      "subject": "list-and-tuples",
+      "size": 150242,
+      "modified": "2026-10-28T09:56:08",
+      "is_pdf": true
+    },
+    {
+      "name": "tuple_worksheet_fitjee.pdf",
+      "path": "class-10-ai-robotics/list-and-tuples/tuple_worksheet_fitjee.pdf",
+      "folder": "class-10-ai-robotics/list-and-tuples",
+      "class": "class-10-ai-robotics",
+      "subject": "list-and-tuples",
+      "size": 7340542,
+      "modified": "2026-10-28T09:56:08",
+      "is_pdf": true
+    },
+    {
+      "name": "python-for-cs-ip-tuple.pdf",
+      "path": "class-10-ai-robotics/list-and-tuples/python-for-cs-ip-tuple.pdf",
+      "folder": "class-10-ai-robotics/list-and-tuples",
+      "class": "class-10-ai-robotics",
+      "subject": "list-and-tuples",
+      "size": 692538,
+      "modified": "2026-10-28T09:56:08",
+      "is_pdf": true
+    },
+    {
+      "name": "python_tuple_worksheet_1.pdf",
+      "path": "class-10-ai-robotics/list-and-tuples/python_tuple_worksheet_1.pdf",
+      "folder": "class-10-ai-robotics/list-and-tuples",
+      "class": "class-10-ai-robotics",
+      "subject": "list-and-tuples",
+      "size": 150224,
+      "modified": "2026-10-28T09:56:08",
+      "is_pdf": true
+    },
+    {
+      "name": "Touch_Pad_tuples_note.pdf",
+      "path": "class-10-ai-robotics/list-and-tuples/Touch_Pad_tuples_note.pdf",
+      "folder": "class-10-ai-robotics/list-and-tuples",
+      "class": "class-10-ai-robotics",
+      "subject": "list-and-tuples",
+      "size": 3307168,
+      "modified": "2026-10-28T09:56:08",
+      "is_pdf": true
+    },
+    {
+      "name": "tuple_worksheet_fitjee_1..pdf",
+      "path": "class-10-ai-robotics/list-and-tuples/tuple_worksheet_fitjee_1..pdf",
+      "folder": "class-10-ai-robotics/list-and-tuples",
+      "class": "class-10-ai-robotics",
+      "subject": "list-and-tuples",
+      "size": 198263,
+      "modified": "2026-10-28T09:56:08",
+      "is_pdf": true
+    },
+    {
+      "name": "list_tuple_power_point_slide.pdf",
+      "path": "class-10-ai-robotics/list-and-tuples/list_tuple_power_point_slide.pdf",
+      "folder": "class-10-ai-robotics/list-and-tuples",
+      "class": "class-10-ai-robotics",
+      "subject": "list-and-tuples",
+      "size": 210930,
+      "modified": "2026-10-28T09:56:08",
+      "is_pdf": true
+    },
+    {
+      "name": "tuple_esay_exam_notes.pdf",
+      "path": "class-10-ai-robotics/list-and-tuples/tuple_esay_exam_notes.pdf",
+      "folder": "class-10-ai-robotics/list-and-tuples",
+      "class": "class-10-ai-robotics",
+      "subject": "list-and-tuples",
+      "size": 119615,
+      "modified": "2026-10-28T09:56:08",
+      "is_pdf": true
+    },
+    {
+      "name": "class-11-tuple-ppt.pdf",
+      "path": "class-10-ai-robotics/list-and-tuples/class-11-tuple-ppt.pdf",
+      "folder": "class-10-ai-robotics/list-and-tuples",
+      "class": "class-10-ai-robotics",
+      "subject": "list-and-tuples",
+      "size": 625534,
+      "modified": "2026-10-28T09:56:08",
+      "is_pdf": true
+    },
+    {
+      "name": "Types of Robotic Joints.pdf",
+      "path": "class-10-ai-robotics/tinkercad/Types of Robotic Joints.pdf",
+      "folder": "class-10-ai-robotics/tinkercad",
+      "class": "class-10-ai-robotics",
+      "subject": "tinkercad",
+      "size": 1189553,
+      "modified": "2026-10-28T09:56:08",
+      "is_pdf": true
+    },
+    {
+      "name": "Components of the Mechanical Block of a Robot.pdf",
+      "path": "class-10-ai-robotics/tinkercad/Components of the Mechanical Block of a Robot.pdf",
+      "folder": "class-10-ai-robotics/tinkercad",
+      "class": "class-10-ai-robotics",
+      "subject": "tinkercad",
+      "size": 1841024,
+      "modified": "2026-10-28T09:56:08",
+      "is_pdf": true
+    },
+    {
+      "name": "1_Applications of Mechanical Block in Robots-2.pdf",
+      "path": "class-10-ai-robotics/tinkercad/1_Applications of Mechanical Block in Robots-2.pdf",
+      "folder": "class-10-ai-robotics/tinkercad",
+      "class": "class-10-ai-robotics",
+      "subject": "tinkercad",
+      "size": 4303510,
+      "modified": "2026-10-28T09:56:08",
+      "is_pdf": true
+    },
+    {
+      "name": "robotics-ppt.pdf",
+      "path": "class-10-ai-robotics/ishaan/robotics-ppt.pdf",
+      "folder": "class-10-ai-robotics/ishaan",
+      "class": "class-10-ai-robotics",
+      "subject": "ishaan",
+      "size": 10172988,
+      "modified": "2026-10-28T09:56:08",
+      "is_pdf": true
+    },
+    {
+      "name": "ai_project_framework.pdf",
+      "path": "class-10-ai-robotics/oct-27/ai_project_framework.pdf",
+      "folder": "class-10-ai-robotics/oct-27",
+      "class": "class-10-ai-robotics",
+      "subject": "oct-27",
+      "size": 978528,
+      "modified": "2026-10-28T09:56:08",
+      "is_pdf": true
+    },
+    {
+      "name": "numpy-ai-robotics-class-10-icse.pdf",
+      "path": "class-10-ai-robotics/oct-27/numpy-ai-robotics-class-10-icse.pdf",
+      "folder": "class-10-ai-robotics/oct-27",
+      "class": "class-10-ai-robotics",
+      "subject": "oct-27",
+      "size": 2751599,
+      "modified": "2026-10-28T09:56:08",
+      "is_pdf": true
+    },
+    {
+      "name": "python-string-class-ppt.pdf",
+      "path": "class-10-ai-robotics/oct-27/python-string-class-ppt.pdf",
+      "folder": "class-10-ai-robotics/oct-27",
+      "class": "class-10-ai-robotics",
+      "subject": "oct-27",
+      "size": 6473873,
+      "modified": "2026-10-28T09:56:08",
+      "is_pdf": true
+    },
+    {
+      "name": "012. PYTHON - string.pdf",
+      "path": "class-10-ai-robotics/oct-27/012. PYTHON - string.pdf",
+      "folder": "class-10-ai-robotics/oct-27",
+      "class": "class-10-ai-robotics",
+      "subject": "oct-27",
+      "size": 1199082,
+      "modified": "2026-10-28T09:56:08",
+      "is_pdf": true
+    },
+    {
+      "name": "numpy_presentation.pdf",
+      "path": "class-10-ai-robotics/oct-27/numpy_presentation.pdf",
+      "folder": "class-10-ai-robotics/oct-27",
+      "class": "class-10-ai-robotics",
+      "subject": "oct-27",
+      "size": 153798,
+      "modified": "2026-10-28T09:56:08",
+      "is_pdf": true
+    },
+    {
+      "name": "Python___dictionary.pdf",
+      "path": "class-10-ai-robotics/oct-27/Python___dictionary.pdf",
+      "folder": "class-10-ai-robotics/oct-27",
+      "class": "class-10-ai-robotics",
+      "subject": "oct-27",
+      "size": 7581843,
+      "modified": "2026-10-28T09:56:08",
+      "is_pdf": true
+    },
+    {
+      "name": "icse2026_beamer.pdf",
+      "path": "class-10-ai-robotics/oct-27/icse2026_beamer.pdf",
+      "folder": "class-10-ai-robotics/oct-27",
+      "class": "class-10-ai-robotics",
+      "subject": "oct-27",
+      "size": 1377630,
+      "modified": "2026-10-28T09:56:08",
+      "is_pdf": true
+    },
+    {
+      "name": "components_of_ai_framework_20261027.pdf",
+      "path": "class-10-ai-robotics/ai (2)/components_of_ai_framework_20261027.pdf",
+      "folder": "class-10-ai-robotics/ai (2)",
+      "class": "class-10-ai-robotics",
+      "subject": "ai (2)",
+      "size": 8733902,
+      "modified": "2026-10-28T09:56:08",
+      "is_pdf": true
+    },
+    {
+      "name": "chapter4_modules_numpy.pdf",
+      "path": "class-10-ai-robotics/ai (2)/chapter4_modules_numpy.pdf",
+      "folder": "class-10-ai-robotics/ai (2)",
+      "class": "class-10-ai-robotics",
+      "subject": "ai (2)",
+      "size": 52180,
+      "modified": "2026-10-28T09:56:08",
+      "is_pdf": true
+    },
+    {
+      "name": "modules_20261027.pdf",
+      "path": "class-10-ai-robotics/ai (2)/modules_20261027.pdf",
+      "folder": "class-10-ai-robotics/ai (2)",
+      "class": "class-10-ai-robotics",
+      "subject": "ai (2)",
+      "size": 5281646,
+      "modified": "2026-10-28T09:56:08",
+      "is_pdf": true
+    },
+    {
+      "name": "icse2026_beamer.pdf",
+      "path": "class-10-ai-robotics/ai (2)/icse2026_beamer.pdf",
+      "folder": "class-10-ai-robotics/ai (2)",
+      "class": "class-10-ai-robotics",
+      "subject": "ai (2)",
+      "size": 1376935,
+      "modified": "2026-10-28T09:56:08",
+      "is_pdf": true
+    },
+    {
+      "name": "numpy_presentation.pdf",
+      "path": "class-10-ai-robotics/ai (2)/numpy_presentation/numpy_presentation.pdf",
+      "folder": "class-10-ai-robotics/ai (2)/numpy_presentation",
+      "class": "class-10-ai-robotics",
+      "subject": "ai (2)",
+      "size": 153798,
+      "modified": "2026-10-28T09:56:08",
+      "is_pdf": true
+    },
+    {
+      "name": "types_of_ai_models.pdf",
+      "path": "class-10-ai-robotics/ai (2)/types_of_ai_models_pdf/types_of_ai_models.pdf",
+      "folder": "class-10-ai-robotics/ai (2)/types_of_ai_models_pdf",
+      "class": "class-10-ai-robotics",
+      "subject": "ai (2)",
+      "size": 832288,
+      "modified": "2026-10-28T09:56:08",
+      "is_pdf": true
+    },
+    {
+      "name": "ai_project_framework.pdf",
+      "path": "class-10-ai-robotics/ai (2)/ai_project_framework_pdf/ai_project_framework.pdf",
+      "folder": "class-10-ai-robotics/ai (2)/ai_project_framework_pdf",
+      "class": "class-10-ai-robotics",
+      "subject": "ai (2)",
+      "size": 978528,
+      "modified": "2026-10-28T09:56:08",
+      "is_pdf": true
+    },
+    {
+      "name": "4ws_problem_canvas.pdf",
+      "path": "class-10-ai-robotics/ai (2)/4ws_problem_canvas_pdf/4ws_problem_canvas.pdf",
+      "folder": "class-10-ai-robotics/ai (2)/4ws_problem_canvas_pdf",
+      "class": "class-10-ai-robotics",
+      "subject": "ai (2)",
+      "size": 448583,
+      "modified": "2026-10-28T09:56:08",
+      "is_pdf": true
+    },
+    {
+      "name": "ai_project_framework.pdf",
+      "path": "class-10-ai-robotics/ai (2)/ai_project_framework/ai_project_framework.pdf",
+      "folder": "class-10-ai-robotics/ai (2)/ai_project_framework",
+      "class": "class-10-ai-robotics",
+      "subject": "ai (2)",
+      "size": 1184651,
+      "modified": "2026-10-28T09:56:08",
+      "is_pdf": true
+    },
+    {
+      "name": "ilide.info-worksheet-strings-in-python-pr_84ba08808727ae92f0bfb80f916df224.pdf",
+      "path": "class-10-ai-robotics/string/ilide.info-worksheet-strings-in-python-pr_84ba08808727ae92f0bfb80f916df224.pdf",
+      "folder": "class-10-ai-robotics/string",
+      "class": "class-10-ai-robotics",
+      "subject": "string",
+      "size": 167274,
+      "modified": "2026-10-28T09:56:08",
+      "is_pdf": true
+    },
+    {
+      "name": "7352163-Class 11_CS_WS_7.pdf",
+      "path": "class-10-ai-robotics/string/7352163-Class 11_CS_WS_7.pdf",
+      "folder": "class-10-ai-robotics/string",
+      "class": "class-10-ai-robotics",
+      "subject": "string",
+      "size": 105682,
+      "modified": "2026-10-28T09:56:08",
+      "is_pdf": true
+    },
+    {
+      "name": "ilide.info-worksheet-class-11-string-pr_33a5e26a937145e4738e0acc018709a0.pdf",
+      "path": "class-10-ai-robotics/string/ilide.info-worksheet-class-11-string-pr_33a5e26a937145e4738e0acc018709a0.pdf",
+      "folder": "class-10-ai-robotics/string",
+      "class": "class-10-ai-robotics",
+      "subject": "string",
+      "size": 25618,
+      "modified": "2026-10-28T09:56:08",
+      "is_pdf": true
+    },
+    {
+      "name": "output-questions-class-11-string_compress.pdf",
+      "path": "class-10-ai-robotics/string/output-questions-class-11-string_compress.pdf",
+      "folder": "class-10-ai-robotics/string",
+      "class": "class-10-ai-robotics",
+      "subject": "string",
+      "size": 569077,
+      "modified": "2026-10-28T09:56:08",
+      "is_pdf": true
+    },
+    {
+      "name": "String_Handling_Worksheet.pdf",
+      "path": "class-10-ai-robotics/string/String_Handling_Worksheet.pdf",
+      "folder": "class-10-ai-robotics/string",
+      "class": "class-10-ai-robotics",
+      "subject": "string",
+      "size": 38051,
+      "modified": "2026-10-28T09:56:08",
+      "is_pdf": true
+    },
+    {
+      "name": "python-string-class-ppt.pdf",
+      "path": "class-10-ai-robotics/string/python-string-class-ppt.pdf",
+      "folder": "class-10-ai-robotics/string",
+      "class": "class-10-ai-robotics",
+      "subject": "string",
+      "size": 6473873,
+      "modified": "2026-10-28T09:56:08",
+      "is_pdf": true
+    },
+    {
+      "name": "string_practice_questions_python.pdf",
+      "path": "class-10-ai-robotics/string/string_practice_questions_python.pdf",
+      "folder": "class-10-ai-robotics/string",
+      "class": "class-10-ai-robotics",
+      "subject": "string",
+      "size": 242679,
+      "modified": "2026-10-28T09:56:08",
+      "is_pdf": true
+    },
+    {
+      "name": "012. PYTHON - string.pdf",
+      "path": "class-10-ai-robotics/string/012. PYTHON - string.pdf",
+      "folder": "class-10-ai-robotics/string",
+      "class": "class-10-ai-robotics",
+      "subject": "string",
+      "size": 1199082,
+      "modified": "2026-10-28T09:56:08",
+      "is_pdf": true
+    },
+    {
+      "name": "document_compress.pdf",
+      "path": "class-10-ai-robotics/string/document_compress.pdf",
+      "folder": "class-10-ai-robotics/string",
+      "class": "class-10-ai-robotics",
+      "subject": "string",
+      "size": 41790,
+      "modified": "2026-10-28T09:56:08",
+      "is_pdf": true
+    },
+    {
+      "name": "class11-python-strings-lists-questionbank_compress.pdf",
+      "path": "class-10-ai-robotics/string/class11-python-strings-lists-questionbank_compress.pdf",
+      "folder": "class-10-ai-robotics/string",
+      "class": "class-10-ai-robotics",
+      "subject": "string",
+      "size": 11964,
+      "modified": "2026-10-28T09:56:08",
+      "is_pdf": true
+    },
+    {
+      "name": "Worksheet - String.pdf",
+      "path": "class-10-ai-robotics/string/Worksheet - String.pdf",
+      "folder": "class-10-ai-robotics/string",
+      "class": "class-10-ai-robotics",
+      "subject": "string",
+      "size": 213832,
+      "modified": "2026-10-28T09:56:08",
+      "is_pdf": true
+    },
+    {
+      "name": "string.pdf",
+      "path": "class-10-ai-robotics/string/string.pdf",
+      "folder": "class-10-ai-robotics/string",
+      "class": "class-10-ai-robotics",
+      "subject": "string",
+      "size": 107224,
+      "modified": "2026-10-28T09:56:08",
+      "is_pdf": true
+    },
+    {
+      "name": "013 LISTS.pdf",
+      "path": "class-10-ai-robotics/string/013 LISTS.pdf",
+      "folder": "class-10-ai-robotics/string",
+      "class": "class-10-ai-robotics",
+      "subject": "string",
+      "size": 2058902,
+      "modified": "2026-10-28T09:56:08",
+      "is_pdf": true
+    },
+    {
+      "name": "Chapter-I Python fundamentals.pdf",
+      "path": "class-10-ai-robotics/string/CompSc-Grade-11-Worksheets-main/Chapter-I Python fundamentals.pdf",
+      "folder": "class-10-ai-robotics/string/CompSc-Grade-11-Worksheets-main",
+      "class": "class-10-ai-robotics",
+      "subject": "string",
+      "size": 6031353,
+      "modified": "2026-10-28T09:56:08",
+      "is_pdf": true
+    },
+    {
+      "name": "String Manipulation.pdf",
+      "path": "class-10-ai-robotics/string/CompSc-Grade-11-Worksheets-main/String Manipulation.pdf",
+      "folder": "class-10-ai-robotics/string/CompSc-Grade-11-Worksheets-main",
+      "class": "class-10-ai-robotics",
+      "subject": "string",
+      "size": 420684,
+      "modified": "2026-10-28T09:56:08",
+      "is_pdf": true
+    },
+    {
+      "name": "1_Computer-Science-Python-Book-Class-XI.pdf",
+      "path": "class-10-ai-robotics/string/CompSc-Grade-11-Worksheets-main/1_Computer-Science-Python-Book-Class-XI.pdf",
+      "folder": "class-10-ai-robotics/string/CompSc-Grade-11-Worksheets-main",
+      "class": "class-10-ai-robotics",
+      "subject": "string",
+      "size": 14638561,
+      "modified": "2026-10-28T09:56:08",
+      "is_pdf": true
+    },
+    {
+      "name": "Getting started with python (1).pdf",
+      "path": "class-10-ai-robotics/string/CompSc-Grade-11-Worksheets-main/Getting started with python (1).pdf",
+      "folder": "class-10-ai-robotics/string/CompSc-Grade-11-Worksheets-main",
+      "class": "class-10-ai-robotics",
+      "subject": "string",
+      "size": 185182,
+      "modified": "2026-10-28T09:56:08",
+      "is_pdf": true
+    },
+    {
+      "name": "Tuples.pdf",
+      "path": "class-10-ai-robotics/string/CompSc-Grade-11-Worksheets-main/Tuples.pdf",
+      "folder": "class-10-ai-robotics/string/CompSc-Grade-11-Worksheets-main",
+      "class": "class-10-ai-robotics",
+      "subject": "string",
+      "size": 338216,
+      "modified": "2026-10-28T09:56:08",
+      "is_pdf": true
+    },
+    {
+      "name": "cyber safety.pdf",
+      "path": "class-10-ai-robotics/string/CompSc-Grade-11-Worksheets-main/cyber safety.pdf",
+      "folder": "class-10-ai-robotics/string/CompSc-Grade-11-Worksheets-main",
+      "class": "class-10-ai-robotics",
+      "subject": "string",
+      "size": 494169,
+      "modified": "2026-10-28T09:56:08",
+      "is_pdf": true
+    },
+    {
+      "name": "cs.-chp-2.pdf",
+      "path": "class-10-ai-robotics/string/CompSc-Grade-11-Worksheets-main/cs.-chp-2.pdf",
+      "folder": "class-10-ai-robotics/string/CompSc-Grade-11-Worksheets-main",
+      "class": "class-10-ai-robotics",
+      "subject": "string",
+      "size": 337560,
+      "modified": "2026-10-28T09:56:08",
+      "is_pdf": true
+    },
+    {
+      "name": "data handling a.pdf",
+      "path": "class-10-ai-robotics/string/CompSc-Grade-11-Worksheets-main/data handling a.pdf",
+      "folder": "class-10-ai-robotics/string/CompSc-Grade-11-Worksheets-main",
+      "class": "class-10-ai-robotics",
+      "subject": "string",
+      "size": 236256,
+      "modified": "2026-10-28T09:56:08",
+      "is_pdf": true
+    },
+    {
+      "name": "cs-chp-18.pdf",
+      "path": "class-10-ai-robotics/string/CompSc-Grade-11-Worksheets-main/cs-chp-18.pdf",
+      "folder": "class-10-ai-robotics/string/CompSc-Grade-11-Worksheets-main",
+      "class": "class-10-ai-robotics",
+      "subject": "string",
+      "size": 271326,
+      "modified": "2026-10-28T09:56:08",
+      "is_pdf": true
+    },
+    {
+      "name": "rdbms.pdf",
+      "path": "class-10-ai-robotics/string/CompSc-Grade-11-Worksheets-main/rdbms.pdf",
+      "folder": "class-10-ai-robotics/string/CompSc-Grade-11-Worksheets-main",
+      "class": "class-10-ai-robotics",
+      "subject": "string",
+      "size": 454915,
+      "modified": "2026-10-28T09:56:08",
+      "is_pdf": true
+    },
+    {
+      "name": "python fundamental a.pdf",
+      "path": "class-10-ai-robotics/string/CompSc-Grade-11-Worksheets-main/python fundamental a.pdf",
+      "folder": "class-10-ai-robotics/string/CompSc-Grade-11-Worksheets-main",
+      "class": "class-10-ai-robotics",
+      "subject": "string",
+      "size": 212907,
+      "modified": "2026-10-28T09:56:08",
+      "is_pdf": true
+    },
+    {
+      "name": "sql a.pdf",
+      "path": "class-10-ai-robotics/string/CompSc-Grade-11-Worksheets-main/sql a.pdf",
+      "folder": "class-10-ai-robotics/string/CompSc-Grade-11-Worksheets-main",
+      "class": "class-10-ai-robotics",
+      "subject": "string",
+      "size": 579749,
+      "modified": "2026-10-28T09:56:08",
+      "is_pdf": true
+    },
+    {
+      "name": "conditional and looping constructs.pdf",
+      "path": "class-10-ai-robotics/string/CompSc-Grade-11-Worksheets-main/conditional and looping constructs.pdf",
+      "folder": "class-10-ai-robotics/string/CompSc-Grade-11-Worksheets-main",
+      "class": "class-10-ai-robotics",
+      "subject": "string",
+      "size": 427909,
+      "modified": "2026-10-28T09:56:08",
+      "is_pdf": true
+    },
+    {
+      "name": "data handling p.pdf",
+      "path": "class-10-ai-robotics/string/CompSc-Grade-11-Worksheets-main/data handling p.pdf",
+      "folder": "class-10-ai-robotics/string/CompSc-Grade-11-Worksheets-main",
+      "class": "class-10-ai-robotics",
+      "subject": "string",
+      "size": 275580,
+      "modified": "2026-10-28T09:56:08",
+      "is_pdf": true
+    },
+    {
+      "name": "Information Representation.pdf",
+      "path": "class-10-ai-robotics/string/CompSc-Grade-11-Worksheets-main/Information Representation.pdf",
+      "folder": "class-10-ai-robotics/string/CompSc-Grade-11-Worksheets-main",
+      "class": "class-10-ai-robotics",
+      "subject": "string",
+      "size": 2550066,
+      "modified": "2026-10-28T09:56:08",
+      "is_pdf": true
+    },
+    {
+      "name": "List Manipulation.pdf",
+      "path": "class-10-ai-robotics/string/CompSc-Grade-11-Worksheets-main/List Manipulation.pdf",
+      "folder": "class-10-ai-robotics/string/CompSc-Grade-11-Worksheets-main",
+      "class": "class-10-ai-robotics",
+      "subject": "string",
+      "size": 483754,
+      "modified": "2026-10-28T09:56:08",
+      "is_pdf": true
+    },
+    {
+      "name": "cs-chp-19 cbsepythonedu.com.pdf",
+      "path": "class-10-ai-robotics/string/CompSc-Grade-11-Worksheets-main/cs-chp-19 cbsepythonedu.com.pdf",
+      "folder": "class-10-ai-robotics/string/CompSc-Grade-11-Worksheets-main",
+      "class": "class-10-ai-robotics",
+      "subject": "string",
+      "size": 306198,
+      "modified": "2026-10-28T09:56:08",
+      "is_pdf": true
+    },
+    {
+      "name": "Getting started with python.pdf",
+      "path": "class-10-ai-robotics/string/CompSc-Grade-11-Worksheets-main/Getting started with python.pdf",
+      "folder": "class-10-ai-robotics/string/CompSc-Grade-11-Worksheets-main",
+      "class": "class-10-ai-robotics",
+      "subject": "string",
+      "size": 771785,
+      "modified": "2026-10-28T09:56:08",
+      "is_pdf": true
+    },
+    {
+      "name": "rdbms a.pdf",
+      "path": "class-10-ai-robotics/string/CompSc-Grade-11-Worksheets-main/rdbms a.pdf",
+      "folder": "class-10-ai-robotics/string/CompSc-Grade-11-Worksheets-main",
+      "class": "class-10-ai-robotics",
+      "subject": "string",
+      "size": 203134,
+      "modified": "2026-10-28T09:56:08",
+      "is_pdf": true
+    },
+    {
+      "name": "sql.pdf",
+      "path": "class-10-ai-robotics/string/CompSc-Grade-11-Worksheets-main/sql.pdf",
+      "folder": "class-10-ai-robotics/string/CompSc-Grade-11-Worksheets-main",
+      "class": "class-10-ai-robotics",
+      "subject": "string",
+      "size": 504385,
+      "modified": "2026-10-28T09:56:08",
+      "is_pdf": true
+    },
+    {
+      "name": "Data Handling ch3.pdf",
+      "path": "class-10-ai-robotics/string/CompSc-Grade-11-Worksheets-main/Data Handling ch3.pdf",
+      "folder": "class-10-ai-robotics/string/CompSc-Grade-11-Worksheets-main",
+      "class": "class-10-ai-robotics",
+      "subject": "string",
+      "size": 545868,
+      "modified": "2026-10-28T09:56:08",
+      "is_pdf": true
+    },
+    {
+      "name": "Dictionaries.pdf",
+      "path": "class-10-ai-robotics/string/CompSc-Grade-11-Worksheets-main/Dictionaries.pdf",
+      "folder": "class-10-ai-robotics/string/CompSc-Grade-11-Worksheets-main",
+      "class": "class-10-ai-robotics",
+      "subject": "string",
+      "size": 349274,
+      "modified": "2026-10-28T09:56:08",
+      "is_pdf": true
+    },
+    {
+      "name": "FAQ-11CS.pdf",
+      "path": "class-10-ai-robotics/string/CompSc-Grade-11-Worksheets-main/FAQ-11CS.pdf",
+      "folder": "class-10-ai-robotics/string/CompSc-Grade-11-Worksheets-main",
+      "class": "class-10-ai-robotics",
+      "subject": "string",
+      "size": 107849,
+      "modified": "2026-10-28T09:56:08",
+      "is_pdf": true
+    },
+    {
+      "name": "Conditional and Looping Constructs a.pdf",
+      "path": "class-10-ai-robotics/string/CompSc-Grade-11-Worksheets-main/Conditional and Looping Constructs a.pdf",
+      "folder": "class-10-ai-robotics/string/CompSc-Grade-11-Worksheets-main",
+      "class": "class-10-ai-robotics",
+      "subject": "string",
+      "size": 262439,
+      "modified": "2026-10-28T09:56:08",
+      "is_pdf": true
+    },
+    {
+      "name": "Python Modules.pdf",
+      "path": "class-10-ai-robotics/string/CompSc-Grade-11-Worksheets-main/Python Modules.pdf",
+      "folder": "class-10-ai-robotics/string/CompSc-Grade-11-Worksheets-main",
+      "class": "class-10-ai-robotics",
+      "subject": "string",
+      "size": 338806,
+      "modified": "2026-10-28T09:56:08",
+      "is_pdf": true
+    },
+    {
+      "name": "Conditional and Looping Constructs p.pdf",
+      "path": "class-10-ai-robotics/string/CompSc-Grade-11-Worksheets-main/Conditional and Looping Constructs p.pdf",
+      "folder": "class-10-ai-robotics/string/CompSc-Grade-11-Worksheets-main",
+      "class": "class-10-ai-robotics",
+      "subject": "string",
+      "size": 430803,
+      "modified": "2026-10-28T09:56:08",
+      "is_pdf": true
+    },
+    {
+      "name": "cs-chp-3.pdf",
+      "path": "class-10-ai-robotics/string/CompSc-Grade-11-Worksheets-main/cs-chp-3.pdf",
+      "folder": "class-10-ai-robotics/string/CompSc-Grade-11-Worksheets-main",
+      "class": "class-10-ai-robotics",
+      "subject": "string",
+      "size": 337546,
+      "modified": "2026-10-28T09:56:08",
+      "is_pdf": true
+    },
+    {
+      "name": "Debugging.pdf",
+      "path": "class-10-ai-robotics/string/CompSc-Grade-11-Worksheets-main/Debugging.pdf",
+      "folder": "class-10-ai-robotics/string/CompSc-Grade-11-Worksheets-main",
+      "class": "class-10-ai-robotics",
+      "subject": "string",
+      "size": 335649,
+      "modified": "2026-10-28T09:56:08",
+      "is_pdf": true
+    },
+    {
+      "name": "Cloud Computing.pdf",
+      "path": "class-10-ai-robotics/string/CompSc-Grade-11-Worksheets-main/Cloud Computing.pdf",
+      "folder": "class-10-ai-robotics/string/CompSc-Grade-11-Worksheets-main",
+      "class": "class-10-ai-robotics",
+      "subject": "string",
+      "size": 472170,
+      "modified": "2026-10-28T09:56:08",
+      "is_pdf": true
+    },
+    {
+      "name": "cs-chp-17.pdf",
+      "path": "class-10-ai-robotics/string/CompSc-Grade-11-Worksheets-main/cs-chp-17.pdf",
+      "folder": "class-10-ai-robotics/string/CompSc-Grade-11-Worksheets-main",
+      "class": "class-10-ai-robotics",
+      "subject": "string",
+      "size": 266490,
+      "modified": "2026-10-28T09:56:08",
+      "is_pdf": true
+    },
+    {
+      "name": "Flowchart and concept of running a program.pdf",
+      "path": "class-10-ai-robotics/string/CompSc-Grade-11-Worksheets-main/Flowchart and concept of running a program.pdf",
+      "folder": "class-10-ai-robotics/string/CompSc-Grade-11-Worksheets-main",
+      "class": "class-10-ai-robotics",
+      "subject": "string",
+      "size": 514547,
+      "modified": "2026-10-28T09:56:08",
+      "is_pdf": true
+    },
+    {
+      "name": "Computer System & Organization.pdf",
+      "path": "class-10-ai-robotics/string/CompSc-Grade-11-Worksheets-main/Computer System & Organization.pdf",
+      "folder": "class-10-ai-robotics/string/CompSc-Grade-11-Worksheets-main",
+      "class": "class-10-ai-robotics",
+      "subject": "string",
+      "size": 1439448,
+      "modified": "2026-10-28T09:56:08",
+      "is_pdf": true
+    },
+    {
+      "name": "cs-chp-1.pdf",
+      "path": "class-10-ai-robotics/string/CompSc-Grade-11-Worksheets-main/cs-chp-1.pdf",
+      "folder": "class-10-ai-robotics/string/CompSc-Grade-11-Worksheets-main",
+      "class": "class-10-ai-robotics",
+      "subject": "string",
+      "size": 219506,
+      "modified": "2026-10-28T09:56:08",
+      "is_pdf": true
+    },
+    {
+      "name": "cs-chp-16.pdf",
+      "path": "class-10-ai-robotics/string/CompSc-Grade-11-Worksheets-main/cs-chp-16.pdf",
+      "folder": "class-10-ai-robotics/string/CompSc-Grade-11-Worksheets-main",
+      "class": "class-10-ai-robotics",
+      "subject": "string",
+      "size": 252039,
+      "modified": "2026-10-28T09:56:08",
+      "is_pdf": true
+    },
+    {
+      "name": "Python fundamentals.pdf",
+      "path": "class-10-ai-robotics/string/CompSc-Grade-11-Worksheets-main/Python fundamentals.pdf",
+      "folder": "class-10-ai-robotics/string/CompSc-Grade-11-Worksheets-main",
+      "class": "class-10-ai-robotics",
+      "subject": "string",
+      "size": 547398,
+      "modified": "2026-10-28T09:56:08",
+      "is_pdf": true
+    },
+    {
+      "name": "revision-july-2026-cns.pdf",
+      "path": "class-10-ai-robotics/revision/revision-july-2026-cns.pdf",
+      "folder": "class-10-ai-robotics/revision",
+      "class": "class-10-ai-robotics",
+      "subject": "revision",
+      "size": 163235,
+      "modified": "2026-10-28T09:56:08",
+      "is_pdf": true
+    },
+    {
+      "name": "revision-july-2026-cns.pdf",
+      "path": "class-10-ai-robotics/revision/daksh/revision-july-2026-cns.pdf",
+      "folder": "class-10-ai-robotics/revision/daksh",
+      "class": "class-10-ai-robotics",
+      "subject": "revision",
+      "size": 165729,
+      "modified": "2026-10-28T09:56:08",
+      "is_pdf": true
+    },
+    {
+      "name": "revisoin-july-2026-exa.pdf",
+      "path": "class-10-ai-robotics/revision/daksh/revisoin-july-2026-exa.pdf",
+      "folder": "class-10-ai-robotics/revision/daksh",
+      "class": "class-10-ai-robotics",
+      "subject": "revision",
+      "size": 448887,
+      "modified": "2026-10-28T09:56:08",
+      "is_pdf": true
+    },
+    {
+      "name": "cobots_v1 (1).pdf",
+      "path": "class-10-ai-robotics/ai/cobots_v1 (1).pdf",
+      "folder": "class-10-ai-robotics/ai",
+      "class": "class-10-ai-robotics",
+      "subject": "ai",
+      "size": 7906367,
+      "modified": "2026-10-28T09:56:08",
+      "is_pdf": true
+    },
+    {
+      "name": "cobots_v1.pdf",
+      "path": "class-10-ai-robotics/ai/cobots_v1.pdf",
+      "folder": "class-10-ai-robotics/ai",
+      "class": "class-10-ai-robotics",
+      "subject": "ai",
+      "size": 7906367,
+      "modified": "2026-10-28T09:56:08",
+      "is_pdf": true
+    },
+    {
+      "name": "Robotics3.pdf",
+      "path": "class-10-ai-robotics/ai/hac-school-notes-icse-ai/Robotics3.pdf",
+      "folder": "class-10-ai-robotics/ai/hac-school-notes-icse-ai",
+      "class": "class-10-ai-robotics",
+      "subject": "ai",
+      "size": 167958,
+      "modified": "2026-10-28T09:56:08",
+      "is_pdf": true
+    },
+    {
+      "name": "AI Chapter1 class 10 copy.pdf",
+      "path": "class-10-ai-robotics/ai/hac-school-notes-icse-ai/AI Chapter1 class 10 copy.pdf",
+      "folder": "class-10-ai-robotics/ai/hac-school-notes-icse-ai",
+      "class": "class-10-ai-robotics",
+      "subject": "ai",
+      "size": 430249,
+      "modified": "2026-10-28T09:56:08",
+      "is_pdf": true
+    },
+    {
+      "name": "AI Projct and AI Framework.pdf",
+      "path": "class-10-ai-robotics/ai/hac-school-notes-icse-ai/AI Projct and AI Framework.pdf",
+      "folder": "class-10-ai-robotics/ai/hac-school-notes-icse-ai",
+      "class": "class-10-ai-robotics",
+      "subject": "ai",
+      "size": 490095,
+      "modified": "2026-10-28T09:56:08",
+      "is_pdf": true
+    },
+    {
+      "name": "AI Chapter3 class 10 copy(Projct and AI Framework ).pdf",
+      "path": "class-10-ai-robotics/ai/hac-school-notes-icse-ai/AI Chapter3 class 10 copy(Projct and AI Framework ).pdf",
+      "folder": "class-10-ai-robotics/ai/hac-school-notes-icse-ai",
+      "class": "class-10-ai-robotics",
+      "subject": "ai",
+      "size": 747276,
+      "modified": "2026-10-28T09:56:08",
+      "is_pdf": true
+    },
+    {
+      "name": "AI chapter2 class10 copy.pdf",
+      "path": "class-10-ai-robotics/ai/hac-school-notes-icse-ai/AI chapter2 class10 copy.pdf",
+      "folder": "class-10-ai-robotics/ai/hac-school-notes-icse-ai",
+      "class": "class-10-ai-robotics",
+      "subject": "ai",
+      "size": 263267,
+      "modified": "2026-10-28T09:56:08",
+      "is_pdf": true
+    },
+    {
+      "name": "2. FROM ROBOTS TO COBOTS.pdf",
+      "path": "class-10-ai-robotics/ai/hac-school-notes-icse-ai/2. FROM ROBOTS TO COBOTS.pdf",
+      "folder": "class-10-ai-robotics/ai/hac-school-notes-icse-ai",
+      "class": "class-10-ai-robotics",
+      "subject": "ai",
+      "size": 218722,
+      "modified": "2026-10-28T09:56:08",
+      "is_pdf": true
+    },
+    {
+      "name": "ICSE_X_Maths_QA_Slides.pdf",
+      "path": "10-icse/competency/ICSE_X_Maths_QA_Slides.pdf",
+      "folder": "10-icse/competency",
+      "class": "10-icse",
+      "subject": "competency",
+      "size": 235670,
+      "modified": "2026-10-28T09:38:58",
+      "is_pdf": true
+    }
+  ]
+}

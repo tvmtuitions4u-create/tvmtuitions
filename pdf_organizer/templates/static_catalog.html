@@ -1,0 +1,76 @@
+{% extends "base.html" %}
+{% block title %}Static Catalog{% endblock %}
+
+{% block extra_css %}
+<style>
+    #searchInput { font-size: 1.1rem; }
+    .doc-card { transition: transform .15s; }
+    .doc-card:hover { transform: translateY(-3px); }
+    .hidden { display: none !important; }
+</style>
+{% endblock %}
+
+{% block content %}
+<div class="mb-4">
+    <h2><i class="bi bi-globe"></i> Public Static Catalog</h2>
+    <p class="text-muted">This view is designed to be exported as a pure static HTML site with client-side search & filtering.</p>
+</div>
+
+<div class="mb-4">
+    <input type="text" id="searchInput" class="form-control form-control-lg" placeholder="Search documents by title, subject, batch, tags, class...">
+</div>
+
+<div class="row" id="catalog">
+    {% for doc in documents %}
+    <div class="col-md-6 col-lg-4 mb-4 doc-card"
+         data-title="{{ doc.title|lower }}"
+         data-subject="{{ (doc.subject or '')|lower }}"
+         data-batch="{{ (doc.batch or '')|lower }}"
+         data-class="{{ (doc.class_name or '')|lower }}"
+         data-tags="{{ (doc.tags or '')|lower }}"
+         data-desc="{{ (doc.description or '')|lower }}">
+        <div class="card h-100">
+            <div class="card-body">
+                <h5 class="card-title">{{ doc.title }}</h5>
+                <div class="mb-2">
+                    {% if doc.subject %}<span class="badge bg-primary">{{ doc.subject }}</span>{% endif %}
+                    {% if doc.batch %}<span class="badge bg-success">{{ doc.batch }}</span>{% endif %}
+                    <span class="badge bg-secondary">{{ doc.category }}</span>
+                </div>
+                {% if doc.class_name %}<p class="small mb-1"><strong>{{ doc.class_name }}</strong></p>{% endif %}
+                {% if doc.class_date %}<p class="small text-muted mb-1">{{ doc.class_date }}</p>{% endif %}
+                <p class="small">{{ (doc.description or '')[:100] }}</p>
+                {% if doc.tags %}
+                    <div>{% for t in doc.tags_list() %}<span class="badge bg-light text-dark me-1">{{ t }}</span>{% endfor %}</div>
+                {% endif %}
+            </div>
+            <div class="card-footer">
+                <a href="{{ url_for('download', doc_id=doc.id) }}" class="btn btn-sm btn-outline-primary">Download</a>
+                <a href="{{ url_for('detail', doc_id=doc.id) }}" class="btn btn-sm btn-link">Details</a>
+            </div>
+        </div>
+    </div>
+    {% else %}
+    <p class="text-center">No documents yet.</p>
+    {% endfor %}
+</div>
+{% endblock %}
+
+{% block extra_js %}
+<script>
+document.getElementById('searchInput').addEventListener('input', function() {
+    const term = this.value.toLowerCase();
+    document.querySelectorAll('.doc-card').forEach(card => {
+        const searchable = [
+            card.dataset.title,
+            card.dataset.subject,
+            card.dataset.batch,
+            card.dataset.class,
+            card.dataset.tags,
+            card.dataset.desc
+        ].join(' ');
+        card.classList.toggle('hidden', term && !searchable.includes(term));
+    });
+});
+</script>
+{% endblock %}

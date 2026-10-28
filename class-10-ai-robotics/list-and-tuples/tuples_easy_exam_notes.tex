@@ -1,0 +1,150 @@
+\documentclass{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{listings}
+\usepackage{color}
+\usepackage{hyperref}
+\usepackage{enumitem}
+
+\definecolor{codegreen}{rgb}{0,0.6,0}
+\definecolor{codegray}{rgb}{0.5,0.5,0.5}
+\definecolor{codepurple}{rgb}{0.58,0,0.82}
+\definecolor{backcolour}{rgb}{0.95,0.95,0.92}
+
+\lstdefinestyle{mystyle}{
+	backgroundcolor=\color{backcolour},   
+	commentstyle=\color{codegreen},
+	keywordstyle=\color{magenta},
+	numberstyle=\tiny\color{codegray},
+	stringstyle=\color{codepurple},
+	basicstyle=\ttfamily\footnotesize,
+	breakatwhitespace=false,         
+	breaklines=true,                 
+	captionpos=b,                    
+	keepspaces=true,                 
+	numbers=left,                    
+	numbersep=5pt,                  
+	showspaces=false,                
+	showstringspaces=false,
+	showtabs=false,                  
+	tabsize=2
+}
+
+\lstset{style=mystyle}
+
+\title{ICSE Class 10 Python \\ Lists and Tuples - Exam Ready Notes}
+\author{}
+\date{}
+
+\begin{document}
+	
+	\maketitle
+	
+	\section{Lists in Python}
+	
+	\begin{itemize}
+		\item A \textbf{list} is a \textbf{mutable} (changeable), \textbf{ordered} sequence of elements.
+		\item Created using \textbf{square brackets} \texttt{[]}.
+		\item Can store elements of \textbf{different data types} (heterogeneous).
+		\item Supports \textbf{indexing} (starts at 0) and \textbf{negative indexing}.
+	\end{itemize}
+	
+	\subsection{Examples}
+	\begin{lstlisting}[language=Python]
+		# Empty list
+		l1 = []
+		
+		# List with different types
+		l2 = [10, 20.5, "Hello", True, [1,2,3]]
+		
+		# Accessing elements
+		print(l2[0])     # 10
+		print(l2[-1])    # [1, 2, 3]
+		print(l2[2:4])   # ['Hello', True]  # Slicing
+	\end{lstlisting}
+	
+	\subsection{List Operations}
+	\begin{itemize}
+		\item Concatenation: \texttt{list1 + list2}
+		\item Repetition: \texttt{list * n}
+		\item Membership: \texttt{element in list}
+		\item Length: \texttt{len(list)}
+	\end{itemize}
+	
+	\subsection{Important List Methods}
+	
+	\begin{tabular}{|l|l|l|}
+		\hline
+		\textbf{Method} & \textbf{Description} & \textbf{Example} \\
+		\hline
+		\texttt{append(x)} & Adds element at the end & \texttt{lst.append(50)} \\
+		\texttt{insert(i, x)} & Inserts at index i & \texttt{lst.insert(1, 25)} \\
+		\texttt{extend(lst2)} & Adds all elements of lst2 & \texttt{lst.extend([60,70])} \\
+		\texttt{remove(x)} & Removes first occurrence of x & \texttt{lst.remove(20)} \\
+		\texttt{pop(i)} & Removes and returns element at i & \texttt{lst.pop()} \\
+		\texttt{clear()} & Removes all elements & \texttt{lst.clear()} \\
+		\texttt{index(x)} & Returns index of first occurrence & \texttt{lst.index(30)} \\
+		\texttt{count(x)} & Counts occurrences of x & \texttt{lst.count(10)} \\
+		\texttt{sort()} & Sorts in ascending order & \texttt{lst.sort()} \\
+		\texttt{reverse()} & Reverses the list & \texttt{lst.reverse()} \\
+		\hline
+	\end{tabular}
+	
+	\subsection{Nested Lists}
+	\begin{lstlisting}[language=Python]
+		nested = [[1,2,3], [4,5,6], [7,8,9]]
+		print(nested[1][2])  # 6
+	\end{lstlisting}
+	
+	\section{Tuples in Python}
+	
+	\begin{itemize}
+		\item A \textbf{tuple} is an \textbf{immutable} (cannot be changed), \textbf{ordered} sequence.
+		\item Created using \textbf{parentheses} \texttt{()} or comma separated values.
+		\item Faster than lists; used for fixed data.
+	\end{itemize}
+	
+	\subsection{Examples}
+	\begin{lstlisting}[language=Python]
+		t1 = (10, 20, 30)
+		t2 = 1, 2, 3, 4          # Parentheses optional
+		t3 = ("apple",)          # Single element needs comma
+		empty = ()               # Empty tuple
+	\end{lstlisting}
+	
+	\subsection{Tuple Assignment / Packing-Unpacking}
+	\begin{lstlisting}[language=Python]
+		# Packing
+		t = 10, 20, 30
+		
+		# Unpacking
+		a, b, c = t
+		print(a, b, c)  # 10 20 30
+		
+		# Swap variables
+		x, y = y, x
+	\end{lstlisting}
+	
+	\section{Key Differences: List vs Tuple}
+	
+	\begin{tabular}{|l|l|l|}
+		\hline
+		\textbf{Feature} & \textbf{List} & \textbf{Tuple} \\
+		\hline
+		Mutability & Mutable & Immutable \\
+		Syntax & \texttt{[]} & \texttt{()} \\
+		Speed & Slower & Faster \\
+		Use case & Changing data & Fixed data \\
+		Memory & More & Less \\
+		\hline
+	\end{tabular}
+	
+	\section{Common Functions}
+	\begin{itemize}
+		\item \texttt{len()} $\rightarrow$ length
+		\item \texttt{max()}, \texttt{min()} $\rightarrow$ on numeric sequences
+		\item \texttt{sum()} $\rightarrow$ for numbers
+		\item \texttt{sorted(seq)} $\rightarrow$ returns new sorted list
+		\item \texttt{list(tuple)} / \texttt{tuple(list)} $\rightarrow$ type conversion
+	\end{itemize}
+	
+\end{document}
